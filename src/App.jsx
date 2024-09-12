@@ -5,7 +5,6 @@ function App() {
     <>
     <Campus />
       <div>
-        hello
       </div>
     </>
   )
