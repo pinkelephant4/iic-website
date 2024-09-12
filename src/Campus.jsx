@@ -1,6 +1,6 @@
 export default function Campus() {
     return (
-        <div><h2 className="Campus-Ambassador">Campus Ambassador in 3 simple steps</h2>
+        <div><h2 className="Campus-Ambassador azerec">Campus Ambassador in 3 simple steps</h2>
         
         <div className="campus-container">
             
@@ -22,7 +22,7 @@ export default function Campus() {
 
      
       <div className="large-rectangle">
-        <p>Become a MujHackx Campus Ambassador today!</p>
+        <p className="azerec">Become a MujHackx Campus Ambassador today!</p>
         <button className="apply-btn">Apply Now</button>
       </div>
     </div>

@@ -15,8 +15,14 @@ body{
     text-align: center;
     font-size: 36px;
     padding:50px;
-    margin:50px;
-    
+    margin:50px;    
+}
+
+.azerec{
+  font-family: "Azeret Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .campus-container {
@@ -85,6 +91,7 @@ body{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
+  
   
   .apply-btn {
     margin-top: 20px;
