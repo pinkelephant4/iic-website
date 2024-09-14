@@ -11,24 +11,29 @@ const Carousel = () => {
   const handleScroll = (e) => {
     e.preventDefault();
     const maxScrollLeft = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
+    const scrollLeft = carouselRef.current.scrollLeft;
 
     // Scroll horizontally based on vertical scroll
-    if (carouselRef.current.scrollLeft + e.deltaY <= maxScrollLeft) {
-      carouselRef.current.scrollLeft += e.deltaY * 1.5; // Adjust sensitivity for smoother trackpad and mouse scroll
-      setIsScrollable(false); // Prevent page scrolling while carousel is active
-      setHasReachedEnd(false); // Reset end reach state
+    if (scrollLeft + e.deltaY <= maxScrollLeft) {
+      carouselRef.current.scrollLeft += e.deltaY * 5; // Adjust sensitivity
+      setIsScrollable(false); // Prevent vertical scroll
+      setHasReachedEnd(false); // Reset end state
     }
 
-    // Check if the carousel has reached the end
-    if (carouselRef.current.scrollLeft >= maxScrollLeft) {
-      setIsScrollable(true);
+    // Detect if last card is fully visible
+    const lastCard = carouselRef.current.lastChild;
+    const lastCardRight = lastCard.getBoundingClientRect().right;
+    const carouselRight = carouselRef.current.getBoundingClientRect().right;
+
+    if (lastCardRight <= carouselRight) {
+      setIsScrollable(true); // Enable vertical scroll
       setHasReachedEnd(true);
     } else {
-      setIsScrollable(false);
+      setIsScrollable(false); // Disable vertical scroll until end
     }
   };
 
-  // Function to scroll the page down automatically after reaching the end of the carousel
+  // Function to scroll the page down after reaching the end of the carousel
   const scrollToEnd = () => {
     if (hasReachedEnd) {
       window.scrollTo({
@@ -51,7 +56,7 @@ const Carousel = () => {
 
     carousel.addEventListener('wheel', onWheel, { passive: false });
 
-    // Prevent body from scrolling when carousel is active
+    // Disable page scroll while carousel is active
     document.body.style.overflowY = isScrollable ? 'auto' : 'hidden';
 
     // Trigger scroll down animation when reaching the end

@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; 
-    padding: 20px 0; 
+    height: 70vh; 
+    /* padding: 20px 0;  */
     background-color: black;
   }
   
@@ -12,11 +12,12 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     width: 100vw;
-    max-width: 800px;
-    height: 300px;
+    /* max-width: 800px; */
+    height: 100%;
     scrollbar-width: none;
     -ms-overflow-style: none;
     margin: 0 auto;
+    padding: 10vh;
   }
   
   .carousel-container::-webkit-scrollbar {
@@ -26,8 +27,10 @@
   .carousel-card {
     min-width: 180px;
     flex: 0 0 auto;
-    height: 200px;
-    margin: 0 10px;
+    height: 100%; 
+    width: 20%;
+    /* margin: 0 10px; */
+    margin: 0 2%;
     background-color: #FF1AF9;
     display: flex;
     align-items: center;
@@ -41,6 +44,7 @@
   .carousel-card:hover {
     transform: scale(1.05);
   }
- .carousel-card:nth-child(8){
+
+ /* .carousel-card:nth-child(8){
     margin-right: 5vw;
- }  
+ }   */
