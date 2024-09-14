@@ -17,7 +17,7 @@ export default function Campus() {
           <p>Get your referral code and start promoting, and enjoy perks.</p>
         </div>
 
-        <img className="c" src="../public/c.png" alt="image" />
+        <img className="c" src="/assets/c.png" alt="image" />
 
 
 
