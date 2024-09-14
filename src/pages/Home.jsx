@@ -1,7 +1,7 @@
-import Guest from "./Guest";
-import Carousel from "./Carousel";
-import Sponser from "./Sponser";
-import Faq from "./Faq";
+import Guest from "../home/Guest";
+import Carousel from "../components/Carousel";
+import Sponser from "../home/Sponser";
+import Faq from "../components/Faq";
 
 function Home() {
   return (

@@ -1,5 +1,5 @@
 import "./Guest.css";
-import Person from "./Person";
+import Person from "../components/Person";
 
 const Guest = () => {
   return (
