@@ -1,0 +1,26 @@
+.guest{
+    background-color: black;
+    color: #B026FF;
+    text-align: center;
+}
+.chief-guest-header{
+    text-align: center;
+    font-size: max(1.5vw,20px);
+    padding: 2rem;
+}
+.chief-guest-body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.judge-header{
+    text-align: center;
+    font-size: max(1.5vw,20px);
+    padding: 2rem;
+}
+.judge-body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
