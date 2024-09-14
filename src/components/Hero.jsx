@@ -53,7 +53,7 @@ function Model() {
     mixer.current?.update(delta);
   });
 
-  return <primitive object={scene} scale={0.2} />;
+  return <primitive object={scene} scale={0.25} />;
 }
 
 function Hero() {

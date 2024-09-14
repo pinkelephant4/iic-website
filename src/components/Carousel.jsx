@@ -69,6 +69,10 @@ const Carousel = () => {
   }, [isScrollable, hasReachedEnd]);
 
   return (
+    <>
+    <div className="heading">
+      <h1>THEMES</h1>
+    </div>
     <div className="carousel-wrapper">
       <div className="carousel-container" {...handlers} ref={carouselRef}>
         {[...Array(8)].map((_, index) => (
@@ -78,6 +82,7 @@ const Carousel = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
