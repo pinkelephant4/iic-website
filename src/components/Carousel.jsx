@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import './Carousel.css';
+import '../styles/Carousel.css';
 
 const Carousel = () => {
   const carouselRef = useRef(null);
