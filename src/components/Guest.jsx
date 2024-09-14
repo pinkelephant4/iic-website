@@ -1,4 +1,4 @@
-import "./Guest.css";
+import "../styles/Guest.css";
 import Person from "../components/Person";
 
 const Guest = () => {

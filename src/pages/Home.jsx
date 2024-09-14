@@ -1,6 +1,6 @@
-import Guest from "../home/Guest";
+import Guest from "../components/Guest";
 import Carousel from "../components/Carousel";
-import Sponser from "../home/Sponser";
+import Sponser from "../components/Sponser";
 import Faq from "../components/Faq";
 
 function Home() {

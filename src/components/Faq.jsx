@@ -1,5 +1,5 @@
 import Accordion from 'react-bootstrap/Accordion';
-import "./Faq.css";
+import "../styles/Faq.css";
 
 const faqData = [
   {

@@ -1,4 +1,4 @@
-import "./Person.css";
+import "../styles/Person.css";
 
 const Person = (props) => {
   return (
