@@ -25,7 +25,7 @@ body{
   font-style: normal;
 }
 
-.campus-container {
+.campus-container{
     display: flex;
     flex-direction: column;
     gap: 50px; /* Space between rectangles */
@@ -34,7 +34,7 @@ body{
     margin: 60px;
   }
   
-  .rectangle {
+  .Campus-rectangle {
     position: relative; /* For absolute positioning of the circle */
     width: 500px;
     height: 100px;
@@ -49,7 +49,7 @@ body{
     
   }
 
-  .rectangle > p{
+  .Campus-rectangle > p{
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
@@ -58,7 +58,7 @@ body{
 
 
 
-  .circle {
+  .Campus-circle {
     position: absolute;
     left: 10px;
     width: 50px;
@@ -76,7 +76,7 @@ body{
   
   
   /* Large rectangle with button */
-.large-rectangle {
+.Campus-large-rectangle {
     width: 600px;
     height: 200px;
     background-color: #f1f1f1; /* Light gray background */
@@ -93,7 +93,7 @@ body{
   }
   
   
-  .apply-btn {
+  .Campus-apply-btn {
     margin-top: 20px;
     width: 120px;
     height: 40px;
@@ -106,7 +106,7 @@ body{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .apply-btn:hover {
+  .Campus-apply-btn:hover {
     background-color: black;
   }
   
