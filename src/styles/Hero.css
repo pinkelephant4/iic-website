@@ -1,0 +1,35 @@
+.hero{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.hero-heading{
+  margin: 3rem;
+}
+.hero-heading h1{
+  font-size: 3rem;
+  font-weight: 700;
+}
+.hero-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-left{
+  margin-right: 10vw;
+}
+.hero-left h1{
+  margin: 1rem;
+  font-size: 3rem;
+}
+.hero-left h2{
+  margin: 1rem;
+}
+.hero-right {
+  width: 40vw;
+  height: 80vh;
+  position: relative;
+  background-color: white;
+  margin-left: 10vw;
+}

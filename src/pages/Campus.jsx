@@ -18,9 +18,7 @@ export default function Campus() {
         </div>
 
         <img className="c" src="/assets/c.png" alt="image" />
-
-
-
+        
         <div className="large-rectangle">
           <p className="azerec">Become a MujHackx Campus Ambassador today!</p>
           <button className="apply-btn">Apply Now</button>
