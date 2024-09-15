@@ -35,7 +35,13 @@ const TypingEffect = () => {
 
     return () => clearTimeout(typingIntervalRef.current); // Clear the interval on cleanup
   }, [displayedWord, isDeleting, loopNum, typingSpeed, words]);
-  return <>{displayedWord}</>;
+
+  return (
+    <strong className="typing-container">
+      {displayedWord}
+      <span className="cursor"></span>
+    </strong>
+  );
 };
 
 export default TypingEffect;
