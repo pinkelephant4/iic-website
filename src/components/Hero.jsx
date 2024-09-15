@@ -57,7 +57,6 @@ function Model() {
 }
 
 function Hero() {
-
   return (
     <div className="hero">
       <div className="hero-heading">
@@ -66,7 +65,10 @@ function Hero() {
       <div className="hero-content">
         <div className="hero-left">
           <h1>
-            Get Ready to <span className="typing-effect"><TypingEffect/></span>
+            Get Ready to{" "}
+            <span className="typing-effect">
+              <TypingEffect />
+            </span>
           </h1>
           <h2>Powered by MUJ</h2>
           <h2>Language Partner MUJ</h2>
@@ -75,17 +77,9 @@ function Hero() {
         <div className="hero-right">
           <Canvas camera={{ position: [0, 0, 5], fov: 50 }} shadows>
             <ambientLight intensity={5} />
-            <directionalLight
-              position={[10, 10, 5]}
-              intensity={1}
-              castShadow
-            />
+            <directionalLight position={[10, 10, 5]} intensity={1} castShadow />
             <Model />
-            <OrbitControls
-              enableZoom={true}
-              autoRotate
-              autoRotateSpeed={1.5}
-            />
+            <OrbitControls enableZoom={true} autoRotate autoRotateSpeed={1.5} />
           </Canvas>
         </div>
       </div>
