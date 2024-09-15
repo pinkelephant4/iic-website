@@ -27,7 +27,7 @@ const Carousel = () => {
   return (
     <div className="carousel">
       <div className="header">
-        <h1>THEMES</h1>
+        <h1>Themes</h1>
       </div>
       <div className="carousel-container">
         <button
