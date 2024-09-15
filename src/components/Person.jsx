@@ -8,7 +8,7 @@ const Person = (props) => {
     <div className="imgBox">
         <img src={props.img} alt=""/>
     </div>
-    <div className="content">
+    <div className="person-content">
         <h2>{props.name}<br/>
         <span>{props.post}</span></h2>
     </div>
