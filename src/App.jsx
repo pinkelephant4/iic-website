@@ -3,12 +3,14 @@ import Home from "./pages/Home";
 import Campus from "./pages/Campus";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Mouse from "./components/Mouse";
+import MouseTrail from "./components/MouseTrail";
+
 
 function App() {
   return (
     <Router>
       <div>
+        <MouseTrail />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
