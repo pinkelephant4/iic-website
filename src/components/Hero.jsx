@@ -144,14 +144,14 @@ function Hero() {
               <TypingEffect />
             </span>
           </h1>
-          <br />
 
+          <br />
           <div className="hero-cta-btn">
             Register Now
           </div>
-          <h2>Powered by MUJ</h2>
-          <h2>Language Partner MUJ</h2>
-          <h2>Technical Partner MUJ</h2>
+          {/* <h6>Powered by MUJ</h6>
+          <h6>Language Partner MUJ</h6>
+          <h6>Technical Partner MUJ</h6> */}
         </div>
         <div className="hero-right">
           <Canvas camera={{ position: [0, 2, 5], fov: 50 }} shadows>

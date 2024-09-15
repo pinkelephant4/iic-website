@@ -18,6 +18,7 @@
   top: 4rem;
   text-align: center;
   z-index: 10;
+  text-shadow: 0px 4px 41px rgba(255, 255, 255, 1);
 }
 
 .hero-heading h1 {
@@ -139,11 +140,17 @@ canvas {
   margin-left: 1vw;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-bottom: 0.7rem;
 }
-.hero-cta-btn:hover{
+
+.hero-cta-btn:hover {
   background-color: white;
   border: 2px solid gray;
   /* border-radius: 0px; */
   /* font-size: 1.1rem; */
   color: black;
+}
+
+.hero-left>h6{
+  text-align: center;
 }
