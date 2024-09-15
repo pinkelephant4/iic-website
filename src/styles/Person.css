@@ -13,7 +13,7 @@
   transform: translate(-3.5rem, -3.5rem);
 }
 
-.container .box:hover .content {
+.container .box:hover .person-content {
   transform: translate(3.5rem, 3.5rem);
 }
 
