@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import * as THREE from 'three';
+import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import "../styles/Hero.css";
@@ -12,9 +12,15 @@ function Model() {
 
   useEffect(() => {
     // Load the textures from the folder
-    const engineTexture = textureLoader.load("/models/textures/ENGINE_baseColor.jpeg");
-    const leatherTexture = textureLoader.load("/models/textures/leather_baseColor.jpeg");
-    const meshMatTexture = textureLoader.load("/models/textures/MESH_MAT_baseColor.jpeg");
+    const engineTexture = textureLoader.load(
+      "/models/textures/ENGINE_baseColor.jpeg"
+    );
+    const leatherTexture = textureLoader.load(
+      "/models/textures/leather_baseColor.jpeg"
+    );
+    const meshMatTexture = textureLoader.load(
+      "/models/textures/MESH_MAT_baseColor.jpeg"
+    );
 
     // Create an AnimationMixer if there are animations
     if (animations && animations.length > 0) {
@@ -38,7 +44,7 @@ function Model() {
         if (node.material.map) {
           node.material.map.encoding = THREE.sRGBEncoding;
         }
-        
+
         node.material.needsUpdate = true; // Ensure material updates
 
         // Enable shadow casting and receiving for realism
@@ -46,6 +52,8 @@ function Model() {
         node.receiveShadow = true;
       }
     });
+
+    scene.rotation.set(0.3, 0.5, 0);
   }, [scene, animations, textureLoader]);
 
   // Use the AnimationMixer to update animations in the scene
@@ -59,39 +67,49 @@ function Model() {
 function Hero() {
   return (
     <>
-    <div className="hero">
-    <div className="hero-heading">
-        <h1>International Innovation Challenge</h1>
-    </div>
-    <div className="hero-content">
-    <div className="hero-left">
-        <h1>Get Ready to <span>HACK</span></h1>
-        <h2>Powered by MUJ</h2>
-        <h2>Language Partner MUJ</h2>
-        <h2>Technical Partner MUJ</h2>
-    </div>
-    <div className="hero-right">
-      <Canvas camera={{ position: [0, 0, 5], fov: 50 }} shadows>
-        {/* Ambient Light */}
-        <ambientLight intensity={0.5} />
+      <div className="hero">
+        <div className="hero-heading">
+          <h1>International Innovation Challenge</h1>
+        </div>
+        <div className="hero-content">
+          <div className="hero-left">
+            <h1>
+              Get Ready to <span>HACK</span>
+            </h1>
+            <h2>Powered by MUJ</h2>
+            <h2>Language Partner MUJ</h2>
+            <h2>Technical Partner MUJ</h2>
+          </div>
+          <div className="hero-right">
+            <Canvas camera={{ position: [0, 0, 5], fov: 50 }} shadows>
+              {/* Ambient Light */}
+              <ambientLight intensity={5} />
 
-        {/* Directional Light with shadow casting */}
-        <directionalLight position={[10, 10, 5]} intensity={1} castShadow />
+              {/* Directional Light with shadow casting */}
+              <directionalLight
+                position={[10, 10, 5]}
+                intensity={1}
+                castShadow
+              />
 
-        {/* Load and Render the Model */}
-        <Model />
+              {/* Load and Render the Model */}
+              <Model />
 
-        {/* Orbit controls for interactivity */}
-        <OrbitControls enableZoom={false} />
-      </Canvas>
+              {/* Orbit controls for interactivity */}
+              <OrbitControls
+                enableZoom={true}
+                autoRotate
+                autoRotateSpeed={1.5}
+              />
+            </Canvas>
 
-      {/* Rest of the homepage content */}
-      <div style={{ position: "absolute", top: 0, left: 0, zIndex: 1 }}>
-        {/* Your homepage content */}
+            {/* Rest of the homepage content */}
+            <div style={{ position: "absolute", top: 0, left: 0, zIndex: 1 }}>
+              {/* Your homepage content */}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
-    </div>
     </>
   );
 }
