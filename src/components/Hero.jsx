@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
@@ -79,7 +79,7 @@ function Hero() {
             <ambientLight intensity={5} />
             <directionalLight position={[10, 10, 5]} intensity={5} castShadow />
             <Model />
-            <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={2} />
+            <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1} />
           </Canvas>
         </div>
       </div>
