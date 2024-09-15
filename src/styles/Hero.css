@@ -42,7 +42,7 @@
 .hero-left {
   width: 20%;
   /* Allocate 40% of the width to text */
-  margin-left: 5vw;
+  margin-left: 9vw;
   z-index: 10;
   /* Keep text above the model when zoomed out */
   padding: 2rem;
@@ -86,7 +86,7 @@ canvas {
   background-size: cover;
 }
 
-.typing-effect::after {
+/* .typing-effect::after {
   content: "|";
   animation: blink 0.5s infinite;
   margin-left: 5px;
@@ -104,4 +104,48 @@ canvas {
   100% {
     opacity: 1;
   }
+} */
+
+.typing-container {
+  caret-color: transparent;
+  /* Hide the default caret */
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  /* Cursor width */
+  background-color: white;
+  /* Cursor color */
+  margin-left: 5px;
+  animation: blink 1s step-start infinite;
+  height: 1.9rem;
+
+  /* Adjust cursor height */
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.hero-cta-btn {
+  /* background-color: blue; */
+  width: fit-content;
+  padding: 5%;
+  border: 2px solid gray;
+  border-radius: 9px;
+  font-size: 1.1rem;
+  margin-left: 1vw;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero-cta-btn:hover{
+  background-color: white;
+  border: 2px solid gray;
+  /* border-radius: 0px; */
+  /* font-size: 1.1rem; */
+  color: black;
 }

@@ -143,6 +143,11 @@ function Hero() {
               <TypingEffect />
             </span>
           </h1>
+          <br />
+
+          <div className="hero-cta-btn">
+            Register Now
+          </div>
           <h2>Powered by MUJ</h2>
           <h2>Language Partner MUJ</h2>
           <h2>Technical Partner MUJ</h2>
