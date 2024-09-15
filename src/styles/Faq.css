@@ -1,22 +1,31 @@
 .faq {
+  padding: 5%;
   height: 70vh;
   text-align: center;
   background-color: black;
+  background: url("/assets/pexels-apasaric-1694000.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.faq > h1 {
+
+.faq>h1 {
   padding-top: 2rem;
   color: #b026ff;
 }
+
 .faq-wrapper {
   width: 80vw;
   margin: auto;
   margin-top: 3rem;
   background-color: black;
 }
+
 .faq-body {
   margin: 2rem;
   border-color: black;
 }
+
 .faq .accordion-button {
   display: flex;
   justify-content: space-between;
@@ -37,8 +46,9 @@
   font-weight: 700;
   box-shadow: none !important;
 }
+
 .answer {
-  background-color: black;
+  background-color: rgb(149, 149, 149);
   color: #e2e2e2;
   font-size: 1.2rem;
   font-weight: 700;

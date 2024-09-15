@@ -4,22 +4,11 @@ export default function Campus() {
 
     <div>
       <div className="Campus-background-container">
-       <div className="Campus-overlay-text">Campus Ambassador IIC. Be the leader of your Campus
-        <br />
+       <div className="Campus-overlay-text">Campus Ambassador IIC. Be the leader of your Campus<br></br>
         <button className="Campus-apply-btn">Apply</button>
        </div>
       </div>
 
-      {/* <div>
-      <h2 className="Campus-WhyIIC">Why participate in IIC?</h2>
-      <div className="Campus-WhyIIC-container">
-      <div className="Campus-WhyIIC-reasons"><img src="../public/assets/think.png" alt="Icon 1" className="icon" />Gain real-world experience on real problems.</div>
-      <div className="Campus-WhyIIC-reasons">Network with peers, mentors, and recruiters.</div>
-      <div className="Campus-WhyIIC-reasons">Sharpen problem-solving under time pressure.</div>
-      <div className="Campus-WhyIIC-reasons">Build your portfolio with tangible projects.</div>
-      <div className="Campus-WhyIIC-reasons">Innovate and think outside the box.</div>
-      <div className="Campus-WhyIIC-reasons">Explore New Tools and Trends</div>
-      </div></div> */}
 
 <div>
 <h2 className="Campus-WhyIIC">Why participate in IIC?</h2>

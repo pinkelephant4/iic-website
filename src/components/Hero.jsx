@@ -139,6 +139,7 @@ function Hero() {
         <div className="hero-left">
           <h1>
             Get Ready to{" "}
+            <br />
             <span className="typing-effect">
               <TypingEffect />
             </span>

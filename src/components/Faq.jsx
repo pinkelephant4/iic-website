@@ -31,7 +31,7 @@ const faqData = [
 function Faq() {
   return (
     <div className="faq">
-      <h1>Frequently Asked Questions</h1>
+      <h1 style={{ margin: "0 0 2rem 0" }}>Frequently Asked Questions</h1>
       <Accordion className='faq-wrapper'>
         {faqData.map((item) => (
           <Accordion.Item eventKey={item.eventKey} className='faq-body' key={item.eventKey}>
