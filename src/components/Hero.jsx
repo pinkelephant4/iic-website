@@ -73,7 +73,7 @@ function Hero() {
         setTypingSpeed(50); // Speed up when deleting
       } else {
         setDisplayedWord(currentWord.substring(0, displayedWord.length + 1));
-        setTypingSpeed(150); // Normal speed when typing
+        setTypingSpeed(50); // Normal speed when typing
       }
 
       if (!isDeleting && displayedWord === currentWord) {
