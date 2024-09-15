@@ -25,7 +25,9 @@
 
 .hero-left {
   width: 60%; /* Allocate 60% width to hero-left */
+  height: 50vh;
   padding-left: 5vw; /* Optional: add slight padding for text alignment */
+  padding-top: 0;
 }
 
 .hero-left h1 {
