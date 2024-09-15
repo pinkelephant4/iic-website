@@ -9,16 +9,55 @@ export default function Campus() {
        </div>
       </div>
 
-      <div>
+      {/* <div>
       <h2 className="Campus-WhyIIC">Why participate in IIC?</h2>
       <div className="Campus-WhyIIC-container">
-      <div className="Campus-WhyIIC-reasons">Reason 1</div>
-      <div className="Campus-WhyIIC-reasons">Reason 2</div>
-      <div className="Campus-WhyIIC-reasons">Reason 3</div>
-      <div className="Campus-WhyIIC-reasons">Reason 4</div>
-      <div className="Campus-WhyIIC-reasons">Reason 5</div>
-      <div className="Campus-WhyIIC-reasons">Reason 6</div>
-      </div></div>
+      <div className="Campus-WhyIIC-reasons"><img src="../public/assets/think.png" alt="Icon 1" className="icon" />Gain real-world experience on real problems.</div>
+      <div className="Campus-WhyIIC-reasons">Network with peers, mentors, and recruiters.</div>
+      <div className="Campus-WhyIIC-reasons">Sharpen problem-solving under time pressure.</div>
+      <div className="Campus-WhyIIC-reasons">Build your portfolio with tangible projects.</div>
+      <div className="Campus-WhyIIC-reasons">Innovate and think outside the box.</div>
+      <div className="Campus-WhyIIC-reasons">Explore New Tools and Trends</div>
+      </div></div> */}
+
+<div>
+<h2 className="Campus-WhyIIC">Why participate in IIC?</h2>
+<div className="Campus-WhyIIC-container">
+<div className="Campus-WhyIIC-reasons">
+    <img src="../public/assets/think.png" alt=""/>
+    <p>Network with peers, mentors, and recruiters.</p>
+</div>
+
+<div className="Campus-WhyIIC-reasons">
+    <img src="" alt=""/>
+    <p>Gain real-world experience on real problems</p>
+</div>
+
+<div className="Campus-WhyIIC-reasons">
+    <img src="" alt=""/>
+    <p>Sharpen problem-solving under time pressure.</p>
+</div>
+
+<div className="Campus-WhyIIC-reasons">
+    <img src="" alt=""/>
+    <p>Explore New Tools and Trends</p>
+    </div>
+
+<div className="Campus-WhyIIC-reasons">
+    <img src="" alt=""/>
+    <p>Innovate and think outside the box.</p>
+</div>
+
+<div className="Campus-WhyIIC-reasons">
+    <img src="" alt=""/>
+    <p>Build your portfolio with tangible projects.</p>
+</div>
+
+
+</div>
+</div> 
+
+    
       
       <h2 className="Campus-Ambassador azerec">Campus Ambassador in 3 simple steps</h2>
 
