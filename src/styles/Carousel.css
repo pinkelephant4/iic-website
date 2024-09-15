@@ -6,7 +6,7 @@
   /* margin: 0 auto; */
   /* background-color: blue; */
   margin-bottom: 5rem;
-  height: 80vh;
+  /* height: 80vh; */
 }
 
 .header {
@@ -23,7 +23,7 @@
   overflow: hidden;
   width: 100%;
   padding: 0 5rem;
-  margin: 0 1rem;
+  /* margin: 0 1rem; */
 }
 
 .wrapper {
