@@ -17,7 +17,6 @@ const Navbar = () => {
         <Link to="/faqs">Faqs</Link>
       </div>
       <div className="nav-right">
-        <a href="">Register Now!</a>
         <a href="">Problem Statements</a>
       </div>
     </div>
