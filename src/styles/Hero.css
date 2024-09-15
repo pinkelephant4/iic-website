@@ -1,35 +1,69 @@
-.hero{
+.hero {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between; /* Aligns left and right content with no space */
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; /* Ensures horizontal alignment */
+  width: 95vw;
+  height: 100vh; /* Make sure the full height of the viewport is used */
 }
-.hero-heading{
+
+.hero-heading {
   margin: 3rem;
 }
-.hero-heading h1{
+
+.hero-heading h1 {
   font-size: 3rem;
   font-weight: 700;
 }
-.hero-content{
+
+.hero-content {
+  width: 100%; /* Use the full width of the parent */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Aligns content to opposite sides */
   align-items: center;
 }
-.hero-left{
-  margin-right: 10vw;
+
+.hero-left {
+  width: 60%; /* Allocate 60% width to hero-left */
+  padding-left: 5vw; /* Optional: add slight padding for text alignment */
 }
-.hero-left h1{
+
+.hero-left h1 {
   margin: 1rem;
   font-size: 3rem;
 }
-.hero-left h2{
+
+.hero-left h1 span {
+  color: green;
+}
+
+.hero-left h2 {
   margin: 1rem;
 }
+
 .hero-right {
-  width: 40vw;
+  width: 40%; /* Allocate 40% width to hero-right */
   height: 80vh;
   position: relative;
   background-color: black;
-  margin-left: 10vw;
+  padding-right: 5vw;
+  /* Remove margin-left to align the right content fully */
 }
+.typing-effect::after {
+  content: "|";
+  animation: blink .5s infinite;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

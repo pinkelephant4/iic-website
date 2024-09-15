@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
+import { motion } from 'framer-motion'; // Import framer-motion
 import '../styles/Carousel.css';
 
 const Carousel = () => {
@@ -70,18 +71,30 @@ const Carousel = () => {
 
   return (
     <>
-    <div className="heading">
-      <h1>THEMES</h1>
-    </div>
-    <div className="carousel-wrapper">
-      <div className="carousel-container" {...handlers} ref={carouselRef}>
-        {[...Array(8)].map((_, index) => (
-          <div className="carousel-card" key={index}>
-            Card {index + 1}
-          </div>
-        ))}
+      <div className="heading">
+        <h1>THEMES</h1>
       </div>
-    </div>
+      <div className="carousel-wrapper">
+        <div className="carousel-container" {...handlers} ref={carouselRef}>
+          {[...Array(8)].map((_, index) => (
+            <motion.div
+              className="carousel-card"
+              key={index}
+              whileHover={{ rotateY: 180 }} // Add flip animation on hover
+              transition={{ duration: 0.6, ease: 'easeInOut' }} // Smooth animation
+            >
+              <div className="carousel-card-inner">
+                <div className="carousel-card-front">
+                  <p>Card {index + 1} - Front</p>
+                </div>
+                <div className="carousel-card-back">
+                  <p>Card {index + 1} - Back</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </>
   );
 };
