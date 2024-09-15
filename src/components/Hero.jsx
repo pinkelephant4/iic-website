@@ -46,7 +46,7 @@ function Model() {
       }
     });
 
-    scene.rotation.set(0.3, 0.5, 0);
+    scene.rotation.set(0.5, 0.1, 0);
   }, [scene, animations, textureLoader]);
 
   useFrame((state, delta) => {
@@ -77,9 +77,9 @@ function Hero() {
         <div className="hero-right">
           <Canvas camera={{ position: [0, 0, 5], fov: 50 }} shadows>
             <ambientLight intensity={5} />
-            <directionalLight position={[10, 10, 5]} intensity={1} castShadow />
+            <directionalLight position={[10, 10, 5]} intensity={5} castShadow />
             <Model />
-            <OrbitControls enableZoom={true} autoRotate autoRotateSpeed={1.5} />
+            <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={2} />
           </Canvas>
         </div>
       </div>

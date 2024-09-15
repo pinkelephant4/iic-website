@@ -1,38 +1,47 @@
 .hero {
   display: flex;
-  justify-content: space-between; /* Aligns left and right content with no space */
+  justify-content: space-between; /* Keeps text on the left and model on the right */
   align-items: center;
-  flex-direction: column; /* Ensures horizontal alignment */
-  width: 95vw;
-  height: 100vh; /* Make sure the full height of the viewport is used */
+  flex-direction: row; /* Horizontal layout */
+  width: 100vw;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Allows model to cover text when zoomed */
+  position: relative;
 }
 
 .hero-heading {
-  margin: 3rem;
+  margin: 2rem;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  align-content: center;
+  z-index: 10; /* Keep text above the model when zoomed out */
+  padding-left: 20%;
 }
 
 .hero-heading h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  
 }
 
 .hero-content {
-  width: 100%; /* Use the full width of the parent */
   display: flex;
-  justify-content: space-between; /* Aligns content to opposite sides */
+  justify-content: space-between; /* Text on left, model on right */
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-left {
-  width: 60%; /* Allocate 60% width to hero-left */
-  height: 50vh;
-  padding-left: 5vw; /* Optional: add slight padding for text alignment */
-  padding-top: 0;
+  width: 40%; /* Allocate 40% of the width to text */
+  padding-left: 5vw;
+  z-index: 10; /* Keep text above the model when zoomed out */
 }
 
 .hero-left h1 {
   margin: 1rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .hero-left h1 span {
@@ -41,19 +50,24 @@
 
 .hero-left h2 {
   margin: 1rem;
+  font-size: 1.5rem;
 }
 
 .hero-right {
-  width: 40%; /* Allocate 40% width to hero-right */
-  height: 80vh;
-  position: relative;
-  background-color: black;
-  padding-right: 5vw;
-  /* Remove margin-left to align the right content fully */
+  width: 100%; /* Allocate 60% of the width to model */
+  height: 100vh;
+  position: absolute;
+  z-index: 5; /* Lower z-index so model covers text when zoomed in */
 }
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
 .typing-effect::after {
   content: "|";
-  animation: blink .5s infinite;
+  animation: blink 0.5s infinite;
   margin-left: 5px;
 }
 
@@ -68,4 +82,3 @@
     opacity: 1;
   }
 }
-
