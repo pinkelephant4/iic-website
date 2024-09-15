@@ -24,7 +24,7 @@ export default function Campus() {
 <h2 className="Campus-WhyIIC">Why participate in IIC?</h2>
 <div className="Campus-WhyIIC-container">
 <div className="Campus-WhyIIC-reasons">
-    <img src="../public/assets/think.png" alt=""/>
+    <img src="" alt=""/>
     <p>Network with peers, mentors, and recruiters.</p>
 </div>
 
