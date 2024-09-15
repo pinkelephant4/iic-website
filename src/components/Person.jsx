@@ -2,14 +2,19 @@ import "../styles/Person.css";
 
 const Person = (props) => {
   return (
-    <div className="guest-card">
-      <div className="guest-img"></div>
-      <div className="guest-text">
-        <h2>{props.name}</h2>
-        <h3>{props.about}</h3>
-        <h4>{props.post}</h4>
-      </div>
+    <>
+    <div className="container">
+    <div className="box">
+    <div className="imgBox">
+        <img src={props.img} alt=""/>
     </div>
+    <div className="person-content">
+        <h2>{props.name}<br/>
+        <span>{props.post}</span></h2>
+    </div>
+</div>
+</div>
+</>
   );
 };
 
