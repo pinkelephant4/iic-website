@@ -5,6 +5,7 @@ export default function Campus() {
     <div>
       <div className="Campus-background-container">
        <div className="Campus-overlay-text">Campus Ambassador IIC. Be the leader of your Campus
+        <br />
         <button className="Campus-apply-btn">Apply</button>
        </div>
       </div>
