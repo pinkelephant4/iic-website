@@ -1,23 +1,47 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Campus from "./pages/Campus";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-
+import Loading from "./components/Loading"; // Import the Loading component
 
 function App() {
+  const [loading, setLoading] = useState(true); // Manage loading state
+  const location = useLocation(); // Get the current route location
+
+  useEffect(() => {
+    // Trigger loading on route change or initial load
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false); // Turn off loading after animation duration
+    }, 1500); // Adjust time as needed
+
+    return () => clearTimeout(timer); // Cleanup timeout on route change
+  }, [location]); // Dependency array to trigger effect on location change
+
   return (
-    <Router>
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/ambassador" element={<Campus />} />
-        </Routes>       
-        <Footer />
-      </div>
-    </Router>
+    <>
+      {loading ? (
+        <Loading /> // Show loading animation while loading is true
+      ) : (
+        <>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/ambassador" element={<Campus />} />
+          </Routes>
+          <Footer />
+        </>
+      )}
+    </>
   );
 }
 
-export default App;
+export default function WrappedApp() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
