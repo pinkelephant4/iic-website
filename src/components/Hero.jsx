@@ -83,7 +83,7 @@ function Model() {
           const targetY = mouseX * Math.PI * 0.5; // Rotate horizontally
 
           setTargetRotation({ x: targetX, y: targetY });
-        }, 50); // Update every 50ms
+        }, 15); // Update every 50ms
       }
     };
 
@@ -148,7 +148,7 @@ function Hero() {
           <h2>Technical Partner MUJ</h2>
         </div>
         <div className="hero-right">
-          <Canvas camera={{ position: [0, 2, 5], fov: 45 }} shadows>
+          <Canvas camera={{ position: [0, 2, 5], fov: 50 }} shadows>
             <ambientLight intensity={5} />
             <directionalLight position={[10, 10, 5]} intensity={5} castShadow />
             <Model />
