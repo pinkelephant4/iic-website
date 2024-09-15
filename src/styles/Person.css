@@ -14,7 +14,7 @@
 }
 
 .container .box:hover .person-content {
-  transform: translate(3.5rem, 3.5rem);
+  transform: translate(.5rem, 3rem);
 }
 
 .imgBox {
