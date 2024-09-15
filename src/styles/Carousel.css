@@ -4,11 +4,12 @@
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  height: 80vh;
 }
 
 .header {
   text-align: center;
-  margin: 3vw;
+  margin: 5vw;
 }
 
 .carousel-container {

@@ -43,17 +43,28 @@
 .content {
   width: 50vw;
   height: 30vh;
-  background-color: white;
   margin-top: 5vh;
   text-align: center;
 }
-.content p {
-  color: black;
-  font-size: 3rem;
-  font-weight: 700;
+.content img{
+  width: 15vw;
+  height: 30vh;
+}
+.copyright{
+  margin-top: 2rem;
 }
 .copyright p {
   color: #e2e2e2;
   font-size: 1.1rem;
   font-weight: 600;
+}
+a{
+  color: white;
+  font-size: 2.5rem;
+  margin: 1rem;
+  transition: all .3s ease-in-out;
+}
+a:hover{
+  transform: translateY(-5px);
+  color: lightblue;
 }
