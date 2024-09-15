@@ -6,11 +6,12 @@
   /* margin: 0 auto; */
   /* background-color: blue; */
   margin-bottom: 5rem;
+  height: 80vh;
 }
 
 .header {
   text-align: center;
-  margin: 3vw;
+  margin: 5vw;
   color: #b026ff;
 }
 

@@ -1,6 +1,8 @@
 // Footer.js
 import { Link } from "react-router-dom";
 import "../styles/Footer.css";
+import {BsInstagram} from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -17,7 +19,11 @@ const Footer = () => {
       </div>
       <div className="footer-body">
         <div className="content">
-          <p>Content</p>
+          <img src="/assets/logo.png" alt="" />
+          <div className="footer-icons">
+            <a href=""><BsLinkedin/></a>
+            <a href=""><BsInstagram/></a>
+          </div>
         </div>
       </div>
       <div className="copyright">
