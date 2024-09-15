@@ -4,7 +4,7 @@ export default function Campus() {
 
     <div>
       <div className="Campus-background-container">
-       <div className="Campus-overlay-text">Campus Ambassador MUJIIC. Be the leader of your Campus
+       <div className="Campus-overlay-text">Campus Ambassador IIC. Be the leader of your Campus
         <button className="Campus-apply-btn">Apply</button>
        </div>
       </div>
@@ -34,7 +34,7 @@ export default function Campus() {
         </div>
         <div className="Campus-rectangle">
           <div className="Campus-circle">3</div>
-          <p>Get your referral code and start promoting, and enjoy perks.</p>
+          <p>Get your referral code, start promoting, and enjoy perks.</p>
         </div>
 
 
@@ -46,7 +46,7 @@ export default function Campus() {
     </div>
 
         <div className="Campus-large-rectangle">
-          <p className="azerec">Become a MujHackx Campus Ambassador today!</p>
+          <p className="azerec">Become IIC Campus Ambassador today!</p>
           <button className="Campus-apply-btn">Apply Now</button>
         </div>
       </div>
