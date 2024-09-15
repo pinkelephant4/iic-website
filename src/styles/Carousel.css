@@ -16,6 +16,7 @@
 .header {
   text-align: center;
   margin: 5vw;
+  color: #b026ff;
 }
 
 .carousel-container {
@@ -26,7 +27,7 @@
   overflow: hidden;
   width: 100%;
   padding: 0 5rem;
-  margin: 0 1rem;
+  /* margin: 0 1rem; */
 }
 
 .wrapper {
