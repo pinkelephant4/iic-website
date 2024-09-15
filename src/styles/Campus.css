@@ -46,6 +46,7 @@ body{
 }
 
 .Campus-WhyIIC-reasons {
+  padding:30px;
   background-color: blueviolet; 
   color: white;
   font-size: 18px;
@@ -56,6 +57,11 @@ body{
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* .Campus-WhyIIC-reasons > .icon{
+
+} */
+
 
 
 .Campus-Ambassador{
