@@ -1,0 +1,18 @@
+.particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* This ensures particles don't interfere with other elements */
+  z-index: 9999; /* Ensure particles appear on top of everything else */
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: opacity 0.5s, transform 1s;
+  pointer-events: none;
+}
