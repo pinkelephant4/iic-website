@@ -11,6 +11,7 @@
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: top 0.3s ease-in-out; /* Smooth transition for hiding/showing */
 }
 
 /* Logo section */
@@ -122,4 +123,9 @@
     font-size: 1.2rem;
     margin: 1rem 0;
   }
+}
+
+/* Navbar hidden state */
+.navbar-hidden {
+  top: -8vh; /* Move the navbar up to hide it */
 }

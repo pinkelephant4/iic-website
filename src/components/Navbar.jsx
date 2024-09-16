@@ -1,23 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import '../styles/Navbar.css'; // Ensure this import is at the top of your file
 import { Link } from 'react-router-dom';
-import '../styles/Navbar.css';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [hidden, setHidden] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(prevState => !prevState);
+  const handleScroll = () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      setHidden(true);
+    } else {
+      // Scrolling up
+      setHidden(false);
+    }
+    setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop); // For Mobile or negative scrolling
   };
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollTop]);
+
   return (
-    <nav className="navbar">
+    <div className={`navbar ${hidden ? 'navbar-hidden' : ''}`}>
       <div className="nav-left">
         <h1>LOGO</h1>
       </div>
-      <div className="menu-toggle" onClick={toggleMenu}>
-        &#9776;
-      </div>
-      <div className={`nav-links ${isOpen ? 'open' : ''}`}>
+      <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/timeline">Timeline</Link>
@@ -27,9 +39,12 @@ const Navbar = () => {
         <Link to="/faqs">Faqs</Link>
       </div>
       <div className="nav-right">
-        <a href="#">Problem Statements</a>
+        <a href="">Problem Statements</a>
       </div>
-    </nav>
+      <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
+      </div>
+    </div>
   );
 };
 
