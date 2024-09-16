@@ -1,36 +1,43 @@
 .guest {
-    padding-top: 7%;
-    background-color: black;
-    color: #B026FF;
-    text-align: center;
-    background: url("/assets/pexels-apasaric-1694000.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+  padding-top: 7%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  background: url("/assets/pexels-apasaric-1694000.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .chief-guest-header {
-    text-align: center;
-    font-size: max(1.5vw, 20px);
-    padding: 2rem;
+  text-align: center;
+  font-size: max(1.5vw, 20px);
+  padding: 2rem;
 }
 
 .chief-guest-body {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .judge-header {
-    text-align: center;
-    font-size: max(1.5vw, 20px);
-    padding: 2rem;
-    margin-top: 2rem;
+  text-align: center;
+  font-size: max(1.5vw, 20px);
+  padding: 2rem;
+  margin-top: 2rem;
 }
 
 .judge-body {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .chief-guest-body {
+    flex-direction: column;
+  }
+  .judge-body {
+    flex-direction: column;
+  }
 }

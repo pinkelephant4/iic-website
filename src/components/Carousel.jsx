@@ -1,12 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/Carousel.css";
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [clickCount, setClickCount] = useState(0); // New state to track button clicks
+  const [clickCount, setClickCount] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(4); // Default to 4 cards for large screens
   const totalCards = 8;
-  const visibleCards = 4;
-  const maxClicks = 2; // Maximum number of clicks before disabling
+  const maxClicks = totalCards - visibleCards;
+
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      if (window.innerWidth <= 500) {
+        setVisibleCards(1); // Show 1 card for mobile
+      } else if (window.innerWidth <= 768) {
+        setVisibleCards(2); // Show 2 cards for tablet
+      } else {
+        setVisibleCards(4); // Default to 4 cards for larger screens
+      }
+    };
+    
+    updateVisibleCards(); // Call once on component mount
+    window.addEventListener("resize", updateVisibleCards); // Update when window is resized
+
+    return () => {
+      window.removeEventListener("resize", updateVisibleCards);
+    };
+  }, []);
 
   const handleNext = () => {
     if (clickCount < maxClicks) {
@@ -42,7 +61,7 @@ const Carousel = () => {
             className="carousel-track"
             style={{
               transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
-              width: `${(totalCards * 100) / visibleCards}%`, // Adjust track width
+              width: `${(totalCards * 100) / visibleCards}%`,
             }}
           >
             {[...Array(totalCards)].map((_, index) => (
@@ -61,7 +80,7 @@ const Carousel = () => {
         <button
           className="carousel-button next"
           onClick={handleNext}
-          disabled={clickCount >= maxClicks}
+          disabled={currentIndex >= totalCards - visibleCards}
         >
           &#10095;
         </button>

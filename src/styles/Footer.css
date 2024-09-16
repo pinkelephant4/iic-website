@@ -4,19 +4,24 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 1rem;
 }
+
 .top-line {
   height: 1px;
   width: 90vw;
   background-color: #e2e2e2;
 }
+
 .links {
   width: 90vw;
   height: 10vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
+
 .links a {
   text-decoration: none;
   color: #e2e2e2;
@@ -24,6 +29,7 @@
   font-weight: 600;
   position: relative;
 }
+
 .links a::after {
   content: "";
   height: 2px;
@@ -34,37 +40,102 @@
   background-color: #e2e2e2;
   transition: width 0.3s ease;
 }
+
 .links a:hover:after {
   width: 90%;
 }
+
 .footer-body {
   height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 .content {
   width: 50vw;
   height: 30vh;
   margin-top: 5vh;
   text-align: center;
 }
-.content img{
+
+.content img {
   width: 15vw;
   height: 30vh;
 }
-.copyright{
+
+.copyright {
   margin-top: 2rem;
 }
+
 .copyright p {
   color: #e2e2e2;
   font-size: 1.1rem;
   font-weight: 600;
 }
-a{
+
+/* Social media icons or external links */
+a {
   color: white;
   font-size: 2.5rem;
   margin: 1rem;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-a:hover{
+
+a:hover {
   transform: translateY(-5px);
   color: lightblue;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+  .content {
+    width: 70vw;
+    height: 25vh;
+  }
+
+  .content img {
+    width: 25vw;
+    height: 20vh;
+  }
+
+  .links a {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 500px) {
+  .footer {
+    padding: 0.5rem;
+  }
+
+  .links {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .links a {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .content {
+    width: 80vw;
+    height: 20vh;
+  }
+
+  .content img {
+    width: 35vw;
+    height: 15vh;
+  }
+
+  .copyright p {
+    font-size: 0.9rem;
+  }
+
+  a {
+    font-size: 2rem;
+  }
 }
