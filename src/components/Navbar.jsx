@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <div className={`navbar ${hidden ? 'navbar-hidden' : ''}`}>
       <div className="nav-left">
-        <h1>LOGO</h1>
+        <h1>IIC</h1>
       </div>
       <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <Link to="/">Home</Link>
