@@ -107,6 +107,33 @@ canvas {
   }
 }
 
+.hero-cta-btn {
+  display: inline-block;
+  padding: 0.5rem 5rem; /* Further reduced padding for a smaller button */
+  font-size: 0.875rem; /* Slightly smaller font size */
+  color: white; /* Text color */
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
+  backdrop-filter: blur(8px); /* Slightly less blur */
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-radius: 8px; /* Slightly smaller border radius */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+  position: absolute; /* Positioning relative to the parent */
+  bottom: 10%; /* Position it slightly upward */
+  
+}
+
+.hero-cta-btn:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* Darker background on hover */
+  color: white; /* Ensure text remains white on hover */
+}
+
+
+
 /* Small devices (phones, small tablets) */
 @media (max-width: 768px) {
   .hero {
