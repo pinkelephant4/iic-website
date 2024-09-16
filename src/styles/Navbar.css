@@ -1,23 +1,38 @@
+/* Base styles for navbar */
 .navbar {
   width: 100vw;
   height: 8vh;
-  background-color: #390756;
+  background: rgba(0, 0, 0, 0.5); /* Transparent background with some opacity */
+  backdrop-filter: blur(10px); /* Apply blur effect */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
+
+/* Logo section */
 .nav-left {
   margin-left: 2rem;
 }
+
 .nav-left h1 {
   color: #e2e2e2;
 }
-.nav-links{
-    width: 50vw;
+
+/* Menu links */
+.nav-links {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 50vw;
+  background: rgba(0, 0, 0, 0.7); /* Black background with some transparency */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  border-radius: 5px; /* Optional: add rounded corners */
 }
+
 .nav-links a {
   text-decoration: none;
   color: #e2e2e2;
@@ -26,6 +41,7 @@
   position: relative;
   margin-bottom: 1rem;
 }
+
 .nav-links a::after {
   content: "";
   height: 2px;
@@ -36,16 +52,20 @@
   background-color: #e2e2e2;
   transition: width 0.3s ease;
 }
-.nav-links a:hover:after {
+
+.nav-links a:hover::after {
   width: 90%;
 }
+
+/* Right section for additional links */
 .nav-right {
   margin-right: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8vh;
 }
+
+/* Additional link styling */
 .nav-right a {
   text-decoration: none;
   color: #e2e2e2;
@@ -57,10 +77,12 @@
   border-radius: 10px;
   transition: all ease-in-out 0.3s;
 }
+
 .nav-right a:hover {
   background-color: #e2e2e2;
   color: #390756;
 }
+
 /* Hamburger Menu Icon */
 .menu-toggle {
   display: none;
@@ -77,25 +99,23 @@
     position: absolute;
     top: 8vh;
     right: 0;
-    background-color: #390756;
+    background: rgba(0, 0, 0, 0.7); /* Black background with some transparency */
+    backdrop-filter: blur(10px); /* Apply blur effect */
     width: 100vw;
     align-items: center;
+    z-index: 1000;
   }
 
   .nav-links.open {
-    display: flex; 
+    display: flex;
   }
 
   .menu-toggle {
-    display: block; 
-  }
-
-  .navbar {
-    justify-content: space-between;
+    display: block;
   }
 
   .nav-right {
-    margin-left: auto;
+    display: none;
   }
 
   .nav-links a {

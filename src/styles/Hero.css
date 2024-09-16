@@ -1,9 +1,9 @@
-/* Base styles for larger screens (desktops, laptops, tablets) */
+/* Base styles */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row; /* Keep the horizontal layout for larger screens */
+  flex-direction: row;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -13,7 +13,7 @@
 .hero-heading {
   position: absolute;
   width: 100%;
-  top: 4rem;
+  top: 6rem;
   text-align: center;
   z-index: 10;
   text-shadow: 0px 4px 41px rgba(255, 255, 255, 1);
@@ -24,6 +24,7 @@
   font-weight: 700;
 }
 
+/* Flex layout for hero content */
 .hero-content {
   display: flex;
   justify-content: space-between;
@@ -64,11 +65,12 @@
 }
 
 .hero-right {
-  width: 70%;
+  width: 100%;
   height: 100vh;
   z-index: 5;
   display: flex;
   justify-content: flex-end;
+  padding-top: 5%;
 }
 
 canvas {
@@ -76,26 +78,18 @@ canvas {
   height: 100%;
 }
 
-/* Responsive adjustments for tablets and smaller devices */
+/* Responsive adjustments */
+
+/* Medium devices (tablets, small laptops) */
 @media (max-width: 1024px) {
   .hero {
-    flex-direction: column; /* Switch to column layout for smaller screens */
-    height: auto;
-  }
-
-  .hero-heading {
-    position: static; /* Remove absolute positioning */
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .hero-heading h1 {
-    font-size: 2.5rem;
+    flex-direction: column;
   }
 
   .hero-left {
     width: 90%;
-    margin: 2rem auto;
+    margin-left: 5vw;
+    margin-bottom: 2rem;
     padding: 1rem;
   }
 
@@ -103,25 +97,25 @@ canvas {
     font-size: 2rem;
   }
 
+  .hero-heading h1 {
+    font-size: 2.5rem;
+  }
+
   .hero-right {
     width: 100%;
-    height: 40vh; /* Reduce the height of the 3D model for smaller screens */
-    margin-bottom: 2rem;
+    height: 50vh;
   }
 }
 
-/* Mobile-first styles */
+/* Small devices (phones, small tablets) */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
   }
 
-  .hero-heading {
-    margin-bottom: 1rem;
-  }
-
   .hero-heading h1 {
     font-size: 2rem;
+    top: 2rem;
   }
 
   .hero-left {
@@ -145,14 +139,15 @@ canvas {
 
   .hero-right {
     width: 100%;
-    height: 50vh;
-    margin-bottom: 2rem;
+    height: 40vh;
   }
 }
 
+/* Extra small devices (phones, small screens) */
 @media (max-width: 480px) {
   .hero-heading h1 {
     font-size: 1.5rem;
+    top: 1rem;
   }
 
   .hero-left {
@@ -176,7 +171,6 @@ canvas {
 
   .hero-right {
     width: 100%;
-    height: 40vh;
-    margin-bottom: 1rem;
+    height: 30vh;
   }
 }

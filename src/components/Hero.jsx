@@ -123,7 +123,7 @@ function Model() {
   return (
     <primitive
       object={scene}
-      scale={0.25}
+      scale={0.30}
       onClick={() => setIsAnimationPaused(!isAnimationPaused)} // Toggle animation on click
     />
   );
