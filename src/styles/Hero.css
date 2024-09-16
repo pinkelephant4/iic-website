@@ -78,6 +78,30 @@ canvas {
   height: 100%;
 }
 
+.hero-cta-btn {
+  display: inline-block;
+  padding: 0.5rem 5rem; /* Base padding */
+  font-size: 1rem; /* Base font size */
+  color: white; /* Text color */
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
+  backdrop-filter: blur(8px); /* Slight blur effect */
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Slight shadow */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+  position: absolute; /* Positioning relative to the parent */
+  bottom: 10%; /* Position it slightly upward */
+}
+
+.hero-cta-btn:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* Darker background on hover */
+  color: white; /* Ensure text remains white on hover */
+}
+
 /* Responsive adjustments */
 
 /* Medium devices (tablets, small laptops) */
@@ -107,33 +131,6 @@ canvas {
   }
 }
 
-.hero-cta-btn {
-  display: inline-block;
-  padding: 0.5rem 5rem; /* Further reduced padding for a smaller button */
-  font-size: 0.875rem; /* Slightly smaller font size */
-  color: white; /* Text color */
-  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
-  backdrop-filter: blur(8px); /* Slightly less blur */
-  -webkit-backdrop-filter: blur(8px); /* For Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
-  border-radius: 8px; /* Slightly smaller border radius */
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow */
-  text-align: center; /* Center text */
-  text-decoration: none; /* Remove underline */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
-  position: absolute; /* Positioning relative to the parent */
-  bottom: 10%; /* Position it slightly upward */
-  
-}
-
-.hero-cta-btn:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Darker background on hover */
-  color: white; /* Ensure text remains white on hover */
-}
-
-
-
 /* Small devices (phones, small tablets) */
 @media (max-width: 768px) {
   .hero {
@@ -160,8 +157,11 @@ canvas {
   }
 
   .hero-cta-btn {
-    padding: 10%;
-    font-size: 1rem;
+    padding: 0.5rem 1rem; /* Adjusted padding for tablets */
+    font-size: 0.875rem; /* Slightly smaller font size */
+    bottom: 2rem; /* Position it slightly upward */
+    left: 1.5rem; /* Position it slightly to the right */
+    position: inherit;
   }
 
   .hero-right {
@@ -192,8 +192,10 @@ canvas {
   }
 
   .hero-cta-btn {
-    padding: 12%;
-    font-size: 0.9rem;
+    padding: 0.5rem 1rem; /* Further reduced padding for extra small screens */
+    font-size: 0.8rem; /* Smaller font size */
+    bottom: 1.5rem; /* Position it slightly upward */
+    left: 1rem; /* Position it slightly to the right */
   }
 
   .hero-right {
