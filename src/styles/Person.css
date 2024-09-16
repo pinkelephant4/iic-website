@@ -18,7 +18,7 @@
 }
 
 .container .box:hover .person-content {
-  transform: translate(.5rem, 3rem);
+  transform: translate(0.5rem, 3rem);
 }
 
 /* Image Box */
@@ -38,6 +38,7 @@
   object-fit: cover;
   resize: both;
   transition: transform 0.5s ease-in-out; /* Smooth resizing */
+  border-radius: 10px;
 }
 
 /* Person Content */
@@ -45,7 +46,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100% !important; 
+  width: 100% !important;
   height: 100% !important;
   padding: 1.5rem;
   display: flex;
@@ -55,6 +56,7 @@
   align-items: flex-end;
   text-align: center;
   transition: transform 0.5s ease-in-out;
+  border-radius: 10px;
 }
 
 .person-content h2 {
@@ -78,7 +80,7 @@
   .container .box:hover .person-content {
     transform: translate(0, 3.5rem);
   }
-  
+
   .container .box:hover .imgBox {
     transform: translate(0, -3.5rem);
   }

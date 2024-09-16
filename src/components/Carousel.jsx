@@ -3,7 +3,8 @@ import "../styles/Carousel.css";
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [clickCount, setClickCount] = useState(0);
+  const [clickCount, setClickCount] = useState(0); // Counts total clicks for the right button
+  const [tapCount, setTapCount] = useState(0); // Track taps on the next button
   const [visibleCards, setVisibleCards] = useState(4); // Default to 4 cards for large screens
   const totalCards = 8;
   const maxClicks = totalCards - visibleCards;
@@ -18,7 +19,7 @@ const Carousel = () => {
         setVisibleCards(4); // Default to 4 cards for larger screens
       }
     };
-    
+
     updateVisibleCards(); // Call once on component mount
     window.addEventListener("resize", updateVisibleCards); // Update when window is resized
 
@@ -28,10 +29,11 @@ const Carousel = () => {
   }, []);
 
   const handleNext = () => {
-    if (clickCount < maxClicks) {
+    if (tapCount < 2 && clickCount < maxClicks) {
       if (currentIndex < totalCards - visibleCards) {
         setCurrentIndex((prevIndex) => prevIndex + 1);
         setClickCount((prevCount) => prevCount + 1);
+        setTapCount((prevTapCount) => prevTapCount + 1); // Increment tap count
       }
     }
   };
@@ -40,6 +42,7 @@ const Carousel = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prevIndex) => prevIndex - 1);
       setClickCount(0); // Reset click count when moving left
+      setTapCount(0); // Reset tap count when moving left
     }
   };
 
@@ -80,7 +83,7 @@ const Carousel = () => {
         <button
           className="carousel-button next"
           onClick={handleNext}
-          disabled={currentIndex >= totalCards - visibleCards}
+          disabled={tapCount >= 2 || currentIndex >= totalCards - visibleCards}
         >
           &#10095;
         </button>
