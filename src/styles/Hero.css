@@ -56,7 +56,7 @@
 }
 
 .hero-left h1 span {
-  color: green;
+  color: rgb(255, 134, 112);
 }
 
 .hero-left h2 {
@@ -65,12 +65,12 @@
 }
 
 .hero-right {
-  width: 100%;
+  width: 60%;
   height: 100vh;
   z-index: 5;
   display: flex;
   justify-content: flex-end;
-  padding-top: 5%;
+  padding-top: 10%;
 }
 
 canvas {
@@ -79,27 +79,26 @@ canvas {
 }
 
 .hero-cta-btn {
-  display: inline-block;
-  padding: 0.5rem 5rem; /* Base padding */
-  font-size: 1rem; /* Base font size */
-  color: white; /* Text color */
-  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
-  backdrop-filter: blur(8px); /* Slight blur effect */
-  -webkit-backdrop-filter: blur(8px); /* For Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Slight shadow */
-  text-align: center; /* Center text */
-  text-decoration: none; /* Remove underline */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
-  position: absolute; /* Positioning relative to the parent */
-  bottom: 10%; /* Position it slightly upward */
+  width: fit-content;
+  padding: 0.5rem 0.8rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s, color 0.3s;
+  box-sizing: border-box;
+
+
 }
 
 .hero-cta-btn:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Darker background on hover */
-  color: white; /* Ensure text remains white on hover */
+  background-color: rgba(255, 255, 255, 0.986);
+  color: rgb(0, 0, 0);
 }
 
 /* Responsive adjustments */
@@ -157,10 +156,14 @@ canvas {
   }
 
   .hero-cta-btn {
-    padding: 0.5rem 1rem; /* Adjusted padding for tablets */
-    font-size: 0.875rem; /* Slightly smaller font size */
-    bottom: 2rem; /* Position it slightly upward */
-    left: 1.5rem; /* Position it slightly to the right */
+    padding: 0.5rem 1rem;
+    /* Adjusted padding for tablets */
+    font-size: 0.875rem;
+    /* Slightly smaller font size */
+    bottom: 2rem;
+    /* Position it slightly upward */
+    left: 1.5rem;
+    /* Position it slightly to the right */
     position: inherit;
   }
 
@@ -192,10 +195,14 @@ canvas {
   }
 
   .hero-cta-btn {
-    padding: 0.5rem 1rem; /* Further reduced padding for extra small screens */
-    font-size: 0.8rem; /* Smaller font size */
-    bottom: 1.5rem; /* Position it slightly upward */
-    left: 1rem; /* Position it slightly to the right */
+    padding: 0.5rem 1rem;
+    /* Further reduced padding for extra small screens */
+    font-size: 0.8rem;
+    /* Smaller font size */
+    bottom: 1.5rem;
+    /* Position it slightly upward */
+    left: 1rem;
+    /* Position it slightly to the right */
   }
 
   .hero-right {
