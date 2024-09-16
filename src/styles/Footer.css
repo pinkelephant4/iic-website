@@ -59,7 +59,7 @@
 .content {
   width: 50vw;
   height: 30vh;
-  margin-top: 5vh;
+  margin: 5vh;
   text-align: center;
 }
 
@@ -136,7 +136,7 @@ a:hover {
 
   .content {
     width: 80vw;
-    height: 20vh;
+    height: 30vh;
   }
 
   .content img {
