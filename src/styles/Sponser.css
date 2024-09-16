@@ -1,3 +1,4 @@
+/* Sponsor Section */
 .sponser {
     background-color: black;
     color: white;
@@ -9,28 +10,63 @@
     background-size: cover;
 }
 
+/* Sponsor Header */
 .sponser-header {
-    
     text-align: center;
-    font-size: max(1.5vw, 20px);
+    font-size: clamp(1.5rem, 2vw, 2.5rem); /* Ensure responsive font size */
     padding: 2rem;
 }
 
+/* Sponsor Body */
 .sponser-body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; /* For mobile-first, start with column */
+    padding: 2rem 0;
 }
 
+/* Sections for Sponsors or Logos */
 section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
     margin: 2rem auto;
 }
 
+/* Sponsor Heading */
 .heading {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 2vw, 2.2rem); /* Make heading responsive */
     margin: 1.5rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sponser-body {
+        padding: 1rem 0; /* Reduce padding for smaller screens */
+    }
+
+    section {
+        flex-direction: column; /* Stack sections on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .sponser {
+        padding-top: 5%; /* Reduce top padding for smaller screens */
+    }
+
+    .sponser-header {
+        font-size: 1.5rem; /* Ensure font doesn't get too large */
+        padding: 1.5rem;
+    }
+
+    .heading {
+        font-size: 1.5rem; /* Ensure heading is readable */
+    }
+
+    section {
+        margin: 1.5rem auto;
+    }
 }

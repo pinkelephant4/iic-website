@@ -1,3 +1,4 @@
+/* Footer Base Styles */
 .footer {
   background-color: black;
   display: flex;
@@ -13,6 +14,7 @@
   background-color: #e2e2e2;
 }
 
+/* Footer Links */
 .links {
   width: 90vw;
   height: 10vh;
@@ -41,10 +43,11 @@
   transition: width 0.3s ease;
 }
 
-.links a:hover:after {
+.links a:hover::after {
   width: 90%;
 }
 
+/* Footer Content Section */
 .footer-body {
   height: 40vh;
   display: flex;
@@ -65,6 +68,7 @@
   height: 30vh;
 }
 
+/* Copyright Section */
 .copyright {
   margin-top: 2rem;
 }
@@ -75,7 +79,7 @@
   font-weight: 600;
 }
 
-/* Social media icons or external links */
+/* Social Media or External Links */
 a {
   color: white;
   font-size: 2.5rem;
@@ -88,7 +92,7 @@ a:hover {
   color: lightblue;
 }
 
-/* Responsive styles for tablets and smaller screens */
+/* Responsive Styles for Tablets and Smaller Screens */
 @media (max-width: 768px) {
   .content {
     width: 70vw;
@@ -103,9 +107,17 @@ a:hover {
   .links a {
     font-size: 1rem;
   }
+
+  .links {
+    flex-wrap: wrap; /* Make sure links wrap well */
+  }
+
+  .footer-body {
+    height: auto; /* Adjust footer height for tablets */
+  }
 }
 
-/* Responsive styles for mobile phones */
+/* Responsive Styles for Mobile Phones */
 @media (max-width: 500px) {
   .footer {
     padding: 0.5rem;
@@ -114,6 +126,7 @@ a:hover {
   .links {
     flex-direction: column;
     height: auto;
+    align-items: center; /* Ensure links are centered */
   }
 
   .links a {
@@ -137,5 +150,10 @@ a:hover {
 
   a {
     font-size: 2rem;
+  }
+
+  .footer-body {
+    height: auto;
+    margin-top: 2rem; /* Ensure footer body has proper margin */
   }
 }

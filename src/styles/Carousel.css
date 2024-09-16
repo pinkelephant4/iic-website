@@ -127,10 +127,32 @@
   right: 0;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+  .carousel {
+    height: 70vh; /* Adjust carousel height for tablet */
+  }
+
   .card {
-    width: 50%; /* Show 2 cards for tablet */
+    width: 33%; /* Show 3 cards on larger tablets */
+    height: 300px; /* Slightly reduce card height */
+  }
+
+  .header h1 {
+    font-size: 4vw;
+  }
+}
+
+/* Responsive design for smaller tablets */
+@media (max-width: 768px) {
+  .carousel {
+    height: 65vh; /* Further adjust carousel height */
+  }
+
+  .card {
+    width: 50%; /* Show 2 cards for smaller tablets */
+    height: 280px;
+    margin-right: 15px; /* Reduce card gap */
   }
 
   .header h1 {
@@ -138,7 +160,12 @@
   }
 }
 
+/* Responsive design for mobile */
 @media (max-width: 500px) {
+  .carousel {
+    height: 60vh; /* Adjust height for mobile */
+  }
+
   .carousel-container {
     padding: 0 1rem;
   }
@@ -146,6 +173,7 @@
   .card {
     width: 100%; /* Show only 1 card on mobile */
     margin-right: 10px;
+    height: 250px; /* Reduce card height */
   }
 
   .carousel-button {
@@ -156,8 +184,19 @@
   .header h1 {
     font-size: 6vw;
   }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 400px) {
+  .header h1 {
+    font-size: 7vw;
+  }
+
+  .card {
+    height: 220px;
+  }
 
   .carousel {
-    height: 60vh;
+    height: 55vh;
   }
 }

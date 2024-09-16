@@ -1,3 +1,4 @@
+/* FAQ Section */
 .faq {
   padding: 5%;
   height: 70vh;
@@ -9,23 +10,29 @@
   background-size: cover;
 }
 
-.faq>h1 {
+.faq > h1 {
   padding-top: 2rem;
   color: white;
+  font-size: 2.5rem; /* Ensure the heading scales well */
 }
 
+/* FAQ Wrapper */
 .faq-wrapper {
   width: 80vw;
   margin: auto;
   margin-top: 3rem;
   background-color: black;
+  padding: 2rem;
+  border-radius: 15px; /* Optional: add rounding for a softer look */
 }
 
+/* FAQ Body */
 .faq-body {
   margin: 2rem;
   border-color: black;
 }
 
+/* Accordion Buttons */
 .faq .accordion-button {
   display: flex;
   justify-content: space-between;
@@ -36,7 +43,7 @@
   font-weight: 700;
   border: none !important;
   box-shadow: none;
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
 }
 
 .faq .accordion-button:not(.collapsed) {
@@ -54,10 +61,12 @@
   font-weight: 700;
 }
 
+/* Hide default accordion caret */
 .faq .accordion-button::after {
   display: none !important;
 }
 
+/* Custom "+" and "-" icons */
 .faq .accordion-button::before {
   content: "+";
   font-size: 1.25rem;
@@ -68,4 +77,48 @@
 
 .faq .accordion-button:not(.collapsed)::before {
   content: "-";
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .faq-wrapper {
+    width: 90vw; /* Adjust for smaller screens */
+    padding: 1.5rem;
+  }
+  
+  .faq > h1 {
+    font-size: 2rem; /* Reduce heading size for tablets */
+  }
+  
+  .faq .accordion-button {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    padding: 0.5rem 1rem;
+  }
+
+  .answer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .faq-wrapper {
+    width: 95vw; /* Full width for small devices */
+  }
+  
+  .faq > h1 {
+    font-size: 1.8rem; /* Smaller heading size for mobile */
+  }
+  
+  .faq .accordion-button {
+    font-size: 0.9rem;
+  }
+
+  .answer {
+    font-size: 0.9rem;
+  }
+
+  .faq {
+    height: auto; /* Allow dynamic height for mobile devices */
+    padding: 10%;
+  }
 }

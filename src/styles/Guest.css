@@ -1,3 +1,4 @@
+/* Guest Section */
 .guest {
   padding-top: 7%;
   background-color: black;
@@ -9,9 +10,10 @@
   background-size: cover;
 }
 
+/* Chief Guest Section */
 .chief-guest-header {
   text-align: center;
-  font-size: max(1.5vw, 20px);
+  font-size: clamp(1.5rem, 2vw, 2.5rem); /* Ensure font is responsive */
   padding: 2rem;
 }
 
@@ -19,11 +21,13 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 2rem 0; /* Add some spacing for the content */
 }
 
+/* Judge Section */
 .judge-header {
   text-align: center;
-  font-size: max(1.5vw, 20px);
+  font-size: clamp(1.5rem, 2vw, 2.5rem); /* Responsive text size */
   padding: 2rem;
   margin-top: 2rem;
 }
@@ -32,12 +36,18 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 2rem 0; /* Add consistent padding */
 }
+
+/* Responsive Styles for Mobile Devices */
 @media (max-width: 500px) {
-  .chief-guest-body {
+  .chief-guest-body, .judge-body {
     flex-direction: column;
+    padding: 1rem 0; /* Adjust padding for smaller screens */
   }
-  .judge-body {
-    flex-direction: column;
+
+  .chief-guest-header, .judge-header {
+    font-size: 1.5rem; /* Prevent text from getting too small */
+    padding: 1rem;
   }
 }
