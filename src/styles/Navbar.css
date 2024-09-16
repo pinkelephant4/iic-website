@@ -28,10 +28,9 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 50vw;
-  background: rgba(0, 0, 0, 0.7); /* Black background with some transparency */
+  width: 50vw; 
   backdrop-filter: blur(10px); /* Apply blur effect */
-  border-radius: 5px; /* Optional: add rounded corners */
+  border-radius: 5px;  /* Optional: add rounded corners */
 }
 
 .nav-links a {

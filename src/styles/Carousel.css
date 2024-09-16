@@ -41,7 +41,7 @@
 }
 
 .card {
-  width: 25%; /* Default for larger screens */
+  width: 25%;
   height: 360px;
   border-radius: 15px;
   padding: 1.5rem;
@@ -94,6 +94,7 @@
 .card:hover .info {
   transform: translateY(0);
   opacity: 1;
+  cursor: pointer;
 }
 
 .carousel-button {
