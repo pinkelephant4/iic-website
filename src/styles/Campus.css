@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,14 +12,14 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh; /* Ensure body takes full viewport height */
+  min-height: 100vh;
 }
 
-/* Center the Campus background and text */
+/* Campus background and text centering */
 .Campus-background-container {
   width: 100vw;
   height: 400px;
-  background-image: url('../public/assets/space.webp');
+  background-image: url('../public/assets/space.webp'); /* Restoring the image */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -27,15 +28,17 @@ body {
   align-items: center;
 }
 
+/* Overlay text positioning */
 .Campus-overlay-text {
   position: absolute;
   color: white;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  text-align: center; /* Center the text inside the overlay */
+  text-align: center;
 }
 
+/* Why IIC Section */
 .Campus-WhyIIC {
   text-align: center;
   padding: 50px;
@@ -63,28 +66,28 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Center the Ambassador heading */
+/* Ambassador Heading */
 .Campus-Ambassador {
   color: blueviolet;
   text-align: center;
   font-size: 36px;
   padding: 50px;
-  margin: 0; /* Remove margin to keep it centered */
 }
 
-/* Flexbox to center content */
+/* Campus container with proper alignment */
 .Campus-container {
   display: flex;
   flex-direction: column;
   gap: 50px;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Ensure it takes full width */
-  max-width: 1200px; /* Optional: limit maximum width */
-  margin: 0 auto; /* Center the container */
-  padding: 20px; /* Add padding if needed */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/* Rectangles aligned and centered */
 .Campus-rectangle {
   position: relative;
   width: 500px;
@@ -96,7 +99,9 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  padding-left: 50px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .Campus-rectangle > p {
@@ -120,35 +125,7 @@ body {
   font-size: 18px;
 }
 
-/* Center the background container */
-.Campus-bg-IIC {
-  width: 100vw;
-  height: 400px;
-  background-image: url('../public/assets/image.png');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px; /* Add space below the container */
-}
-
-/* Add padding and margin to separate the glass overlay from other content */
-.Campus-glass-overlay {
-  width: 30%;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  text-align: center;
-  color: white;
-  position: relative; /* Ensure the overlay is not affected by absolute positioning */
-}
-
-/* Ensure large rectangle is distinct and centered */
+/* Large rectangle with proper centering */
 .Campus-large-rectangle {
   width: 600px;
   height: 200px;
@@ -163,11 +140,10 @@ body {
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 20px; /* Add space above the large rectangle */
-  position: relative;
+  margin: 20px auto;
 }
 
-/* Center the button */
+/* Apply Button Centering */
 .Campus-apply-btn {
   margin-top: 20px;
   width: 120px;
@@ -183,7 +159,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: auto;
-  margin-right: auto; /* Centers the button horizontally */
+  margin-right: auto;
 }
 
 .Campus-apply-btn:hover {
@@ -192,4 +168,64 @@ body {
 
 .Campus-space {
   width: 100%;
+  text-align: center;
+}
+
+/* Glass overlay styling */
+.Campus-glass-overlay {
+  width: 100%;
+  max-width: 400px; /* Set maximum width */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  color: white;
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Mobile and Tablet Responsiveness */
+@media only screen and (max-width: 1024px) {
+  /* Tablet view */
+  .Campus-WhyIIC-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Campus-rectangle, .Campus-large-rectangle {
+    width: 90%;
+  }
+
+  .Campus-glass-overlay {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Mobile view */
+  body {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .Campus-WhyIIC-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Campus-rectangle, .Campus-large-rectangle {
+    width: 90%;
+  }
+
+  .Campus-glass-overlay {
+    width: 90%;
+  }
+
+  .Campus-bg-IIC {
+    height: 250px;
+  }
+
+  .Campus-container {
+    width: 100%;
+    padding: 10px;
+  }
 }
