@@ -39,6 +39,7 @@
 
 .hero-left {
   width: 30%;
+  height: 40vh;
   margin-left: 9vw;
   z-index: 10;
   padding: 2rem;
@@ -53,10 +54,11 @@
 .hero-left h1 {
   margin: 1rem;
   font-size: 2.5rem;
+  line-height: 4rem;
 }
 
 .hero-left h1 span {
-  color: green;
+  color: rgb(0, 255, 0);
 }
 
 .hero-left h2 {
@@ -70,7 +72,7 @@
   z-index: 5;
   display: flex;
   justify-content: flex-end;
-  padding-top: 5%;
+  padding-top: 9%;
 }
 
 canvas {
@@ -81,7 +83,7 @@ canvas {
 .hero-cta-btn {
   display: inline-block;
   padding: 0.5rem 5rem; /* Base padding */
-  font-size: 1rem; /* Base font size */
+  font-size: 1.2rem; /* Base font size */
   color: white; /* Text color */
   background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
   backdrop-filter: blur(8px); /* Slight blur effect */
@@ -98,7 +100,7 @@ canvas {
 }
 
 .hero-cta-btn:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Darker background on hover */
+  background-color: rgba(0, 0, 0,.5);
   color: white; /* Ensure text remains white on hover */
 }
 
