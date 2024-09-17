@@ -19,7 +19,7 @@ body {
 .Campus-background-container {
   width: 100vw;
   height: 400px;
-  background-image: url('../public/assets/space.webp');
+  background-image: url('/assets/space.webp');
   background-size: cover;
   background-position: center;
   position: relative;
