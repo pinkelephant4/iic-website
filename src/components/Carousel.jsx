@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import "../styles/Carousel.css";
 
 import logo1 from "/Theme/Heath.png";
@@ -11,12 +10,12 @@ import logo6 from "/Theme/World.png";
 const Carousel = () => {
   return (
       <div className="theme-page">
-        <h1>THEME</h1>
+        <h1>THEMES</h1>
         
         <div className="themes-row">
           <div className="theme-card">
             <img src={logo1} alt="Theme 1 Logo" className="theme-logo" />
-            <p>Healt Care</p>
+            <p>Health Care</p>
           </div>
           <div className="theme-card">
             <img src={logo2} alt="Theme 2 Logo" className="theme-logo" />
