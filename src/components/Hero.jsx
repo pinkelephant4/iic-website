@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Hero.css'
+import MagneticEffect from './magnetic'
 
 const Hero = () => {
   return (
@@ -13,8 +14,14 @@ const Hero = () => {
         </div>
         <div className="hero-bottom">
           <div className="hero-bottom-icons">
-            <img src="/assets/insta-b.svg" alt="Instagram" className='hero-bottom-icon' />
-            <img src="/assets/linkedin-b.svg" alt="LinkedIn" className='hero-bottom-icon' />
+
+            <MagneticEffect>
+              <img src="/assets/insta-b.svg" alt="Instagram" className='hero-bottom-icon' />
+            </MagneticEffect>
+
+            <MagneticEffect>
+              <img src="/assets/linkedin-b.svg" alt="LinkedIn" className='hero-bottom-icon' />
+            </MagneticEffect>
           </div>
 
           <div className='hero-bottom-left'>
@@ -43,9 +50,11 @@ const Hero = () => {
           </div>
           <div className='hero-bottom-right'>
             <div className="hero-bottom-right-container">
-              <div className="hero-bottom-right-register-btn">
-                Register Now
-              </div>
+              <MagneticEffect>
+                <div className="hero-bottom-right-register-btn">
+                  Register Now
+                </div>
+              </MagneticEffect>
               <div className='hero-bottom-right-about' >
 
                 <span>About</span>
