@@ -1,36 +1,30 @@
 /* FAQ Section */
 .faq {
   padding: 5%;
-  height: 80vh;
-  text-align: center;
-  background-color: black;
-  background: url("/assets/pexels-apasaric-1694000.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 5rem;
+  padding-top: 2%;
+  height: 85vh;
+  background-color: #eae9ff;
 }
 
 .faq > h1 {
-  padding-top: 2rem;
-  color: white;
-  font-size: 2.5rem; /* Ensure the heading scales well */
+  padding-left: 4.7rem;
+  color: black;
+  font-size: 3.5rem;
 }
 
 /* FAQ Wrapper */
 .faq-wrapper {
-  width: 80vw;
-  margin: auto;
-  margin-top: 3rem;
-  background-color: black;
+  width: 90vw;
+  margin: 0;
+  background-color: #eae9ff;
   padding: 2rem;
-  border-radius: 15px; /* Optional: add rounding for a softer look */
+  padding-top: 0.5rem;
 }
 
 /* FAQ Body */
 .faq-body {
   margin: 2rem;
-  border-color: black;
+  border-color: #eae9ff;
 }
 
 /* Accordion Buttons */
@@ -38,28 +32,48 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black !important;
-  color: #e2e2e2 !important;
-  font-size: 1.2rem;
-  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    #612e8d 15%,
+    #c880f0 69%,
+    #5047ff 100%
+  ) !important;
+  color: #eae9ff !important;
+  font-size: 1.7rem;
+  font-weight: 500;
   border: none !important;
+  border-radius: 10px !important;
   box-shadow: none;
   padding: 0.75rem 1.25rem;
+  height: 8vh;
+  transition: all 0.1s ease !important;
+}
+.accordion-item {
+  background-color: #eae9ff !important;
 }
 
 .faq .accordion-button:not(.collapsed) {
   background-color: black !important;
   color: #e2e2e2 !important;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 500;
   box-shadow: none !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
 .answer {
-  background-color: black;
-  color: #e2e2e2;
-  font-size: 1.2rem;
-  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    #612e8d 15%,
+    #c880f0 69%,
+    #5047ff 100%
+  ) !important;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 /* Hide default accordion caret */
@@ -70,7 +84,7 @@
 /* Custom "+" and "-" icons */
 .faq .accordion-button::before {
   content: "+";
-  font-size: 1.25rem;
+  font-size: 2rem;
   color: #e2e2e2;
   margin-left: auto;
   order: 2;
@@ -86,11 +100,11 @@
     width: 90vw; /* Adjust for smaller screens */
     padding: 1.5rem;
   }
-  
+
   .faq > h1 {
     font-size: 2rem; /* Reduce heading size for tablets */
   }
-  
+
   .faq .accordion-button {
     font-size: 1rem; /* Adjust font size for smaller screens */
     padding: 0.5rem 1rem;
@@ -105,11 +119,11 @@
   .faq-wrapper {
     width: 95vw; /* Full width for small devices */
   }
-  
+
   .faq > h1 {
     font-size: 1.8rem; /* Smaller heading size for mobile */
   }
-  
+
   .faq .accordion-button {
     font-size: 0.9rem;
   }
