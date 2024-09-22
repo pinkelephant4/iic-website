@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -13,4 +14,7 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: #8d8d8d;
+}
+*{
+    font-family: 'Rubik','sans-serif';
 }
