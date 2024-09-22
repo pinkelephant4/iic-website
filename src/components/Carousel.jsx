@@ -1,94 +1,48 @@
 import { useState, useEffect } from "react";
 import "../styles/Carousel.css";
 
+import logo1 from "/Theme/Heath.png";
+import logo2 from "/Theme/rocket.png";
+import logo3 from "/Theme/BlockChain.png";
+import logo4 from "/Theme/IOT.png";
+import logo5 from "/Theme/OpenInnovation.png";
+import logo6 from "/Theme/World.png";
+
 const Carousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [clickCount, setClickCount] = useState(0); // Counts total clicks for the right button
-  const [tapCount, setTapCount] = useState(0); // Track taps on the next button
-  const [visibleCards, setVisibleCards] = useState(4); // Default to 4 cards for large screens
-  const totalCards = 8;
-  const maxClicks = totalCards - visibleCards;
-
-  useEffect(() => {
-    const updateVisibleCards = () => {
-      if (window.innerWidth <= 500) {
-        setVisibleCards(1); // Show 1 card for mobile
-      } else if (window.innerWidth <= 768) {
-        setVisibleCards(2); // Show 2 cards for tablet
-      } else {
-        setVisibleCards(4); // Default to 4 cards for larger screens
-      }
-    };
-
-    updateVisibleCards(); // Call once on component mount
-    window.addEventListener("resize", updateVisibleCards); // Update when window is resized
-
-    return () => {
-      window.removeEventListener("resize", updateVisibleCards);
-    };
-  }, []);
-
-  const handleNext = () => {
-    if (tapCount < 2 && clickCount < maxClicks) {
-      if (currentIndex < totalCards - visibleCards) {
-        setCurrentIndex((prevIndex) => prevIndex + 1);
-        setClickCount((prevCount) => prevCount + 1);
-        setTapCount((prevTapCount) => prevTapCount + 1); // Increment tap count
-      }
-    }
-  };
-
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
-      setClickCount(0); // Reset click count when moving left
-      setTapCount(0); // Reset tap count when moving left
-    }
-  };
-
   return (
-    <div className="carousel">
-      <div className="header">
-        <h1>Themes</h1>
-      </div>
-      <div className="carousel-container">
-        <button
-          className="carousel-button prev"
-          onClick={handlePrev}
-          disabled={currentIndex === 0}
-        >
-          &#10094;
-        </button>
-        <div className="wrapper">
-          <div
-            className="carousel-track"
-            style={{
-              transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
-              width: `${(totalCards * 100) / visibleCards}%`,
-            }}
-          >
-            {[...Array(totalCards)].map((_, index) => (
-              <div className="card" key={index}>
-                <img
-                  src={`https://picsum.photos/280/360?random=${index + 1}`}
-                  alt={`Card ${index + 1}`}
-                />
-                <div className="info">
-                  <h1>Card {index + 1}</h1>
-                </div>
-              </div>
-            ))}
+      <div className="theme-page">
+        <h1>THEME</h1>
+        
+        <div className="themes-row">
+          <div className="theme-card">
+            <img src={logo1} alt="Theme 1 Logo" className="theme-logo" />
+            <p>Healt Care</p>
+          </div>
+          <div className="theme-card">
+            <img src={logo2} alt="Theme 2 Logo" className="theme-logo" />
+            <p>Space Tech</p>
+          </div>
+          <div className="theme-card">
+            <img src={logo3} alt="Theme 3 Logo" className="theme-logo" />
+            <p>BlockChain</p>
           </div>
         </div>
-        <button
-          className="carousel-button next"
-          onClick={handleNext}
-          disabled={tapCount >= 2 || currentIndex >= totalCards - visibleCards}
-        >
-          &#10095;
-        </button>
+        
+        <div className="themes-row">
+          <div className="theme-card">
+            <img src={logo4} alt="Theme 4 Logo" className="theme-logo" />
+            <p>IOT Tech</p>
+          </div>
+          <div className="theme-card">
+            <img src={logo5} alt="Theme 5 Logo" className="theme-logo" />
+            <p>Open Innovation</p>
+          </div>
+          <div className="theme-card">
+            <img src={logo6} alt="Theme 6 Logo" className="theme-logo" />
+            <p>Enviromental</p>
+          </div>
+        </div>
       </div>
-    </div>
   );
 };
 
