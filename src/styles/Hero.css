@@ -118,15 +118,24 @@
 
 .hero-bottom-right-register-btn {
   background-color: black;
+  border: 2px solid transparent;
   border-radius: 15px;
   color: white;
   padding: 0.8vw 1.5vw;
   font-size: 1.5vw;
   margin-top: 7vh;
+  transition: transform 0.3s ease, border 0.3s ease;
+  ;
+  cursor: pointer;
+}
+
+.hero-bottom-right-register-btn:hover {
+  transform: scale(1.05);
+  border: 2px solid rgb(135, 135, 135);
 }
 
 .hero-bottom-right-about {
-  padding: 0 2vw 0 0;
+  padding: 0 2vw 1vw 0;
   text-align: justify;
 }
 
