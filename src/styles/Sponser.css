@@ -8,11 +8,12 @@
 
 /* Sponsor Header */
 .sponser-header {
+  text-align: center;
   padding: 2rem;
 }
 .sponser-header > h1 {
   font-size: 3.2rem;
-  padding-left: 12rem;
+  color: black;
 }
 
 /* Sponsor Body */
@@ -84,3 +85,12 @@
   z-index: 10;
   cursor: pointer;
 }
+/* .knowledge-card:hover{
+  transform: translateX(-8rem);
+}
+.education-card1:hover{
+  transform: translateX(-8rem);
+}
+.education-card2:hover{
+  transform: translateX(-8rem);
+} */

@@ -4,10 +4,10 @@
   padding-top: 2%;
   height: 85vh;
   background-color: #eae9ff;
+  text-align: center;
 }
 
 .faq > h1 {
-  padding-left: 4.7rem;
   color: black;
   font-size: 3.5rem;
 }
