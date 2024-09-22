@@ -1,74 +1,77 @@
 /* Sponsor Section */
 .sponser {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding-top: 8%;
-    background: url("/assets/pexels-apasaric-1694000.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #eae9ff;
+    color: #770fb3;
+    height: 100vh;
+    position: relative;
 }
 
 /* Sponsor Header */
 .sponser-header {
-    text-align: center;
-    font-size: clamp(1.5rem, 2vw, 2.5rem); /* Ensure responsive font size */
     padding: 2rem;
+}
+.sponser-header > h1 {
+    font-size: 3.2rem;
+    padding-left: 12rem;
 }
 
 /* Sponsor Body */
 .sponser-body {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    flex-direction: column; 
-    padding: 2rem 0;
+    flex-direction: column;
+    position: relative;
 }
 
-/* Sections for Sponsors or Logos */
-section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    margin: 2rem auto;
+/* General Card Styling */
+.knowledge-card, .education-card1, .education-card2 {
+    width: 70vw;
+    height: 50vh;
+    text-align: center;
+    position: absolute;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.knowledge-card{
+    background-color: #f6f6f6;
+}
+.education-card1{
+    background-color: #e6e4ff;
+}
+.education-card2{
+    background-color: #efd4ff;
 }
 
-/* Sponsor Heading */
-.heading {
-    font-size: clamp(1.8rem, 2vw, 2.2rem); /* Make heading responsive */
-    margin: 1.5rem 0;
+.knowledge-card h1, .education-card1 h1, .education-card2 h1 {
+    padding: 1rem 0;
+    font-size: 2.5rem;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .sponser-body {
-        padding: 1rem 0; /* Reduce padding for smaller screens */
-    }
-
-    section {
-        flex-direction: column; /* Stack sections on smaller screens */
-        flex-wrap: wrap;
-    }
+/* Hide the rest of the card except h1 */
+.knowledge-card p, .education-card1 p , .education-card2 p{
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    font-size: 2rem;
+}
+/* Adjust Positioning for Overlap */
+.knowledge-card {
+    top: 0; /* Move it down slightly */
+    z-index: 1;
+}
+.education-card1 {
+    top: 5rem; /* Education card stays at the top */
+    z-index: 2;
+}
+.education-card2 {
+    top: 10rem; /* Education card stays at the top */
+    z-index: 3;
 }
 
-@media (max-width: 500px) {
-    .sponser {
-        padding-top: 5%; /* Reduce top padding for smaller screens */
-    }
-
-    .sponser-header {
-        font-size: 1.5rem; /* Ensure font doesn't get too large */
-        padding: 1.5rem;
-    }
-
-    .heading {
-        font-size: 1.5rem; /* Ensure heading is readable */
-    }
-
-    section {
-        margin: 1.5rem auto;
-        flex-wrap: wrap;
-    }
+/* Hover Effect: Show the card when hovered */
+.knowledge-card:hover, .education-card1:hover ,.education-card2:hover{
+    opacity: 1;
+    transform: scale(1.05);
+    z-index: 10;
 }
