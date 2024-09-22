@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/Hero.css'
-import MagneticEffect from './magnetic'
+import MagneticEffect from './Magnetic'
 
 const Hero = () => {
   return (
