@@ -61,6 +61,15 @@
   padding: 0 0 5vh 2vh;
 }
 
+.hero-bottom-icon {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hero-bottom-icon:hover {
+  transform: scale(1.1);
+}
+
 
 .hero-bottom-left {
   width: 28%;
