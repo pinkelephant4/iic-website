@@ -10,7 +10,7 @@ function Home() {
 
       <Hero />
       <Carousel />
-      <Guest />
+      {/* <Guest /> */}
       <Sponser />
       <Faq />
 

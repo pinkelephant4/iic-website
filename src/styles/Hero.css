@@ -23,7 +23,6 @@
 
 .hero-heading {
   text-align: left;
-
   font-size: 4vw;
   margin: 4% 0 0 4%;
   z-index: 4;
@@ -93,11 +92,12 @@
   width: 50%;
   height: auto;
   margin-bottom: 18%;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-bottom-img {
-  width: 100%;
-  /* Full width within its container */
+  width: 90%;
   height: auto;
   z-index: 3;
 }
