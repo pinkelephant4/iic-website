@@ -11,15 +11,15 @@ const Footer = () => {
       <div className="links">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Link to="/timeline">Timeline</Link>
-        <Link to="/ambassador">Ambassador</Link>
+        {/* <Link to="/timeline">Timeline</Link> */}
+        {/* <Link to="/ambassador">Ambassador</Link> */}
         <Link to="/team">Team</Link>
-        <Link to="/gallery">Gallery</Link>
-        <Link to="/faqs">Faqs</Link>
+        {/* <Link to="/gallery">Gallery</Link> */}
+        {/* <Link to="/faqs">Faqs</Link> */}
       </div>
       <div className="footer-body">
         <div className="content">
-          <img src="/assets/logo.png" alt="" />
+          <img src="/assets/iic logo bg removed 2.png" alt="" />
           <div className="footer-icons">
             <a href=""><BsLinkedin/></a>
             <a href=""><BsInstagram/></a>

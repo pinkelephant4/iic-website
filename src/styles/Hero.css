@@ -144,7 +144,7 @@
 }
 
 .hero-bottom-right-about {
-  padding: 0 2vw 1vw 0;
+  padding: 0 3vw 1vw 0;
   text-align: justify;
 }
 
@@ -157,4 +157,5 @@
   color: #8E8E8E;
   line-height: 1.2;
   font-size: 1.1vw;
+  text-align: left;
 }
