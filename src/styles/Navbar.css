@@ -1,130 +1,82 @@
-/* Base styles for navbar */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 .navbar {
-  width: 100vw;
-  height: 8vh;
-  background: rgba(0, 0, 0, 0.5); /* Transparent background with some opacity */
-  backdrop-filter: blur(10px); /* Apply blur effect */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  transition: top 0.3s ease-in-out; /* Smooth transition for hiding/showing */
+  width: 100%;
+  font-family: 'Rubik', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  z-index: 100;
+  transition: all 0.3s ease;
 }
 
-/* Logo section */
+.scrolled {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .nav-left {
-  margin-left: 2rem;
+  width: 33%;
+  padding: 0 0 0 4%;
 }
 
-.nav-left h1 {
-  color: #e2e2e2;
+.nav-left>img {
+  height: 7vh;
 }
 
-/* Menu links */
+.nav-mid {
+  width: 34%;
+
+}
+
 .nav-links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  width: 50vw; 
-  backdrop-filter: blur(10px); /* Apply blur effect */
-  border-radius: 5px;  /* Optional: add rounded corners */
+
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #e2e2e2;
-  font-size: 1.2rem;
-  font-weight: 600;
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.nav-links a::after {
-  content: "";
-  height: 2px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  background-color: #e2e2e2;
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 90%;
-}
-
-/* Right section for additional links */
-.nav-right {
-  margin-right: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Additional link styling */
-.nav-right a {
-  text-decoration: none;
-  color: #e2e2e2;
-  margin: 0 .5rem 0.5rem 1rem;
-  padding: 5px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  border: 2px solid #e2e2e2;
-  border-radius: 10px;
-  transition: all ease-in-out 0.3s;
-}
-
-.nav-right a:hover {
-  background-color: #e2e2e2;
-  color: #390756;
-}
-
-/* Hamburger Menu Icon */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: #e2e2e2;
+.nav-link {
+  font-weight: 300;
+  border: solid 1px #B0B0B0;
+  border-radius: 2rem;
+  background-color: white;
+  font-size: 2vh;
+  padding: 1vh 3.5vh;
   cursor: pointer;
 }
 
-/* Responsive Styles for Screens Smaller than 768px */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 8vh;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7); /* Black background with some transparency */
-    backdrop-filter: blur(10px); /* Apply blur effect */
-    width: 100vw;
-    align-items: center;
-    z-index: 1000;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-right {
-    display: none;
-  }
-
-  .nav-links a {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-  }
+.nav-link.active {
+  background-color: black;
+  color: white;
+  border: none;
 }
 
-/* Navbar hidden state */
-.navbar-hidden {
-  top: -8vh; /* Move the navbar up to hide it */
+.nav-right {
+  width: 33%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-right-btn {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 2vh 3.5vh;
+  z-index: 4;
+  font-size: 2.5vh;
+  border-bottom-left-radius: 1.4rem;
+  cursor: pointer;
+}
+
+.nav-right-btn>img {
+  height: 3.5vh;
+  padding-left: 1vh;
 }
