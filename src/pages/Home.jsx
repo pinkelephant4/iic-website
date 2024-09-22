@@ -7,13 +7,13 @@ import Hero from "../components/Hero";
 function Home() {
   return (
     <>
-      <div>
-        <Hero/>
-        <Carousel />
-        <Guest />
-        <Sponser />
-        <Faq />
-      </div>
+
+      <Hero />
+      <Carousel />
+      <Guest />
+      <Sponser />
+      <Faq />
+
     </>
   );
 }

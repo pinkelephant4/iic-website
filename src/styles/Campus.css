@@ -1,9 +1,9 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+//change the name of this tag, it makes changes directly to the html, which affects all the other components.
 body {
   background-color: black;
   color: white;
@@ -13,9 +13,8 @@ body {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-}
+} */
 
-/* Campus background and text centering */
 .Campus-background-container {
   width: 100vw;
   height: 400px;
@@ -55,8 +54,10 @@ body {
 
 .Campus-WhyIIC-reasons {
   padding: 30px;
-  background-color: white; /* Changed from blueviolet to white */
-  color: black; /* Changed text color to black */
+  background-color: white;
+  /* Changed from blueviolet to white */
+  color: black;
+  /* Changed text color to black */
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -68,7 +69,8 @@ body {
 
 /* Ambassador Heading */
 .Campus-Ambassador {
-  color: white; /* Changed from blueviolet to white */
+  color: white;
+  /* Changed from blueviolet to white */
   text-align: center;
   font-size: 36px;
   padding: 50px;
@@ -104,7 +106,7 @@ body {
   padding-right: 30px;
 }
 
-.Campus-rectangle > p {
+.Campus-rectangle>p {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
@@ -115,8 +117,10 @@ body {
   left: 10px;
   width: 50px;
   height: 60px;
-  background-color: white; /* Changed from blueviolet to white */
-  color: black; /* Changed text color to black */
+  background-color: white;
+  /* Changed from blueviolet to white */
+  color: black;
+  /* Changed text color to black */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -148,8 +152,10 @@ body {
   margin-top: 20px;
   width: 120px;
   height: 40px;
-  background-color: white; /* Default background color */
-  color: black; /* Default text color */
+  background-color: white;
+  /* Default background color */
+  color: black;
+  /* Default text color */
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -160,12 +166,15 @@ body {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  transition: background-color 0.3s, color 0.3s;
+  /* Smooth transition for hover effect */
 }
 
 .Campus-apply-btn:hover {
-  background-color: black; /* Background color changes to black on hover */
-  color: white; /* Text color changes to white on hover */
+  background-color: black;
+  /* Background color changes to black on hover */
+  color: white;
+  /* Text color changes to white on hover */
 }
 
 
@@ -190,12 +199,14 @@ body {
 
 /* Mobile and Tablet Responsiveness */
 @media only screen and (max-width: 1024px) {
+
   /* Tablet view */
   .Campus-WhyIIC-container {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .Campus-rectangle, .Campus-large-rectangle {
+  .Campus-rectangle,
+  .Campus-large-rectangle {
     width: 90%;
   }
 
@@ -205,17 +216,19 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+
   /* Mobile view */
-  body {
+  /* body {
     justify-content: flex-start;
     align-items: center;
-  }
+  } */
 
   .Campus-WhyIIC-container {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .Campus-rectangle, .Campus-large-rectangle {
+  .Campus-rectangle,
+  .Campus-large-rectangle {
     width: 90%;
   }
 
