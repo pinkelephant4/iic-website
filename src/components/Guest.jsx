@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import "../styles/Guest.css";
 
 const Guest = () => {
@@ -23,7 +23,7 @@ const Guest = () => {
 
   return (
     <div className="guest-speaker-container">
-      <h2 className="component-heading">Guest Speakers</h2>
+      <h1 className="component-heading">Guest Speakers</h1>
       <div className="guest-wrapper" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {guests.map((guest, index) => (
           <div className="guest-section" key={index}>

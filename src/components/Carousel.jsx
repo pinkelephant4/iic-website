@@ -11,7 +11,7 @@ import logo6 from "/Theme/World.png";
 const Carousel = () => {
   return (
     <div className="theme-page">
-      <h1>Your Heading</h1>
+      <h1>Themes</h1>
       
       <div className="themes-row">
         <div className="theme-card">
