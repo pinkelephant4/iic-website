@@ -1,28 +1,42 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import '../styles/Navbar.css';
-
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState('up'); // New state to track scroll direction
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection('down');
+      } else {
+        setScrollDirection('up');
+      }
+
+      setLastScrollY(currentScrollY);
+
+      // Add logic to set scrolling state
+      if (currentScrollY > 40) {
         setScrolling(true);
       } else {
         setScrolling(false);
       }
     };
+
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [lastScrollY]);
 
   return (
-    <div className={`navbar ${scrolling ? 'scrolled' : ''}`}>
+    <div className={`navbar ${scrolling ? 'scrolled' : ''} ${scrollDirection === 'down' ? 'hide' : 'show'}`}>
       <div className="nav-left">
-        <img src="/assets/iic logo bg removed 2.png" alt="" />
+        <img src="/assets/iic logo bg removed 2.png" alt="logo" />
       </div>
       <div className="nav-mid">
         <div className="nav-links">
@@ -33,14 +47,12 @@ const Navbar = () => {
       </div>
       <div className="nav-right">
         <div className="nav-right-btn">
-          <span>
-            Problem Statments
-          </span>
-          <img src="/assets/right-arrow.svg" alt="" />
+          <span>Problem Statements</span>
+          <img src="/assets/right-arrow.svg" alt="arrow" />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
