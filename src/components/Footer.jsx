@@ -21,6 +21,7 @@ const Footer = () => {
         <div className="content">
           <img src="/assets/iic logo bg removed 2.png" alt="" />
           <div className="footer-icons">
+            
             <a href=""><BsLinkedin/></a>
             <a href=""><BsInstagram/></a>
           </div>
