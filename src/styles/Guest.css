@@ -1,53 +1,80 @@
-/* Guest Section */
-.guest {
-  padding-top: 7%;
-  background-color: black;
-  color: white;
-  text-align: center;
-  background: url("/assets/pexels-apasaric-1694000.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.guest-speaker-container {
+  width: 100%;
+  background-color: #eae9ff;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Hide overflow to prevent showing previous guests */
 }
 
-/* Chief Guest Section */
-.chief-guest-header {
+.component-heading {
   text-align: center;
-  font-size: clamp(1.5rem, 2vw, 2.5rem); /* Ensure font is responsive */
-  padding: 2rem;
+  margin-bottom: 100px; /* Increased margin for more space */
+  font-size: 36px; /* Make heading larger */
+  font-weight: bold; /* Make the heading bold */
 }
 
-.chief-guest-body {
+.guest-wrapper {
+  display: flex; /* Use flexbox for horizontal alignment */
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+  width: 100%; /* Full width */
+}
+
+.guest-section {
+  min-width: 100%; /* Each guest section takes full width */
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 2rem 0; /* Add some spacing for the content */
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 0.5s forwards; /* Animation for fade-in */
+  padding: 20px;
 }
 
-/* Judge Section */
-.judge-header {
-  text-align: center;
-  font-size: clamp(1.5rem, 2vw, 2.5rem); /* Responsive text size */
-  padding: 2rem;
-  margin-top: 2rem;
+.info-section {
+  flex: 2; /* Take more space for text */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex; /* Center content */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text */
 }
 
-.judge-body {
+.guest-name {
+  font-size: 40px; /* Increase name size for visibility */
+  margin-bottom: 10px;
+}
+
+.guest-description {
+  font-size: 18px; /* Set description size */
+  line-height: 1.5; /* Line height for better readability */
+  max-height: 10.5em; /* Limit to 7 lines (approx.) */
+  overflow: hidden; /* Hide overflow */
+}
+
+.image-section {
+  flex: 1.5; /* Take less space for image */
+  background-color: #afaddf;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  padding: 2rem 0; /* Add consistent padding */
+  padding: 20px;
+  border-radius: 8px;
 }
 
-/* Responsive Styles for Mobile Devices */
-@media (max-width: 500px) {
-  .chief-guest-body, .judge-body {
-    flex-direction: column;
-    padding: 1rem 0; /* Adjust padding for smaller screens */
+.guest-image {
+  max-width: 80%; /* Make image smaller */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Invisible */
+    transform: translateY(10px); /* Start slightly lower */
   }
-
-  .chief-guest-header, .judge-header {
-    font-size: 1.5rem; /* Prevent text from getting too small */
-    padding: 1rem;
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Original position */
   }
 }
