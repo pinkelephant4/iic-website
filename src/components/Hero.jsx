@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <>
       <div className='hero-wrapper'>
-        <img src="assets/Frame 5232.png" alt="" className='hero-bg-img' />
+          <img src="assets/Frame 5232.png" alt="" className='hero-bg-img' />
         <div className="hero-heading">
           <span className='hero-heading-l1'>International Innovation </span>
           <br />
@@ -41,11 +41,13 @@ const Hero = () => {
               alt=""
               className="hero-img-line-element"
             />
+          <MagneticEffect>  
             <img
               src="/assets/zkeypvVwRH2K7Yw8t6e38w 1.png"
               alt=""
               className="hero-bottom-img"
             />
+          </MagneticEffect>  
           </div>
           <div className='hero-bottom-right'>
             <div className="hero-bottom-right-container">

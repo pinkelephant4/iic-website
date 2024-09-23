@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../styles/Guest.css";
+import MagneticEffect from './Magnetic';
 
 const Guest = () => {
+
   const guests = [
     { name: "John Doe", description: "An experienced speaker in technology and innovation. He has transformed startups into successful tech companies. His insights on emerging technologies are sought after globally. John is also a mentor for young entrepreneurs. He believes in leveraging technology to solve real-world problems. His workshops focus on practical skills for the tech-savvy. Outside of work, he enjoys hiking and photography.", image: "/assets/Guest.jpg" },
     { name: "Jane Smith", description: "A renowned expert in environmental science with multiple publications on climate change. Her innovative approaches to conservation have garnered international recognition. She emphasizes the importance of community involvement in environmental issues. Passionate about education, she conducts workshops for students. In her free time, she loves gardening and painting.", image: "/assets/Guest.jpg" },
@@ -23,7 +25,7 @@ const Guest = () => {
 
   return (
     <div className="guest-speaker-container">
-      <h1 className="component-heading">Guest Speakers</h1>
+      <h2 className="component-heading">Guest Speakers</h2>
       <div className="guest-wrapper" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {guests.map((guest, index) => (
           <div className="guest-section" key={index}>
@@ -32,7 +34,10 @@ const Guest = () => {
               <p className="guest-description">{guest.description}</p>
             </div>
             <div className="image-section">
-              <img src={guest.image} alt={guest.name} className="guest-image" />
+              {/* Wrap the image with MagneticEffect component */}
+              <MagneticEffect>
+                <img src={guest.image} alt={guest.name} className="guest-image" />
+              </MagneticEffect>
             </div>
           </div>
         ))}
