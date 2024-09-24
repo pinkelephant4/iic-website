@@ -1,3 +1,4 @@
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +19,7 @@ h1 {
 .themes-row {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .theme-card {
@@ -41,7 +43,7 @@ h1 {
 }
 
 .theme-logo {
-  width: 120px; /* Centered and large logo */
+  width: 120px; /* Centered and large logo for desktop */
   transition: all 0.5s ease-in-out;
   position: relative;
   z-index: 1;
@@ -57,7 +59,6 @@ h1 {
   z-index: 1;
 }
 
-/* Description hidden by default */
 .theme-description {
   font-size: 1rem;
   color: #333;
@@ -65,26 +66,57 @@ h1 {
   transition: opacity 0.5s ease-in-out;
   max-width: 80%;
   text-align: center;
-  position: absolute; 
+  position: absolute;
   bottom: 15px; /* Move the description closer to the theme name */
 }
 
-.theme-card:hover .theme-logo {
-  width: 60px; /* Shrink the logo */
-  position: absolute;
-  left: 20px; /* Move logo to the left */
-  top: 20px; /* Move logo to the top-left */
-  transition: width 0.5s ease-in-out, left 0.5s ease-in-out, top 0.5s ease-in-out;
+/* Hover effects for desktop only */
+@media (min-width: 769px) {
+  .theme-card:hover .theme-logo {
+    width: 60px; /* Shrink the logo */
+    position: absolute;
+    left: 20px; /* Move logo to the left */
+    top: 20px; /* Move logo to the top-left */
+    transition: width 0.5s ease-in-out, left 0.5s ease-in-out, top 0.5s ease-in-out;
+  }
+
+  .theme-card:hover .theme-name {
+    transform: translateY(-20px); /* Move theme name upwards slightly */
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .theme-card:hover .theme-description {
+    opacity: 1; /* Fade in the description */
+    bottom: 10px; /* Keep the description very close to the theme name */
+    transition: opacity 0.5s ease-in-out 0.5s, bottom 0.5s ease-in-out;
+    position: relative;
+  }
 }
 
-.theme-card:hover .theme-name {
-  transform: translateY(-20px); /* Move theme name upwards slightly */
-  transition: transform 0.5s ease-in-out;
-}
+/* Styles for mobile and tablets (hover effects disabled, smaller image size) */
+@media (max-width: 768px) {
+  .theme-card {
+    width: 300px; /* Slightly smaller for mobile */
+    height: 260px;
+  }
 
-.theme-card:hover .theme-description {
-  opacity: 1; /* Fade in the description */
-  bottom: 10px; /* Keep the description very close to the theme name */
-  transition: opacity 0.5s ease-in-out 0.5s, bottom 0.5s ease-in-out; /* Smooth movement and appearance */
-  position: relative;
+  /* Disable hover effect for mobile and tablet */
+  .theme-card:hover .theme-logo,
+  .theme-card:hover .theme-name,
+  .theme-card:hover .theme-description {
+    transform: none;
+    opacity: 1;
+    transition: none; /* Disable transition */
+  }
+
+  .theme-description {
+    opacity: 1; /* Always visible */
+    position: relative;
+    bottom: 10px;
+  }
+
+  /* Make the logo smaller for mobile and tablet */
+  .theme-logo {
+    width: 80px; /* Smaller logo size for mobile and tablet */
+  }
 }

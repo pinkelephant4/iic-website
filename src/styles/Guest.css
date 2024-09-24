@@ -89,3 +89,50 @@
     transform: translateY(0); /* Original position */
   }
 }
+
+@media (max-width: 768px) {
+  .image-section {
+    flex: 1.3; /* Ensure it takes less space compared to text */
+    background-color: #afaddf;
+    display: flex;
+    justify-content: center; /* Ensure the image stays centered horizontally */
+    align-items: center; /* Ensure the image stays centered vertically */
+    padding: 35px 15px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden; /* Prevents overflow due to transformations */
+    height: 300px;
+  }
+
+  .guest-image {
+    max-width: 100%; /* Ensure it doesn't exceed parent width */
+    height: 250px;
+    padding: 0px 0px;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+
+  .info-section {
+    flex: 2; /* Take more space for text */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex; /* Center content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+    height: 300px;
+  }
+  .guest-name {
+    font-size: 20px; /* Increase name size for visibility */
+    margin-bottom: 10px;
+  }
+  
+  .guest-description {
+    font-size: 11px; /* Set description size */
+    line-height: 1.5; /* Line height for better readability */
+    max-height: 10.5em; /* Limit to 7 lines (approx.) */
+    overflow: hidden; /* Hide overflow */
+  }
+}

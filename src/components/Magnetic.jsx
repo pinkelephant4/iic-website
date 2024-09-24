@@ -1,9 +1,29 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 const MagneticEffect = ({ children }) => {
     const magneticRef = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
+        // Function to check if the screen size is mobile/tablet
+        const checkScreenSize = () => {
+            setIsMobile(window.innerWidth <= 768); // Disable for screens <= 768px
+        };
+
+        // Initial check
+        checkScreenSize();
+
+        // Add event listener to check screen size on window resize
+        window.addEventListener('resize', checkScreenSize);
+
+        return () => {
+            window.removeEventListener('resize', checkScreenSize); // Cleanup on unmount
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isMobile) return; // Disable magnetic effect for mobile/tablet
+
         const magneticElement = magneticRef.current;
 
         const handleMouseMove = (e) => {
@@ -34,7 +54,7 @@ const MagneticEffect = ({ children }) => {
             magneticElement.removeEventListener('mousemove', handleMouseMove);
             magneticElement.removeEventListener('mouseout', handleMouseOut);
         };
-    }, []);
+    }, [isMobile]);
 
     return <div ref={magneticRef} className="magnetic">{children}</div>;
 };
