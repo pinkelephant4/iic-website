@@ -3,8 +3,13 @@ import '../styles/Navbar.css';
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
-  const [scrollDirection, setScrollDirection] = useState('up'); // New state to track scroll direction
+  const [scrollDirection, setScrollDirection] = useState('up');
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +23,6 @@ const Navbar = () => {
 
       setLastScrollY(currentScrollY);
 
-      // Add logic to set scrolling state
       if (currentScrollY > 40) {
         setScrolling(true);
       } else {
@@ -50,6 +54,26 @@ const Navbar = () => {
           <span>Problem Statements</span>
           <img src="/assets/right-arrow.svg" alt="arrow" />
         </div>
+      </div>
+
+      {/* Hamburger Menu */}
+      <div className={`hamburger ${menuOpen ? 'hide' : ''}`} onClick={toggleMenu}>
+        &#9776;
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`menu ${menuOpen ? 'active' : ''}`}>
+        <ul className="menu-links">
+          <li className="nav-link" onClick={toggleMenu}>Home</li>
+          <li className="nav-link" onClick={toggleMenu}>About</li>
+          <li className="nav-link" onClick={toggleMenu}>Team</li>
+          <li className="nav-link" onClick={toggleMenu}>Problem Statements</li>
+        </ul>
+      </div>
+
+      {/* Close Menu Icon */}
+      <div className={`hamburger-close ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+        &times;
       </div>
     </div>
   );
