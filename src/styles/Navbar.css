@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.2rem;
 }
 
 .scrolled {
@@ -27,6 +27,7 @@
 
 .nav-left img {
   height: 7vh;
+  margin-left: 4%; /* Adjust logo position to be 4% from the left */
 }
 
 .nav-mid {
@@ -35,7 +36,7 @@
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1rem; /* Reduced gap to make the boxes smaller */
 }
 
 .nav-link {
@@ -43,8 +44,8 @@
   border: 1px solid #B0B0B0;
   border-radius: 2rem;
   background-color: white;
-  font-size: 2vh;
-  padding: 1vh 3.5vh;
+  font-size: 1.8vh; /* Slightly smaller font size */
+  padding: 0.5vh 2.5vh; /* Reduced padding to make the boxes smaller */
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -68,6 +69,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   background-color: black;
@@ -86,9 +88,9 @@
 
 /* Hamburger Menu for Mobile */
 .hamburger {
-  font-size: 3vh;
+  font-size: 5vh;
   cursor: pointer;
-  padding: 1rem;
+  padding: 1.5rem;
   color: black;
   z-index: 2000;
   display: block; /* Visible only on mobile */
@@ -100,9 +102,9 @@
 
 /* Close Menu Icon for Mobile */
 .hamburger-close {
-  font-size: 3vh;
+  font-size: 5vh;
   cursor: pointer;
-  padding: 1rem;
+  padding: 1.5rem;
   color: black;
   z-index: 2000;
   display: none; /* Hidden by default */
@@ -176,8 +178,8 @@
   }
 
   .nav-link {
-    padding: 1.5vh 5vh; /* Larger padding on bigger screens */
-    font-size: 2.5vh;
+    padding: 1vh 4vh; /* Adjusted padding for larger screens */
+    font-size: 2.2vh;
   }
 
   .nav-right-btn {
