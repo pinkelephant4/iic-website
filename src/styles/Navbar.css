@@ -58,6 +58,7 @@
   text-decoration: none;
   font-size: 2vh;
   font-weight: 500;
+  color: black;
 }
 
 .nav-link:hover {
@@ -69,6 +70,9 @@
   background-color: black;
   color: white;
   border: none;
+}
+.nav-link.active a{
+  color: white;
 }
 
 .nav-right {

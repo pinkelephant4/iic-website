@@ -30,7 +30,7 @@
 .info-section {
   flex: 2; /* Take more space for text */
   background-color: white;
-  padding: 20px;
+  padding: 5rem;
   border-radius: 8px;
   display: flex; /* Center content */
   flex-direction: column; /* Stack content vertically */
@@ -57,7 +57,7 @@
   display: flex;
   justify-content: center; /* Ensure the image stays centered horizontally */
   align-items: center; /* Ensure the image stays centered vertically */
-  padding: 35px;
+  padding: 3rem;
   border-radius: 8px;
   position: relative;
   overflow: hidden; /* Prevents overflow due to transformations */

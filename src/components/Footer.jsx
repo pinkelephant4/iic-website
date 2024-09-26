@@ -1,8 +1,10 @@
 // Footer.js
 import { Link } from "react-router-dom";
 import "../styles/Footer.css";
-import {BsInstagram} from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -21,9 +23,18 @@ const Footer = () => {
         <div className="content">
           <img src="/assets/iic logo bg removed 2.png" alt="" />
           <div className="footer-icons">
-            
-            <a href=""><BsLinkedin/></a>
-            <a href=""><BsInstagram/></a>
+            <a href="">
+              <BsTwitter />
+            </a>
+            <a href="">
+              <BsLinkedin />
+            </a>
+            <a href="">
+              <BsInstagram />
+            </a>
+            <a href="">
+              <BsFacebook />
+            </a>
           </div>
         </div>
       </div>
