@@ -16,7 +16,7 @@ function App() {
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false); // Turn off loading after animation duration
-    }, 1500); // Adjust time as needed
+    }, 3000); // Adjust time as needed
 
     return () => clearTimeout(timer); // Cleanup timeout on route change
   }, [location]); // Dependency array to trigger effect on location change
