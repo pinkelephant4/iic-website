@@ -31,7 +31,7 @@
 .typing-animation {
   font-size: 3rem;
   font-weight: 600;
-  border-right: 2px solid;
+  border-right: 2px solid;  
   white-space: nowrap;
   overflow: hidden;
   width: 0;

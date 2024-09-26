@@ -8,7 +8,7 @@ const Loading = () => {
     // Trigger image animation after text animation completes
     const timer = setTimeout(() => {
       setShowImage(true);
-    },2000); // Adjust timing based on your typing animation
+    },2150); // Adjust timing based on your typing animation
 
     return () => clearTimeout(timer);
   }, []);
