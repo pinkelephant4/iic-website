@@ -5,6 +5,7 @@
   height: 85vh;
   background-color: #eae9ff;
   text-align: center;
+  width: 100vw;
 }
 
 .faq > h1 {
@@ -46,7 +47,7 @@
   box-shadow: none;
   padding: 0.75rem 1.25rem;
   height: 8vh;
-  transition: all 0.1s ease !important;
+  transition: all 0s ease !important;
 }
 .accordion-item {
   background-color: #eae9ff !important;

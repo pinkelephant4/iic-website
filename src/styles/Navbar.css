@@ -41,7 +41,7 @@
   /* Reduced gap to make the boxes smaller */
 }
 
-.nav-link {
+.nav-link{
   font-weight: 300;
   border: 1px solid #B0B0B0;
   border-radius: 2rem;
@@ -52,6 +52,12 @@
   /* Reduced padding to make the boxes smaller */
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.nav-link a{
+  text-decoration: none;
+  font-size: 2vh;
+  font-weight: 500;
 }
 
 .nav-link:hover {
@@ -128,7 +134,7 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 100%;
+  width: 50%;
   height: 100vh;
   /* Full height to cover the screen */
   background-color: rgba(255, 255, 255, 0.8);

@@ -1,0 +1,22 @@
+.team{
+    text-align: center;
+    width: 100vw;
+}
+.heading1{
+    height: 20vh;
+}
+.heading1 h1{
+    padding-top: 15vh;
+}
+.heading2{
+    height: 30vh;
+}
+.first{
+    margin: 0;
+    padding-top: 5rem;
+}
+.second{
+    margin: 0;
+    font-weight: 350;
+}
+

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import "../styles/Guest.css";
-import MagneticEffect from './Magnetic';
 
 const Guest = () => {
 
@@ -35,9 +34,7 @@ const Guest = () => {
             </div>
             <div className="image-section">
               {/* Wrap the image with MagneticEffect component */}
-              <MagneticEffect>
                 <img src={guest.image} alt={guest.name} className="guest-image" />
-              </MagneticEffect>
             </div>
           </div>
         ))}

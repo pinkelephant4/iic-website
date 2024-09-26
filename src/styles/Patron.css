@@ -1,0 +1,31 @@
+.patron {
+  height: 75vh;
+  width: 100vw;
+  background-color: #bc9ad9;
+  border-top-right-radius: 50px;
+  margin: 10vh 0;
+}
+.header h1 {
+  font-weight: 400;
+  padding-top: 2rem;
+}
+.content {
+  width: 100vw !important;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5vw;
+}
+
+.box {
+  height: 50vh;
+  width: 40vw;
+  background-color: #bfbcfc;
+  border-radius: 50px;
+}
+@media (max-width: 768px) {
+  .box {
+    height: 40vh;
+    margin-top: 20vh;
+  }
+}

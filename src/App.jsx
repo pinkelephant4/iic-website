@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Campus from "./pages/Campus";
+import Team from "./pages/Team";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Loading from "./components/Loading"; // Import the Loading component
@@ -30,6 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/ambassador" element={<Campus />} />
+            <Route path="/team" element={<Team />} />
           </Routes>
           <Footer />
         </>

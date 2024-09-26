@@ -44,9 +44,9 @@ const Navbar = () => {
       </div>
       <div className="nav-mid">
         <div className="nav-links">
-          <div className="nav-link active">Home</div>
-          <div className="nav-link">About</div>
-          <div className="nav-link">Team</div>
+          <div className="nav-link active"><a href="/">Home</a></div>
+          <div className="nav-link"><a href="/about">About</a></div>
+          <div className="nav-link"><a href="/team">Team</a></div>
         </div>
       </div>
       <div className="nav-right">
