@@ -8,12 +8,12 @@
     box-sizing: border-box;
 }
 
-.header-sc h1 {
+.heading h1 {
     font-weight: 400;
     padding-top: 2rem;
 }
 
-.content-sc {
+.container-sc {
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-evenly;
