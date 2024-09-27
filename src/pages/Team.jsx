@@ -1,5 +1,6 @@
 import Copatron from "../components/Copatron";
 import Patron from "../components/Patron";
+import StudentConvener from "../components/StudentConvener";
 import "../styles/Team.css";
 
 const Team = () => {
@@ -14,6 +15,7 @@ const Team = () => {
       </div>
         <Patron/>
         <Copatron/>
+        <StudentConvener/>
     </div>
   )
 }

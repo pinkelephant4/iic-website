@@ -1,0 +1,54 @@
+.StudentConvener {
+    height: 150vh;
+    width: 100vw;
+    background-color: #bc9ad9;
+    border-top-right-radius: 50px;
+    margin: 10vh 0;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.header-sc h1 {
+    font-weight: 400;
+    padding-top: 2rem;
+}
+
+.content-sc {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5vw;
+}
+
+.box-sc {
+    height: 50vh;
+    width:28vw; /* Controls width for 3 boxes per row */
+    max-width: 30vw;
+    background-color: #bfbcfc;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* For smaller screens, stack boxes into rows of 2 */
+@media (max-width: 1024px) {
+    .box-sc {
+        width: 40vw; /* Adjust box width to fit 2 in a row */
+        max-width: 40vw;
+        margin-top: 5vh;
+    }
+}
+
+/* For very small screens, stack boxes into rows of 1 */
+@media (max-width: 768px) {
+    .box-sc {
+        width: 80vw; /* Full-width for small screens */
+        max-width: 80vw;
+        height: 40vh;
+        margin-top: 10vh;
+    }
+}
