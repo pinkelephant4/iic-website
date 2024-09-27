@@ -1,3 +1,4 @@
+import Copatron from "../components/Copatron";
 import Patron from "../components/Patron";
 import "../styles/Team.css";
 
@@ -12,6 +13,7 @@ const Team = () => {
         <h1 className="second">Challenge 2024</h1>
       </div>
         <Patron/>
+        <Copatron/>
     </div>
   )
 }
