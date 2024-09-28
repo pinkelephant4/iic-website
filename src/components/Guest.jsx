@@ -12,20 +12,50 @@ const Guest = () => {
     { name: "Chris Lee", description: "A digital marketing guru who helps brands build their online presence. His insights on digital trends are highly valued in the industry. He believes in data-driven strategies to achieve measurable results. He also writes a popular blog on digital marketing tips. When not working, Chris enjoys photography and exploring new restaurants.", image: "/assets/Guest.jpg" },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const totalSlides = guests.length;
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % guests.length);
+      setIsTransitioning(true);
+      setCurrentIndex(prevIndex => prevIndex + 1);
     }, 3000); // Change guest every 3 seconds
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, []);
 
+  useEffect(() => {
+    if (currentIndex === totalSlides + 1) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(1);
+      }, 500); // Match this to the transition duration
+    }
+  }, [currentIndex, totalSlides]);
+
   return (
     <div className="guest-speaker-container">
       <h2 className="component-heading">Guest Speakers</h2>
-      <div className="guest-wrapper" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+      <div
+        className="guest-wrapper"
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+          transition: isTransitioning ? 'transform 0.5s ease' : 'none'
+        }}
+      >
+        {/* Clone the last slide and place it at the beginning */}
+        <div className="guest-section">
+          <div className="info-section">
+            <h3 className="guest-name">{guests[totalSlides - 1].name}</h3>
+            <p className="guest-description">{guests[totalSlides - 1].description}</p>
+          </div>
+          <div className="image-section">
+            <img src={guests[totalSlides - 1].image} alt={guests[totalSlides - 1].name} className="guest-image" />
+          </div>
+        </div>
+
         {guests.map((guest, index) => (
           <div className="guest-section" key={index}>
             <div className="info-section">
@@ -33,11 +63,21 @@ const Guest = () => {
               <p className="guest-description">{guest.description}</p>
             </div>
             <div className="image-section">
-              {/* Wrap the image with MagneticEffect component */}
-                <img src={guest.image} alt={guest.name} className="guest-image" />
+              <img src={guest.image} alt={guest.name} className="guest-image" />
             </div>
           </div>
         ))}
+
+        {/* Clone the first slide and place it at the end */}
+        <div className="guest-section">
+          <div className="info-section">
+            <h3 className="guest-name">{guests[0].name}</h3>
+            <p className="guest-description">{guests[0].description}</p>
+          </div>
+          <div className="image-section">
+            <img src={guests[0].image} alt={guests[0].name} className="guest-image" />
+          </div>
+        </div>
       </div>
     </div>
   );

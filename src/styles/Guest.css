@@ -14,9 +14,9 @@
 }
 
 .guest-wrapper {
-  display: flex; /* Use flexbox for horizontal alignment */
-  transition: transform 0.5s ease; /* Smooth transition for sliding */
-  width: 100%; /* Full width */
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition for the slide */
+  width: calc(100% * (number_of_guests + 2)); /* Adjust width to account for two extra slides (beginning and end) */
 }
 
 .guest-section {
