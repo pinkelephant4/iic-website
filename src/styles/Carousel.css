@@ -74,26 +74,30 @@ h1 {
 /* Hover effects for desktop only */
 @media (min-width: 769px) {
   .theme-card:hover .theme-logo {
-    width: 60px; /* Shrink the logo */
     position: absolute;
+    text-align: center;
+    justify-content: center;
     left: 20px; /* Move logo to the left */
     top: 20px; /* Move logo to the top-left */
-    transition: width 0.5s ease-in-out, left 0.5s ease-in-out, top 0.5s ease-in-out;
+    width: 60px; /* Shrink the logo */
+    transition: width 1s ease-in-out, left 0.5s ease-in-out, top 0.3s ease-in-out;
   }
+
   h1{
     font-weight: 400;
   }
 
   .theme-card:hover .theme-name {
-    transform: translateY(-20px); /* Move theme name upwards slightly */
-    transition: transform 0.5s ease-in-out;
+    transform: translateY(-40px); /* Move theme name upwards slightly */
+    transition: transform 1s ease-in-out;
   }
 
   .theme-card:hover .theme-description {
     opacity: 1; /* Fade in the description */
-    bottom: 10px; /* Keep the description very close to the theme name */
+    bottom: 30px; /* Keep the description very close to the theme name */
+    transform: translateY(-40px); /* Move theme name upwards slightly */
     transition: opacity 0.5s ease-in-out 0.5s, bottom 0.5s ease-in-out;
-    position: relative;
+    position: absolute;
   }
 }
 
