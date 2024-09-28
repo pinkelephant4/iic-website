@@ -15,9 +15,10 @@ const Team = () => {
       </div>
         <Patron/>
         <Copatron/>
-
-
-{/* add remaining components before student convener */}
+        <Patron/>
+        <Copatron/>
+        <Patron/>
+        <Copatron/>
         <StudentConvener/> 
     </div>
   )

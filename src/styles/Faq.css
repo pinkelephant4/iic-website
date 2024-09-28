@@ -120,7 +120,7 @@
 
 @media (max-width: 500px) {
   .faq-wrapper {
-    width: 95vw; /* Full width for small devices */
+    width: 100%; /* Full width for small devices */
   }
 
   .faq > h1 {

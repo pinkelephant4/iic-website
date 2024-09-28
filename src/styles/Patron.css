@@ -24,8 +24,14 @@
   border-radius: 50px;
 }
 @media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    width: 100vw;
+    height: 70% !important;
+    margin: 0;
+    gap: 1rem;
+  }
   .box {
-    height: 40vh;
-    margin-top: 20vh;
+    width: 75vw;
   }
 }

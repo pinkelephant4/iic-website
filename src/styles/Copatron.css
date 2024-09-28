@@ -40,9 +40,15 @@ body {
 }
 
 @media (max-width: 768px) {
-    .boxcopatron {
+    .contentcopatron{
+        flex-direction: column;
+        width: 100vw;
+        height: 70% !important;
+        margin: 0;
+        gap: 2rem;
+      }
+      .boxcopatron{
+        width: 80vw;
         height: 40vh;
-        margin-top: 20vh;
-        width: 80vw; /* Ensure boxes fit within the viewport on smaller screens */
-    }
+      }
 }
