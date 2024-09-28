@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import "../styles/Guest.css";
 
 const Guest = () => {
-
   const guests = [
     { name: "John Doe", description: "An experienced speaker in technology and innovation. He has transformed startups into successful tech companies. His insights on emerging technologies are sought after globally. John is also a mentor for young entrepreneurs. He believes in leveraging technology to solve real-world problems. His workshops focus on practical skills for the tech-savvy. Outside of work, he enjoys hiking and photography.", image: "/assets/Guest.jpg" },
     { name: "Jane Smith", description: "A renowned expert in environmental science with multiple publications on climate change. Her innovative approaches to conservation have garnered international recognition. She emphasizes the importance of community involvement in environmental issues. Passionate about education, she conducts workshops for students. In her free time, she loves gardening and painting.", image: "/assets/Guest.jpg" },
@@ -14,16 +13,24 @@ const Guest = () => {
 
   const [currentIndex, setCurrentIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const intervalRef = useRef(null);
 
   const totalSlides = guests.length;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const resetInterval = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
       setIsTransitioning(true);
       setCurrentIndex(prevIndex => prevIndex + 1);
-    }, 3000); // Change guest every 3 seconds
+    }, 3000); // Slide changes every 3 seconds
+  };
 
-    return () => clearInterval(interval); // Clear interval on component unmount
+  useEffect(() => {
+    resetInterval(); // Start interval on component mount
+
+    return () => clearInterval(intervalRef.current); // Clear interval on component unmount
   }, []);
 
   useEffect(() => {
@@ -32,8 +39,25 @@ const Guest = () => {
         setIsTransitioning(false);
         setCurrentIndex(1);
       }, 500); // Match this to the transition duration
+    } else if (currentIndex === 0) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(totalSlides);
+      }, 500); // Match this to the transition duration
     }
   }, [currentIndex, totalSlides]);
+
+  const handlePrevClick = () => {
+    setIsTransitioning(true);
+    setCurrentIndex(prevIndex => prevIndex - 1);
+    resetInterval(); // Reset interval on manual control
+  };
+
+  const handleNextClick = () => {
+    setIsTransitioning(true);
+    setCurrentIndex(prevIndex => prevIndex + 1);
+    resetInterval(); // Reset interval on manual control
+  };
 
   return (
     <div className="guest-speaker-container">
@@ -78,6 +102,14 @@ const Guest = () => {
             <img src={guests[0].image} alt={guests[0].name} className="guest-image" />
           </div>
         </div>
+      </div>
+      
+      {/* Arrow controls */}
+      <div className="arrow left-arrow" onClick={handlePrevClick}>
+        &#10094; {/* Left arrow symbol */}
+      </div>
+      <div className="arrow right-arrow" onClick={handleNextClick}>
+        &#10095; {/* Right arrow symbol */}
       </div>
     </div>
   );
