@@ -115,6 +115,7 @@
   font-size: 5vh;
   cursor: pointer;
   padding: 1.5rem;
+  padding-right: 5%;
   color: black;
   z-index: 2000;
   display: none;
@@ -169,7 +170,7 @@
 
 /* Add black border between each menu item */
 .menu-links .nav-link:not(:last-child) {
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid black;
 }
 
 /* Media Queries */
