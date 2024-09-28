@@ -92,7 +92,7 @@
 
 @media (max-width: 768px) {
   .image-section {
-    flex: 1.3; /* Ensure it takes less space compared to text */
+    flex: 2.5; /* Ensure it takes less space compared to text */
     background-color: #afaddf;
     display: flex;
     justify-content: center; /* Ensure the image stays centered horizontally */
