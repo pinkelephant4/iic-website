@@ -13,6 +13,7 @@
 
 h1 {
   font-size: 3.5rem;
+  font-weight: 500;
   margin-bottom: 30px;
 }
 
@@ -79,6 +80,9 @@ h1 {
     top: 20px; /* Move logo to the top-left */
     transition: width 0.5s ease-in-out, left 0.5s ease-in-out, top 0.5s ease-in-out;
   }
+  h1{
+    font-weight: 400;
+  }
 
   .theme-card:hover .theme-name {
     transform: translateY(-20px); /* Move theme name upwards slightly */
@@ -98,6 +102,9 @@ h1 {
   .theme-card {
     width: 300px; /* Slightly smaller for mobile */
     height: 260px;
+  }
+  h1{
+    font-weight: 400;
   }
 
   /* Disable hover effect for mobile and tablet */

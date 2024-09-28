@@ -14,7 +14,8 @@
 }
 
 .sponser-header > h1 {
-  font-size: 3.2rem;
+  font-size: 3.5rem;
+  font-weight: 500;
   color: black;
 }
 
@@ -81,5 +82,10 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+@media (max-width: 700px) {
+  .sponser-header > h1 {
+    font-weight: 400;
   }
 }

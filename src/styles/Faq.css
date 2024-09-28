@@ -11,6 +11,7 @@
 .faq > h1 {
   color: black;
   font-size: 3.5rem;
+  font-weight: 500;
 }
 
 /* FAQ Wrapper */
@@ -103,7 +104,8 @@
   }
 
   .faq > h1 {
-    font-size: 2rem; /* Reduce heading size for tablets */
+    font-size: 3rem;
+    font-weight: 400;/* Reduce heading size for tablets */
   }
 
   .faq .accordion-button {
