@@ -37,6 +37,10 @@ const Navbar = () => {
     };
   }, [lastScrollY]);
 
+  const handleLinkClick = () => {
+    setMenuOpen(false);  // Close the menu when a link is clicked
+  };
+
   return (
     <div className={`navbar ${scrolling ? 'scrolled' : ''} ${scrollDirection === 'down' ? 'hide' : 'show'}`}>
       <div className="nav-left">
@@ -64,10 +68,10 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`menu ${menuOpen ? 'active' : ''}`}>
         <ul className="menu-links">
-          <li className="nav-link" onClick={toggleMenu}>Home</li>
-          <li className="nav-link" onClick={toggleMenu}>About</li>
-          <li className="nav-link" onClick={toggleMenu}>Team</li>
-          <li className="nav-link" onClick={toggleMenu}>Problem Statements</li>
+          <li className="nav-link" onClick={handleLinkClick}><a href="/">Home</a></li>
+          <li className="nav-link" onClick={handleLinkClick}><a href="/about">About</a></li>
+          <li className="nav-link" onClick={handleLinkClick}><a href="/team">Team</a></li>
+          <li className="nav-link" onClick={handleLinkClick}><a href="/problem-statements">Problem Statements</a></li>
         </ul>
       </div>
 
