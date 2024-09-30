@@ -1,34 +1,75 @@
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Fullscreen Container for the CampusHero Section */
 .campus-hero {
+  position: relative; /* Make it relative for absolute children */
+  width: 100vw;
+  height: 90vh; /* Set the height as desired */
+  overflow: hidden; /* Prevent overflow of canvas */
+  text-align: center; /* Center align the text */
+  color: white; /* Text color */
+  margin-bottom: 10vh;
+}
+
+canvas {
+  position: absolute; /* Position the canvas absolutely */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  z-index: 1; /* Set lower z-index */
+}
+
+h1,
+p {
+  position: relative; /* Position text relatively */
+  z-index: 2; /* Ensure text is above the canvas */
+  margin: 0; /* Remove default margins */
+  color: black;
+}
+
+h1:nth-child(1) {
+  padding-top: 7rem;
+}
+
+p {
+  padding-top: 1rem;
+}
+
+.reg-btn {
+  font-weight: 300;
+  border: 1px solid black;
+  border-radius: 2rem;
+  background-color: black;
+  font-size: 1.8vh;
+  padding: 1.2vh 2.5vh;
+  cursor: pointer;
+  transition: all 0.3s ease;
   position: relative;
-  height: 80vh; /* Set the height to 80% of the viewport */
-  margin: 0 auto; /* Center the section */
-  overflow: hidden; /* Prevent scrollbars from appearing */
+  z-index: 2;
+  margin: 2vh 44vw;
 }
 
-/* Matter.js Rendering Area */
-#scene {
-  width: 100%; /* Full width of the parent container */
-  height: 100%; /* Full height of the parent container */
-  background-color: transparent; /* Set the background to transparent */
+.reg-btn a {
+  text-decoration: none;
+  font-size: 2vh;
+  font-weight: 500;
+  color: white;
 }
 
-/* Optional - Body styling for spacing */
-body {
-  font-family: 'Ropa Sans', sans-serif;
-  background-color: #fc0; /* To match the canvas background */
+.reg-btn:hover {
+  transform: scale(1.05);
 }
 
-/* Navbar and Footer Styles */
-.navbar, .footer {
-  background-color: #fff; /* Example color for navbar and footer */
-  padding: 10px 20px; /* Padding for visual appeal */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+.reg-btn:hover a {
+  color: white;
+}
+
+.end-line {
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  height: 3px;
+  background-color: black;
+  margin-top: 40.6vh;
+  display: flex; /* Use flexbox to align the button */
+  justify-content: flex-end; /* Align button to the right */
+  padding: 1rem; /* Add some padding */
 }
