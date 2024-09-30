@@ -1,68 +1,48 @@
-import { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Matter from "matter-js";
 import "../styles/CampusHero.css";
 
 const CampusHero = () => {
-  useEffect(() => {
-    // Create an engine with gravity
-    const engine = Matter.Engine.create();
-    const world = engine.world;
-    engine.gravity.y = 1; // Gravity effect
+  const sceneRef = useRef(null);
+  const engine = useRef(Matter.Engine.create());
+  const render = useRef(null);
+  const mouseConstraint = useRef(null);
 
-    // Create a renderer
-    const render = Matter.Render.create({
-      element: document.querySelector(".matter-container"), // Attach to a separate div
-      engine: engine,
+  useEffect(() => {
+    const { Engine, Render, World, Bodies, Mouse, MouseConstraint, Events } = Matter;
+
+    // Set up the renderer
+    render.current = Render.create({
+      element: sceneRef.current,
+      engine: engine.current,
       options: {
         width: window.innerWidth,
-        height: window.innerHeight,
-        background: "transparent",
+        height: window.innerHeight * 0.8,
         wireframes: false,
+        background: "transparent",
       },
     });
 
-    // Create draggable, throwable rectangles
-    const rectangles = [];
-    for (let i = 0; i < 5; i++) {
-      const rect = Matter.Bodies.rectangle(
-        Math.random() * window.innerWidth, // Random x position
-        100, // Start near the top of the viewport
-        150, // width
-        80, // height
-        {
-          chamfer: { radius: 15 },
-          restitution: 0.8, // Bounce effect
-          render: {
-            fillStyle: "lightblue",
-            strokeStyle: "black",
-            lineWidth: 3,
-          },
-        }
-      );
-      rectangles.push(rect);
-    }
+    // Create draggable elements
+    const element1 = Bodies.rectangle(300, 200, 100, 100, { 
+      restitution: 0.5, 
+      render: { fillStyle: 'red' } 
+    });
+    const element2 = Bodies.rectangle(500, 200, 100, 100, { 
+      restitution: 0.5, 
+      render: { fillStyle: 'green' } 
+    });
+    const element3 = Bodies.rectangle(700, 200, 100, 100, { 
+      restitution: 0.5, 
+      render: { fillStyle: 'blue' } 
+    });
 
-    // Add a ground (matches the .end-line position)
-    const ground = Matter.Bodies.rectangle(
-      window.innerWidth / 2,
-      window.innerHeight - 150, // Position near the bottom
-      window.innerWidth,
-      10, // Thin line as the ground
-      {
-        isStatic: true, // Prevent movement
-        render: {
-          fillStyle: "transparent", // Invisible ground
-        },
-      }
-    );
+    // Add elements to the world
+    World.add(engine.current.world, [element1, element2, element3]);
 
-    // Add rectangles and ground to the world
-    Matter.World.add(world, [...rectangles, ground]);
-
-    // Add both mouse and touch control for dragging and throwing
-    const mouse = Matter.Mouse.create(render.canvas);
-    const touch = Matter.Mouse.create(render.canvas); // For touchscreens (trackpads are covered by mouse events)
-    const mouseConstraint = Matter.MouseConstraint.create(engine, {
+    // Create mouse control
+    const mouse = Mouse.create(render.current.canvas);
+    mouseConstraint.current = MouseConstraint.create(engine.current, {
       mouse: mouse,
       constraint: {
         stiffness: 0.2,
@@ -71,48 +51,50 @@ const CampusHero = () => {
         },
       },
     });
-    Matter.World.add(world, mouseConstraint);
 
-    // Enable touch support
-    const touchConstraint = Matter.MouseConstraint.create(engine, {
-      mouse: touch,
-      constraint: {
-        stiffness: 0.2,
-        render: {
-          visible: false,
-        },
-      },
+    // Add mouse constraint to the world
+    World.add(engine.current.world, mouseConstraint.current);
+
+    // Handle touch events for dragging
+    render.current.canvas.addEventListener('touchstart', (event) => {
+      event.preventDefault();
+      const touch = event.touches[0];
+      const mousePosition = { x: touch.clientX, y: touch.clientY };
+      mouse.position = mousePosition;
+      Matter.Body.setPosition(mouseConstraint.current.body, mousePosition);
+      mouseConstraint.current.mouse.button = 0; // Simulate a left-click
     });
-    Matter.World.add(world, touchConstraint);
 
-    // Run the engine and renderer
-    Matter.Engine.run(engine);
-    Matter.Render.run(render);
+    render.current.canvas.addEventListener('touchmove', (event) => {
+      event.preventDefault();
+      const touch = event.touches[0];
+      const mousePosition = { x: touch.clientX, y: touch.clientY };
+      mouse.position = mousePosition;
+    });
+
+    render.current.canvas.addEventListener('touchend', () => {
+      mouseConstraint.current.mouse.button = -1; // Release the touch
+    });
+
+    // Run the engine and the renderer
+    Engine.run(engine.current);
+    Render.run(render.current);
 
     // Cleanup on component unmount
     return () => {
-      Matter.Render.stop(render);
-      Matter.World.clear(world);
-      Matter.Engine.clear(engine);
-      render.canvas.remove();
-      render.textures = {};
+      Matter.Render.stop(render.current);
+      Matter.World.clear(engine.current.world);
+      Matter.Engine.clear(engine.current);
+      render.current.canvas.remove();
+      render.current.canvas = null;
+      render.current.context = null;
+      render.current.textures = {};
     };
   }, []);
 
   return (
     <div className="campus-hero">
-      <h1>Become Campus Ambassador</h1>
-      <h1>Unite to Innovate</h1>
-      <p>
-        idk what to add in the text and I am too lazy to insert some lorem ipsum
-        text, so please make this work and <br /> add the content as per the
-        content team suggests
-      </p>
-      <div className="register-button"><a href="#">Register Now</a></div>
-      <div className="end-line"></div>
-
-      {/* Matter.js canvas container */}
-      <div className="matter-container"></div>
+      <div ref={sceneRef} id="scene"></div>
     </div>
   );
 };
