@@ -1,0 +1,68 @@
+.campus-hero {
+    height: 90vh;
+    width: 100vw;
+    padding-top: 20vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Ensure canvas is behind other elements */
+  }
+  
+  h1, p, .register-button {
+    position: relative;
+    z-index: 1; /* Ensure text and button appear above the canvas */
+  }
+  
+  .register-button {
+    font-weight: 300;
+    border: 1px solid #b0b0b0;
+    border-radius: 2rem;
+    background-color: black;
+    font-size: 1.8vh;
+    padding: 0.5vh 2.5vh;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 10vw;
+    height: 6vh;
+    margin: auto;
+    padding-top: 0.6rem;
+  }
+  
+  .register-button a {
+    text-decoration: none;
+    font-size: 2vh;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .register-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .register-button a:hover {
+    color: white;
+  }
+  
+  .end-line {
+    width: 100vw;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    bottom: 150px; /* Matches the ground position */
+  }
+  
+  .matter-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Matter.js canvas behind the content */
+  }
+  

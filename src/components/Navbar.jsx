@@ -51,6 +51,7 @@ const Navbar = () => {
           <div className="nav-link active"><a href="/">Home</a></div>
           <div className="nav-link"><a href="/about">About</a></div>
           <div className="nav-link"><a href="/team">Team</a></div>
+          <div className="nav-link"><a href="/ambassador">Campus</a></div>
         </div>
       </div>
       <div className="nav-right">
@@ -71,6 +72,7 @@ const Navbar = () => {
           <li className="nav-link" onClick={handleLinkClick}><a href="/">Home</a></li>
           <li className="nav-link" onClick={handleLinkClick}><a href="/about">About</a></li>
           <li className="nav-link" onClick={handleLinkClick}><a href="/team">Team</a></li>
+          <li className="nav-link" onClick={handleLinkClick}><a href="/ambassador">Campus Ambassador</a></li>
           <li className="nav-link" onClick={handleLinkClick}><a href="/problem-statements">Problem Statements</a></li>
         </ul>
       </div>
