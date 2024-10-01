@@ -1,4 +1,4 @@
-import Accordion from 'react-bootstrap/Accordion';
+import Accordion from "react-bootstrap/Accordion";
 import "../styles/Faq.css";
 
 const faqData = [
@@ -32,13 +32,17 @@ function Faq() {
   return (
     <div className="faq">
       <h1 style={{ margin: "0 0 2rem 0" }}>Frequently Asked Questions</h1>
-      <Accordion className='faq-wrapper'>
+      <Accordion className="faq-wrapper">
         {faqData.map((item) => (
-          <Accordion.Item eventKey={item.eventKey} className='faq-body' key={item.eventKey}>
-            <Accordion.Header className='question'>{item.question}</Accordion.Header>
-            <Accordion.Body className='answer'>
-              {item.answer}
-            </Accordion.Body>
+          <Accordion.Item
+            eventKey={item.eventKey}
+            className="faq-body"
+            key={item.eventKey}
+          >
+            <Accordion.Header className="question">
+              {item.question}
+            </Accordion.Header>
+            <Accordion.Body className="answer">{item.answer}</Accordion.Body>
           </Accordion.Item>
         ))}
       </Accordion>

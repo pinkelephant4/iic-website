@@ -17,7 +17,14 @@ const CampusHero = () => {
     "Manipal University Jaipur",
   ];
 
-  const colors = ["yellow", "yellowgreen", "pink", "red", "blue"]; // 5 colors
+  // Map each word to a specific color
+  const wordColors = {
+    "International": "#fe757a",
+    "Goodies": "#fc813d",
+    "Certificates": "#fdc21e",
+    "LOR's": "#468cc4",
+    "Manipal University Jaipur": "#339f47",
+  };
 
   useEffect(() => {
     // Setup the canvas and physics engine
@@ -86,23 +93,24 @@ const CampusHero = () => {
 
     Matter.World.add(engineRef.current.world, [ground, wallLeft, wallRight]);
 
-    // Create words
+    // Create words with specific colors
     for (let i = 0; i < wordsToDisplay.length; i++) {
       const xPosition = Math.random() * (widthRef.current - 50) + 25; // Ensure circles are within bounds
-      const randomColor = colors[Math.floor(Math.random() * colors.length)]; // Random color for each shape
+      const word = wordsToDisplay[i];
+      const specificColor = wordColors[word]; // Get specific color for the word
 
       if (i < 2) {
         wordsRef.current.push(
-          new Word(xPosition, -200, wordsToDisplay[i], true, randomColor)
+          new Word(xPosition, -200, word, true, specificColor)
         ); // Pass true for circles
       } else {
         wordsRef.current.push(
           new Word(
             Math.random() * widthRef.current,
             -200,
-            wordsToDisplay[i],
+            word,
             false,
-            randomColor
+            specificColor
           )
         ); // Pass false for rectangles
       }
@@ -126,7 +134,7 @@ const CampusHero = () => {
     constructor(x, y, word, isCircle, color) {
       this.word = word;
       this.isCircle = isCircle;
-      this.color = color; // Store the color
+      this.color = color; // Store the specific color
       // Create body based on shape
       if (isCircle) {
         this.radius = Math.max(word.length * 7, 12); // Reduced radius for circles
@@ -156,7 +164,7 @@ const CampusHero = () => {
       ctx.translate(pos.x, pos.y);
       ctx.rotate(angle);
 
-      ctx.fillStyle = this.color; // Use the assigned color for the shape
+      ctx.fillStyle = this.color; // Use the specific color for the shape
 
       if (this.isCircle) {
         ctx.beginPath();
@@ -237,6 +245,7 @@ const CampusHero = () => {
       }
     }
   };
+
   return (
     <div className="campus-hero">
       <h1>Become Campus Ambassador</h1>

@@ -1,7 +1,6 @@
 .patron {
-  height: 75vh;
+  height: 65vh;
   width: 100vw;
-  background-color: #bc9ad9;
   border-top-right-radius: 50px;
   margin: 10vh 0;
 }
@@ -16,22 +15,17 @@
   align-items: center;
   gap: 5vw;
 }
-
-.box {
-  height: 50vh;
-  width: 40vw;
-  background-color: #bfbcfc;
-  border-radius: 50px;
-}
 @media (max-width: 768px) {
   .content {
-    flex-direction: column;
-    width: 100vw;
-    height: 70% !important;
+    flex-direction: column; /* Stack cards vertically on mobile */
+    width: 100%;
+    height: 80% !important; /* Allow height to adjust */
     margin: 0;
     gap: 1rem;
   }
-  .box {
-    width: 75vw;
+
+  .patron {
+    height: 120vh;
+    margin: 5vh 0; /* Adjust margin for mobile */
   }
 }
