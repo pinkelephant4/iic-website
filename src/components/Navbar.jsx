@@ -48,10 +48,26 @@ const Navbar = () => {
       </div>
       <div className="nav-mid">
         <div className="nav-links">
-          <div className="nav-link active"><a href="/">Home</a></div>
-          <div className="nav-link"><a href="/about">About</a></div>
-          <div className="nav-link"><a href="/team">Team</a></div>
-          <div className="nav-link"><a href="/ambassador">Campus</a></div>
+          <a href="/">
+            <div className="nav-link active">
+              Home
+            </div>
+          </a>
+          <a href="/about">
+            <div className="nav-link">
+              About
+            </div>
+          </a>
+          <a href="/team">
+            <div className="nav-link">
+              Team
+            </div>
+          </a>
+          <a href="/ambassador">
+            <div className="nav-link">
+              Campus
+            </div>
+          </a>
         </div>
       </div>
       <div className="nav-right">
