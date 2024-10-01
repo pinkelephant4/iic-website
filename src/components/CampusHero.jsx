@@ -17,6 +17,8 @@ const CampusHero = () => {
     "Manipal University Jaipur",
   ];
 
+  const colors = ["yellow", "yellowgreen", "pink", "red", "blue"]; // 5 colors
+
   useEffect(() => {
     // Setup the canvas and physics engine
     setup();
@@ -87,9 +89,11 @@ const CampusHero = () => {
     // Create words
     for (let i = 0; i < wordsToDisplay.length; i++) {
       const xPosition = Math.random() * (widthRef.current - 50) + 25; // Ensure circles are within bounds
+      const randomColor = colors[Math.floor(Math.random() * colors.length)]; // Random color for each shape
+
       if (i < 2) {
         wordsRef.current.push(
-          new Word(xPosition, -200, wordsToDisplay[i], true)
+          new Word(xPosition, -200, wordsToDisplay[i], true, randomColor)
         ); // Pass true for circles
       } else {
         wordsRef.current.push(
@@ -97,7 +101,8 @@ const CampusHero = () => {
             Math.random() * widthRef.current,
             -200,
             wordsToDisplay[i],
-            false
+            false,
+            randomColor
           )
         ); // Pass false for rectangles
       }
@@ -118,9 +123,10 @@ const CampusHero = () => {
   };
 
   class Word {
-    constructor(x, y, word, isCircle) {
+    constructor(x, y, word, isCircle, color) {
       this.word = word;
       this.isCircle = isCircle;
+      this.color = color; // Store the color
       // Create body based on shape
       if (isCircle) {
         this.radius = Math.max(word.length * 7, 12); // Reduced radius for circles
@@ -150,8 +156,9 @@ const CampusHero = () => {
       ctx.translate(pos.x, pos.y);
       ctx.rotate(angle);
 
+      ctx.fillStyle = this.color; // Use the assigned color for the shape
+
       if (this.isCircle) {
-        ctx.fillStyle = "yellow"; // Set shape background to yellow
         ctx.beginPath();
         ctx.arc(0, 0, this.radius, 0, Math.PI * 2);
         ctx.fill();
@@ -166,7 +173,6 @@ const CampusHero = () => {
         ctx.font = "bold 20px Arial"; // Slightly smaller text size
         ctx.fillText(this.word, 0, 0);
       } else {
-        ctx.fillStyle = "yellow"; // Set shape background to yellow
         this.roundRect(
           ctx,
           (-this.word.length * 20) / 2,
