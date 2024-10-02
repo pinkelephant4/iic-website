@@ -1,5 +1,6 @@
 .CampusLast-Heading{
     text-align: center;
+    padding:10px;
 }
 .CampusLast-container {
     display: flex;
@@ -20,7 +21,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    position: relative; /* Enables positioning of the number and icon */
+    position: relative;
     flex: 1 1 calc(50% - 40px); /* Each box takes 50% of the row width */
     min-width: 300px; 
     max-width: 100%;
@@ -29,7 +30,7 @@
   }
   
   .CampusLast-box:hover {
-    background-color: #BA84FE; /* Darker tone on hover */
+    background-color: #BA84FE; 
   }
   
   /* Style for the large number in the background */
@@ -78,29 +79,6 @@
     text-align: left;
   }
   
-/* Styles for mobile and tablets (hover effects disabled, smaller image size) */
-@media (max-width: 768px) {
-  .CampusLast-container {
-      padding-left: 20px; 
-      padding-right: 20px; 
-  }
-  
-  .CampusLast-box {
-      flex: 1 1 100%; /* Each box takes full width in a row */
-      min-width: auto;
-  }
-
-  .CampusLast-box-number {
-      font-size: calc(100px + 5vw); /* Adjust font size for smaller screens */
-  }
-
-  .CampusLast-box > p {
-    font-size: smaller;
-  }
-}
-
-
-
   /*numbers columns */
   .vertical-box-container {
     display: flex;
@@ -137,7 +115,7 @@
   }
   
   .vertical-box-heading {
-    font-size: 1.1rem; /* Font size for the heading */
+    font-size: 1.1rem; 
     color: black;
     text-align: left;
    
@@ -158,7 +136,78 @@
   height:70vh;
 }
 
+/* Styles for mobile and tablets (hover effects disabled, smaller image size) */
+@media (max-width: 768px) {
+  .CampusLast-container {
+      padding-left: 20px; 
+      padding-right: 20px; 
+  }
+  
+  .CampusLast-box {
+      flex: 1 1 100%; /* Each box takes full width in a row */
+      min-width: auto;
+  }
+
+  .CampusLast-box-number {
+      font-size: calc(200px + 5vw); /* Adjust font size for smaller screens */
+      font-weight: 350;
+  }
+
+  .CampusLast-box > p {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #000;
+  }
+
+  .CampusLast-Heading{
+    color: #000;
+    font-size: 30px;
+    padding: 30px;
+  }
+}
+
 
   
   /* Responsive Design */
+  @media (max-width: 768px) {
+    .vertical-box-container {
+        flex-direction: column; 
+        margin-left: 5px; 
+    }
+
+    .vertical-box {
+        width: 100%;
+        height: 300px; 
+        padding: 20px;
+        margin-bottom: 20px; 
+        border-bottom: 2px solid black;
+      background-color: #FCEFF8; }
+
+    .vertical-box:last-child {
+        border-bottom: none; 
+    }
+
+    .vertical-box-number {
+        font-size: 4rem; 
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .vertical-box-heading {
+        font-size: 1.5rem;
+        margin: 0%;
+        padding: 0%;
+
+    }
+
+    .vertical-para {
+        padding-top: 70px; 
+        font-size: 1rem; 
+    }
+
+    .vertical-box-separator {
+        display: none; 
+    }
+}
+
   

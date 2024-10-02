@@ -32,7 +32,7 @@ const CampusLast = () => {
     </div>
 
     </div>
-    <h1>You are just 3 Steps away from <br></br> becoming a part of this journey </h1>
+    <h1 className='CampusLast-Heading'>You are just 3 Steps away from <br></br> becoming a part of this journey </h1>
 
     {/* vertical box */}
     <div className="vertical-box-container">
