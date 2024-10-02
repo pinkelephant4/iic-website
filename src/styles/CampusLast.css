@@ -1,16 +1,19 @@
-.CampusLast-Heading{
+h1{
     text-align: center;
 }
 .CampusLast-container {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping to next row */
-    gap: 20px; /* Space between the boxes */
-    padding: 40px; /* Adds padding around the container */
-    justify-content: space-between; /* Ensures space is distributed evenly */
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding-left: 240px;
+    padding-right: 240px; 
+    padding-top: 40px;
+    padding-bottom: 70px;
+    justify-content: space-between; 
   }
   
   .CampusLast-box {
-    background-color: white;
+    background-color: #FCEFF8;
     height: 40vh;
     padding: 30px;
     margin: 10px;
@@ -19,10 +22,10 @@
     text-align: center;
     position: relative; /* Enables positioning of the number and icon */
     flex: 1 1 calc(50% - 40px); /* Each box takes 50% of the row width */
-    min-width: 300px; /* Ensures boxes don't get too small */
-    max-width: 100%; /* Prevents them from overflowing */
+    min-width: 300px; 
+    max-width: 100%;
     transition: background-color 0.3s ease;
-    overflow: hidden; /* Ensures that background elements stay within the box */
+    overflow: hidden; 
   }
   
   .CampusLast-box:hover {
@@ -44,31 +47,35 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
-    pointer-events: none; /* Makes the number non-interactable */
+    pointer-events: none; 
   }
   
-  /* Style for the small icon in the top-left corner */
+  
   .icon {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 40px; /* Adjust size of the icon */
+    width: 40px; 
     height: 40px;
-    z-index: 1; /* Ensures icon is on top of the background number */
+    z-index: 1; 
   }
   
   h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     position: relative;
-    z-index: 2; /* Keeps heading above the number */
+    z-index: 2; 
+    top:50%;
+    text-align: left;
   }
   
   p {
     font-size: 1rem;
     color: #333;
     position: relative;
-    z-index: 2; /* Keeps text above the number */
+    z-index: 2; 
+    top:50%;
+    text-align: left;
   }
   
   /* Responsive Design */
