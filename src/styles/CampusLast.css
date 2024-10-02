@@ -1,0 +1,82 @@
+.CampusLast-Heading{
+    text-align: center;
+}
+.CampusLast-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to next row */
+    gap: 20px; /* Space between the boxes */
+    padding: 40px; /* Adds padding around the container */
+    justify-content: space-between; /* Ensures space is distributed evenly */
+  }
+  
+  .CampusLast-box {
+    background-color: white;
+    height: 40vh;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; /* Enables positioning of the number and icon */
+    flex: 1 1 calc(50% - 40px); /* Each box takes 50% of the row width */
+    min-width: 300px; /* Ensures boxes don't get too small */
+    max-width: 100%; /* Prevents them from overflowing */
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* Ensures that background elements stay within the box */
+  }
+  
+  .CampusLast-box:hover {
+    background-color: #BA84FE; /* Darker tone on hover */
+  }
+  
+  /* Style for the large number in the background */
+  .CampusLast-box-number {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 100%;
+    height: 100%;
+    font-size: calc(100px + 10vw); /* Dynamically adjust the font size */
+    color: #cda8f9; /* Lighter and more transparent */
+  
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none; /* Makes the number non-interactable */
+  }
+  
+  /* Style for the small icon in the top-left corner */
+  .icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px; /* Adjust size of the icon */
+    height: 40px;
+    z-index: 1; /* Ensures icon is on top of the background number */
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2; /* Keeps heading above the number */
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #333;
+    position: relative;
+    z-index: 2; /* Keeps text above the number */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .box {
+      flex: 1 1 100%; /* Stacks boxes in one column on smaller screens */
+      min-width: 100%;
+      margin: 10px 0; /* Adjusts margins for stacked layout */
+    }
+  }
+  
