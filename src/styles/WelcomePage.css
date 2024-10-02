@@ -32,7 +32,8 @@
   margin-right: auto;
 }
 
-.description-line {
+.description-line > p {
+  text-align: center;
   margin: 0;
   margin-bottom: 0;
   font-weight: 300;
@@ -60,6 +61,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10px; /* Adds some spacing between lines */
+  font-size: 3rem;
 }
 
 .image-container {
@@ -94,7 +96,8 @@
   padding: 0px 10px;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -102,91 +105,101 @@ body, html {
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
-  .welcome-to, .challenge-heading {
-      font-size: 3rem;
+  .welcome-to,
+  .challenge-heading {
+    font-size: 3rem;
   }
 
   .bold-text-with-images {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 }
 
 @media (max-width: 992px) {
-  .welcome-to, .challenge-heading {
-      font-size: 2.5rem;
+  .welcome-to,
+  .challenge-heading {
+    font-size: 2.5rem;
   }
 
   .bold-text-with-images {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   .welcome-description {
-      font-size: 0.9rem;
-      margin-bottom: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
   }
 
   .image1 img {
-      width: 150px;
+    width: 150px;
   }
 
-  .image2 img, .image3 img, .image5 img {
-      width: 100px;
+  .image2 img,
+  .image3 img,
+  .image5 img {
+    width: 100px;
   }
 
   .image4 img {
-      width: 90px;
+    width: 90px;
   }
 }
 
 @media (max-width: 768px) {
-  .welcome-to, .challenge-heading {
-      font-size: 2rem;
+  .welcome-to,
+  .challenge-heading {
+    font-size: 2rem;
   }
 
   .bold-text-with-images {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .welcome-description {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
   }
 
   .image1 img {
-      width: 100px;
-      height: 50px;
+    width: 100px;
+    height: 50px;
   }
 
-  .image2 img, .image3 img, .image5 img {
-      width: 80px;
+  .image2 img,
+  .image3 img,
+  .image5 img {
+    width: 80px;
   }
 
   .image4 img {
-      width: 70px;
+    width: 70px;
   }
 }
 
 @media (max-width: 576px) {
-  .welcome-to, .challenge-heading {
-      font-size: 1.5rem;
+  .welcome-to,
+  .challenge-heading {
+    font-size: 1.5rem;
   }
 
   .bold-text-with-images {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .welcome-description {
-      font-size: 0.7rem;
+    font-size: 0.7rem;
   }
 
   .image1 img {
-      width: 100px;
+    width: 100px;
   }
 
-  .image2 img, .image3 img, .image5 img {
-      width: 60px;
+  .image2 img,
+  .image3 img,
+  .image5 img {
+    width: 60px;
   }
 
   .image4 img {
-      width: 50px;
+    width: 50px;
   }
 }

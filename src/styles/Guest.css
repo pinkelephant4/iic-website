@@ -52,6 +52,7 @@ h1 {
   line-height: 1.5; /* Line height for better readability */
   max-height: 10.5em; /* Limit to 7 lines (approx.) */
   overflow: hidden; /* Hide overflow */
+  margin-top: 2rem;
 }
 
 .image-section {

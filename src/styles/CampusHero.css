@@ -18,7 +18,7 @@ canvas {
 }
 
 h1,
-p {
+.para>p {
   position: relative; /* Position text relatively */
   z-index: 2; /* Ensure text is above the canvas */
   margin: 0; /* Remove default margins */
@@ -29,8 +29,9 @@ h1:nth-child(1) {
   padding-top: 7rem;
 }
 
-p {
-  padding-top: 1rem;
+.para>p {
+  text-align: center;
+  padding-top: 1rem !important;
 }
 
 .reg-btn {

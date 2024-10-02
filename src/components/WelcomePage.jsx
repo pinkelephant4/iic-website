@@ -12,7 +12,9 @@ const WelcomePage = () => {
 
       {/* Description with two lines */}
       <div className="welcome-description">
-        <p className="description-line">Where Global Minds Unite to Innovate, Create, and Shape the</p>
+        <div className="description-line">
+        <p>Where Global Minds Unite to Innovate, Create, and Shape the</p>
+        </div>
         <span className="description-line second-line">Future of Tomorrow!</span>
       </div>
       
