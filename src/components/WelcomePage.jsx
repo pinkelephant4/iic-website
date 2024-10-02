@@ -23,13 +23,13 @@ const WelcomePage = () => {
           <div className="image-container image1">
             <img src="/assets/Manipal.png" alt="logo1" />
           </div>
-          are an University
+          are a University
         </p>
         <p>
           <div className="image-container image2">
             <img src="/assets/Manipal2.png" alt="logo2" />
           </div>
-          who care 
+          who cares
           <div className="image-container image3">
             <img src="/assets/Manipal3.png" alt="logo3" />
           </div>
