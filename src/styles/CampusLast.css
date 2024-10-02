@@ -78,14 +78,26 @@
     text-align: left;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .CampusLast-box{
-      flex: 1 1 100%; /* Stacks boxes in one column on smaller screens */
-      min-width: 100%;
-      margin: 10px 0; /* Adjusts margins for stacked layout */
-    }
+/* Styles for mobile and tablets (hover effects disabled, smaller image size) */
+@media (max-width: 768px) {
+  .CampusLast-container {
+      padding-left: 20px; 
+      padding-right: 20px; 
   }
+  
+  .CampusLast-box {
+      flex: 1 1 100%; /* Each box takes full width in a row */
+      min-width: auto;
+  }
+
+  .CampusLast-box-number {
+      font-size: calc(100px + 5vw); /* Adjust font size for smaller screens */
+  }
+
+  .CampusLast-box > p {
+    font-size: smaller;
+  }
+}
 
 
 
