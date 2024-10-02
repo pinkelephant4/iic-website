@@ -7,17 +7,19 @@
   position: relative; /* Position relative to allow positioning of arrows */
 }
 
-.component-heading {
+h1 {
   text-align: center;
-  margin-bottom: 40px; /* Increased margin for more space */
-  font-size: 3.5rem; /* Make heading larger */
-  font-weight: 500; /* Make the heading bold */
+  margin-bottom: 40px;
+  font-size: 3.5rem;
+  font-weight: 500;
 }
 
 .guest-wrapper {
   display: flex;
   transition: transform 0.5s ease; /* Smooth transition for the slide */
-  width: calc(100% * (number_of_guests + 2)); /* Adjust width to account for two extra slides (beginning and end) */
+  width: calc(
+    100% * (number_of_guests + 2)
+  ); /* Adjust width to account for two extra slides (beginning and end) */
 }
 
 .guest-section {
@@ -33,20 +35,20 @@
   background-color: white;
   padding: 5rem;
   border-radius: 8px;
-  display: flex; /* Center content */
-  flex-direction: column; /* Stack content vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  text-align: center; /* Center text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .guest-name {
-  font-size: 40px; /* Increase name size for visibility */
-  margin-bottom: 10px;
+  font-size: 2.5rem; /* Increase name size for visibility */
+  margin: 0 !important;
 }
 
 .guest-description {
-  font-size: 18px; /* Set description size */
+  font-size: 1.1rem; /* Set description size */
   line-height: 1.5; /* Line height for better readability */
   max-height: 10.5em; /* Limit to 7 lines (approx.) */
   overflow: hidden; /* Hide overflow */
@@ -148,7 +150,7 @@
     height: 300px;
   }
 
-  .component-heading{
+  .component-heading {
     font-weight: 400;
   }
 

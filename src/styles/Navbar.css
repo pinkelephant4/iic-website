@@ -2,7 +2,7 @@
 .navbar {
   position: fixed;
   width: 100%;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   z-index: 1000;
   transition: all 0.3s ease;
   display: flex;
@@ -25,7 +25,7 @@
   transform: translateY(0);
 }
 
-.nav-left>a>img {
+.nav-left > a > img {
   height: 5vw;
   margin-left: 4%;
 }
@@ -41,7 +41,7 @@
 
 .nav-link {
   font-weight: 300;
-  border: 1px solid #B0B0B0;
+  border: 1px solid #b0b0b0;
   border-radius: 2rem;
   background-color: white;
   font-size: 1.8vh;
@@ -98,13 +98,13 @@
   position: relative;
 }
 
-.nav-btn-content>img {
+.nav-btn-content > img {
   height: 1vw;
   padding-left: 0.5vw;
 }
 
 .nav-btn-content::after {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 1px;
@@ -200,7 +200,6 @@
 /* Media Queries */
 /* mobile */
 @media (max-width: 768px) {
-
   .nav-link {
     border: none;
     /* Remove border */
@@ -211,12 +210,16 @@
     padding: 0;
     /* Adjust padding */
   }
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
 
   .nav-left {
     margin-left: 4%;
   }
 
-  .nav-left>a>img {
+  .nav-left > a > img {
     height: 9vw;
   }
 
@@ -228,7 +231,6 @@
 }
 
 @media (min-width: 768px) {
-
   .nav-mid,
   .nav-right {
     display: flex;
@@ -256,11 +258,10 @@
 }
 
 @media (min-width: 1024px) {
-
   .navbar {
     position: fixed;
     width: 100%;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     z-index: 100;
@@ -271,7 +272,6 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-
   }
 
   .scrolled {
@@ -286,7 +286,7 @@
     padding: 0 0 0 4%;
   }
 
-  .nav-left>a>img {
+  .nav-left > a > img {
     height: 7vh;
     margin: 0;
   }
@@ -294,7 +294,7 @@
   .nav-mid {
     /* width: 34%; */
     flex-grow: 1;
-    justify-content: center
+    justify-content: center;
   }
 
   .nav-links {
@@ -306,7 +306,7 @@
 
   .nav-link {
     font-weight: 400;
-    border: solid 1px #B0B0B0;
+    border: solid 1px #b0b0b0;
     border-radius: 2rem;
     background-color: white;
     font-size: 2vh;
@@ -348,13 +348,13 @@
     position: relative;
   }
 
-  .nav-btn-content>img {
+  .nav-btn-content > img {
     height: 1vw;
     padding-left: 0.5vw;
   }
 
   .nav-btn-content::after {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 1px;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { throttle } from 'lodash'
+import { throttle } from 'lodash';
 import '../styles/Navbar.css';
 
 const Navbar = () => {

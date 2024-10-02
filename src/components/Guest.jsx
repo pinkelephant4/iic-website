@@ -61,7 +61,7 @@ const Guest = () => {
 
   return (
     <div className="guest-speaker-container">
-      <h2 className="component-heading">Guest Speakers</h2>
+      <h1 className="component-heading">Guest Speakers</h1>
       <div
         className="guest-wrapper"
         style={{

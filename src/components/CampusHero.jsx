@@ -256,7 +256,7 @@ const CampusHero = () => {
         content team suggests
       </p>
       <div className="reg-btn">
-        <a href="dkkd">Register Now</a>
+        <a href="#register">Register Now</a>
       </div>
       <canvas ref={canvasRef} />
       <div className="end-line"></div>

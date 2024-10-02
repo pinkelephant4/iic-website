@@ -13,7 +13,7 @@ const CampusLast = () => {
         <p>Top 1-2 ambassadors will get the change to incubate at Atal Incubation Center</p>
       </div>
       <div className="CampusLast-box">
-        <img src="path_to_your_icon/icon2.png" alt="icon" className="icon" />
+        <img src="/icon2.png" alt="icon" className="icon" />
         <div className="CampusLast-box-number">2</div>
         <h2>Exclusive Goodies</h2>
         <p>Top 5 campus ambassador will receive exclusive goodies.</p>
