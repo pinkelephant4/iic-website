@@ -80,11 +80,12 @@ h1 {
     left: 20px; /* Move logo to the left */
     top: 20px; /* Move logo to the top-left */
     width: 60px; /* Shrink the logo */
-    transition: width 1s ease-in-out, left 0.5s ease-in-out, top 0.3s ease-in-out;
+    transition: width 1s ease-in-out, left 0.5s ease-in-out,
+      top 0.3s ease-in-out;
   }
 
-  h1{
-    font-weight: 400;
+  h1 {
+    font-weight: 400 !important;
   }
 
   .theme-card:hover .theme-name {
@@ -107,8 +108,8 @@ h1 {
     width: 300px; /* Slightly smaller for mobile */
     height: 260px;
   }
-  h1{
-    font-weight: 400;
+  h1 {
+    font-weight: 400 !important;
   }
 
   /* Disable hover effect for mobile and tablet */
@@ -129,5 +130,6 @@ h1 {
   /* Make the logo smaller for mobile and tablet */
   .theme-logo {
     width: 80px; /* Smaller logo size for mobile and tablet */
+    margin-top: 1rem;
   }
 }

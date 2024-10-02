@@ -53,8 +53,7 @@ h1 {
   max-height: 10.5em; /* Limit to 7 lines (approx.) */
   overflow: hidden; /* Hide overflow */
   margin-top: 2rem;
-  position: absolute;
-  width: 50%;
+  width: 90%;
   text-align: center;
 }
 
