@@ -26,7 +26,7 @@
 }
 
 .nav-left img {
-  height: 7vh;
+  height: 5vw;
   margin-left: 4%;
 }
 
@@ -78,23 +78,46 @@
 
 .nav-right-btn {
   position: absolute;
+  height: 100%;
   top: 0;
   right: 0;
-  bottom: 0;
   display: flex;
   align-items: center;
   background-color: black;
   color: white;
-  padding: 2vh 3.5vh;
   z-index: 4;
-  font-size: 2.5vh;
   border-bottom-left-radius: 1.4rem;
   cursor: pointer;
+  padding: 1vw 1.5vw;
+  font-size: 1.2vw;
 }
 
-.nav-right-btn > img {
-  height: 3.5vh;
-  padding-left: 1vh;
+.nav-btn-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-btn-content>img {
+  height: 1vw;
+  padding-left: 0.5vw;
+}
+
+.nav-btn-content::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: width 0.3s ease;
+  margin-top: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.nav-right-btn:hover .nav-btn-content::after {
+  width: 99.5%;
 }
 
 /* Hamburger Menu for Mobile */
@@ -175,13 +198,32 @@
 }
 
 /* Media Queries */
+/* mobile */
 @media (max-width: 768px) {
 
   .nav-link {
-    border: none;              /* Remove border */
-    border-radius: 0;          /* Remove border-radius */
-    background-color: none;    /* Remove background */
-    padding: 0;                /* Adjust padding */
+    border: none;
+    /* Remove border */
+    border-radius: 0;
+    /* Remove border-radius */
+    background-color: none;
+    /* Remove background */
+    padding: 0;
+    /* Adjust padding */
+  }
+
+  .nav-left {
+    margin-left: 4%;
+  }
+
+  .nav-left img {
+    height: 9vw;
+  }
+
+  .navbar {
+    height: 18vw;
+    display: flex;
+    align-content: center;
   }
 }
 
@@ -197,6 +239,20 @@
   .menu {
     display: none;
   }
+
+  /* .nav-left {
+    margin-left: 4%;
+  }
+
+  .nav-left img {
+    height: 5vw;
+  }
+
+  .navbar{
+    height: 18vw;
+    display: flex;
+    align-content: center;
+  } */
 }
 
 @media (min-width: 1024px) {
@@ -212,6 +268,10 @@
     height: 9vh;
     box-sizing: content-box;
     padding: 0.2rem 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
   }
 
   .scrolled {
@@ -226,13 +286,15 @@
     padding: 0 0 0 4%;
   }
 
-  .nav-left > img {
+  .nav-left>img {
     height: 7vh;
     margin: 0;
   }
 
   .nav-mid {
-    width: 34%;
+    /* width: 34%; */
+    flex-grow: 1;
+    justify-content: center
   }
 
   .nav-links {
@@ -273,29 +335,38 @@
     align-items: center;
     background-color: black;
     color: white;
-    padding: 2vh 3.5vh;
     z-index: 4;
-    font-size: 2.5vh;
     border-bottom-left-radius: 1.4rem;
     cursor: pointer;
+    padding: 1vw 1.5vw;
+    font-size: 1.2vw;
   }
 
-  .nav-right-btn > img {
-    height: 3.5vh;
-    padding-left: 1vh;
+  .nav-btn-content {
+    display: flex;
+    align-items: center;
+    position: relative;
   }
 
-  .nav-right-btn span::after {
+  .nav-btn-content>img {
+    height: 1vw;
+    padding-left: 0.5vw;
+  }
+
+  .nav-btn-content::after {
     content: '';
     display: block;
     width: 0;
-    height: 2px;
+    height: 1px;
     background-color: white;
     transition: width 0.3s ease;
-    margin-top: 2px;
+    margin-top: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
   }
 
-  .nav-right-btn:hover span::after {
-    width: 100%;
+  .nav-right-btn:hover .nav-btn-content::after {
+    width: 99.5%;
   }
 }
