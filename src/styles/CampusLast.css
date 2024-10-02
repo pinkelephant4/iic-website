@@ -1,4 +1,4 @@
-h1{
+.CampusLast-Heading{
     text-align: center;
 }
 .CampusLast-container {
@@ -51,7 +51,7 @@ h1{
   }
   
   
-  .icon {
+  .CampusLast-icon{
     position: absolute;
     top: 10px;
     left: 10px;
@@ -60,7 +60,7 @@ h1{
     z-index: 1; 
   }
   
-  h2 {
+  .CampusLast-h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     position: relative;
@@ -69,7 +69,7 @@ h1{
     text-align: left;
   }
   
-  p {
+  .CampusLast-box > p {
     font-size: 1rem;
     color: #333;
     position: relative;
