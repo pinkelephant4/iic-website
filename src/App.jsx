@@ -17,6 +17,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Loading from "./components/Loading"; // Import the Loading component
 import About from "./pages/About";
+import Problems from "./pages/Problems";
 
 function App() {
   const [loading, setLoading] = useState(true); // Manage loading state
@@ -42,8 +43,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/ambassador" element={<Campus />} />
-            <Route path="/about" element={<About />} />
             <Route path="/team" element={<Team />} />
+            {/* to-do */}
+            <Route path="/about" element={<About />} />
+            <Route path="/problems" element={<Problems />} />
           </Routes>
           <Footer />
         </>

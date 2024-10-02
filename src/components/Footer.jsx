@@ -14,7 +14,7 @@ const Footer = () => {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         {/* <Link to="/timeline">Timeline</Link> */}
-        {/* <Link to="/ambassador">Ambassador</Link> */}
+        <Link to="/ambassador">Ambassador</Link>
         <Link to="/team">Team</Link>
         {/* <Link to="/gallery">Gallery</Link> */}
         {/* <Link to="/faqs">Faqs</Link> */}

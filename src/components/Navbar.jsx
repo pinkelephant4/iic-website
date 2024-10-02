@@ -60,7 +60,9 @@ const Navbar = () => {
     // <div className={`navbar ${scrolling ? 'scrolled' : ''} ${scrollDirection === 'down' ? 'hide' : 'show'}`}>
     <div className={`navbar ${scrolling ? 'scrolled' : ''}`}>
       <div className="nav-left">
-        <img src="/assets/iic logo bg removed 2.png" alt="logo" />
+        <a href="/">
+          <img src="/assets/iic logo bg removed 2.png" alt="logo" />
+        </a>
       </div>
       <div className="nav-mid">
         <div className="nav-links">
@@ -74,20 +76,20 @@ const Navbar = () => {
               About
             </div>
           </a>
-          <a href="/team">
-            <div className="nav-link">
-              Team
-            </div>
-          </a>
           <a href="/ambassador">
             <div className="nav-link">
               Ambassador
             </div>
           </a>
+          <a href="/team">
+            <div className="nav-link">
+              Team
+            </div>
+          </a>
         </div>
       </div>
       <div className="nav-right">
-        <div className="nav-right-btn">
+        <div className="nav-right-btn" onClick={() => { window.location.href = '/problems' }}>
           <span className="nav-btn-content">
             Problem Statements
             <img src="/assets/right-arrow.svg" alt="arrow" />
