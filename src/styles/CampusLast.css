@@ -143,18 +143,10 @@ h1{
 .vertical-box-separator {
   width: 2px;
   background-color: #000;
-  height:100px;
+  height:80vh;
 }
 
-/* Add a border around the vertical boxes */
-.vertical-box {
-  border-right: 2px solid #000; /* Add a right border to each box */
-}
 
-/* Remove right border from the last box */
-.vertical-box:last-child {
-  border-right: none;
-}
   
   /* Responsive Design */
   @media (max-width: 768px) {
