@@ -33,6 +33,22 @@ const CampusLast = () => {
 
     </div>
     <h1>You are just 3 Steps away from <br></br> becoming a part of this journey </h1>
+    <div className="vertical-box-container">
+      <div className="vertical-box">
+        <div className="box-number">1</div>
+        <p>This is some text for box 1. You can add more details here.</p>
+      </div>
+      <div className="separator"></div>
+      <div className="vertical-box">
+        <div className="box-number">2</div>
+        <p>This is some text for box 2. You can add more details here.</p>
+      </div>
+      <div className="separator"></div>
+      <div className="vertical-box">
+        <div className="box-number">3</div>
+        <p>This is some text for box 3. You can add more details here.</p>
+      </div>
+    </div>
 
     </div>
   );
