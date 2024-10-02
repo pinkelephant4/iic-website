@@ -80,7 +80,7 @@
   
   /* Responsive Design */
   @media (max-width: 768px) {
-    .box {
+    .CampusLast-box{
       flex: 1 1 100%; /* Stacks boxes in one column on smaller screens */
       min-width: 100%;
       margin: 10px 0; /* Adjusts margins for stacked layout */
