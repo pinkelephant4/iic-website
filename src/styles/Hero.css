@@ -37,6 +37,41 @@
   font-weight: 300;
 }
 
+.unstop-div {
+  font-size: 1.4vw;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  padding-left: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.unstop-img-div {
+  padding-left: .25rem;
+  padding-right: .25rem;
+  --tw-bg-opacity: 1;
+  /* background-color: rgb(255 255 255); */
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unstop-img-div>img {
+  height: 2.3vw;
+}
+
+/* .unstop {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
+  background-image: url("public/assets/unstop2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+} */
+
 .hero-bottom {
   background-color: #F6F6F6;
   border-radius: 35px;
@@ -179,6 +214,22 @@
   .hero-heading {
     font-size: 10vw;
     margin: 20% 0 5% 5%;
+  }
+
+  .unstop-div {
+    font-size: 4vw;
+    padding-left: 0.4rem;
+  }
+
+  .unstop-img-div {
+    padding-left: .25rem;
+    padding-right: .25rem;
+    --tw-bg-opacity: 1;
+    border-radius: .5rem;
+  }
+
+  .unstop-img-div>img {
+    height: 6vw;
   }
 
   .hero-bottom {

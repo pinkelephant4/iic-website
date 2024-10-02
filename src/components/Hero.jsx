@@ -10,6 +10,14 @@ const Hero = () => {
           <span className='hero-heading-l1'>International Innovation </span>
           <br />
           <span className='hero-heading-l2'>Challenge</span>
+
+          <div className='unstop-div'>
+            <span>co-powered by</span>
+            <div className='unstop-img-div'>
+              <img src="/assets/unstop2.png" alt="" />
+              {/* <div className='unstop'></div> */}
+            </div>
+          </div>
         </div>
         <div className="hero-bottom">
           <div className="hero-bottom-icons">
