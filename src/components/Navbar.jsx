@@ -81,7 +81,7 @@ const Navbar = () => {
           </a>
           <a href="/ambassador">
             <div className="nav-link">
-              Campus
+              Ambassador
             </div>
           </a>
         </div>
