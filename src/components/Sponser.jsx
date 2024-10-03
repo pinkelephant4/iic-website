@@ -4,7 +4,7 @@ const Sponser = () => {
   return (
     <div className="sponser">
       <div className="sponser-header">
-        <h1>IIC Official Sponsors</h1>
+        <h1>IIC Official Partners</h1>
       </div>
       <div className="carousel">
         <div className="carousel-track">
