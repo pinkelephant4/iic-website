@@ -89,3 +89,15 @@ h1 {
     font-weight: 400;
   }
 }
+@media (max-width: 500px) {
+  .carousel-card {
+    height: 45vh;
+  }
+  .carousel-card h1 {
+    font-size: 2rem;
+  }
+  .carousel-card p {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+}
