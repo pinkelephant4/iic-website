@@ -143,6 +143,7 @@
   .CampusLast-box {
     flex: 1 1 100%; /* Each box takes full width in a row */
     min-width: auto;
+    height:350px;
   }
 
   .CampusLast-box-number {

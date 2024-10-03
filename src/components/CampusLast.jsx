@@ -37,7 +37,7 @@ const CampusLast = () => {
           <div className="CampusLast-box-number">3</div>
           <h2 className="CampusLast-h2">Letter of Recommendation </h2>
           <p>
-            Campus ambassadors who successfully bring 20+ teams will be eligible
+            CAs who successfully bring 20+ teams will be eligible
             for LOR
           </p>
         </div>
@@ -50,7 +50,7 @@ const CampusLast = () => {
           <div className="CampusLast-box-number">4</div>
           <h2 className="CampusLast-h2">Certificate</h2>
           <p>
-            CAs who bring in 5+ registrations will be awarded with a certificate
+            CAs who bring in 5+ registerations will be awarded with a certificate
             of appreciation
           </p>
         </div>
