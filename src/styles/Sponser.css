@@ -46,6 +46,14 @@ h1 {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-card img{
+  width: 80%;
+  height: 60%;
+  border-radius: 10px;
 }
 
 .carousel-card:hover {
