@@ -232,9 +232,9 @@
 
 .CampusLast-button-container {
   display: flex;
-  justify-content: center; /* Centers the button horizontally */
-  align-items: center; /* Centers the button vertically if needed */
-  height: 20vh; /* Full viewport height */
+  justify-content: center; 
+  align-items: center; 
+  height: 20vh; 
 }
 
 .CampusLast-black-button {
