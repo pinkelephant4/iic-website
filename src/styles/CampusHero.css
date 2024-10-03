@@ -18,7 +18,7 @@ canvas {
 }
 
 h1,
-.para>p {
+.para > p {
   position: relative; /* Position text relatively */
   z-index: 2; /* Ensure text is above the canvas */
   margin: 0; /* Remove default margins */
@@ -29,7 +29,7 @@ h1:nth-child(1) {
   padding-top: 7rem;
 }
 
-.para>p {
+.para > p {
   text-align: center;
   padding-top: 1rem !important;
 }
@@ -73,4 +73,24 @@ h1:nth-child(1) {
   display: flex; /* Use flexbox to align the button */
   justify-content: flex-end; /* Align button to the right */
   padding: 1rem; /* Add some padding */
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+    font-weight: 500 !important;
+    padding-bottom: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .reg-btn {
+    width: 35vw;
+    margin: auto;
+  }
+  .end-line {
+    height: 5px !important;
+    width: 100vw;
+  }
 }

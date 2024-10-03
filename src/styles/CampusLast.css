@@ -1,156 +1,153 @@
-.CampusLast-Heading{
-    text-align: center;
-    padding:10px;
+.CampusLast-Heading {
+  text-align: center;
+  padding: 10px;
 }
 .CampusLast-container {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 20px; 
-    padding-left: 240px;
-    padding-right: 240px; 
-    padding-top: 40px;
-    padding-bottom: 70px;
-    justify-content: space-between; 
-  }
-  
-  .CampusLast-box {
-    background-color: #FCEFF8;
-    height: 40vh;
-    padding: 30px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    position: relative;
-    flex: 1 1 calc(50% - 40px); /* Each box takes 50% of the row width */
-    min-width: 300px; 
-    max-width: 100%;
-    transition: background-color 0.3s ease;
-    overflow: hidden; 
-  }
-  
-  .CampusLast-box:hover {
-    background-color: #BA84FE; 
-  }
-  
-  /* Style for the large number in the background */
-  .CampusLast-box-number {
-    position: absolute;
-    top: 0;
-    left: 30%;
-    width: 100%;
-    height: 100%;
-    font-size: calc(100px + 10vw); /* Dynamically adjust the font size */
-    color: #cda8f9; /* Lighter and more transparent */
-  
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    pointer-events: none; 
-  }
-  
-  
-  .CampusLast-icon{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 40px; 
-    height: 40px;
-    z-index: 1; 
-  }
-  
-  .CampusLast-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    position: relative;
-    z-index: 2; 
-    top:50%;
-    text-align: left;
-  }
-  
-  .CampusLast-box > p {
-    font-size: 1rem;
-    color: #333;
-    position: relative;
-    z-index: 2; 
-    top:50%;
-    text-align: left;
-  }
-  
-  /*numbers columns */
-  .vertical-box-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 40px; /* Space between the columns and the footer */
-    /* background-color: #FCEFF8; */
-    padding:20px;
-    margin-left:300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 240px;
+  padding-right: 240px;
+  padding-top: 40px;
+  padding-bottom: 70px;
+  justify-content: space-between;
+}
 
-  }
-  
-  .vertical-box {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align content to the start */
-    height: 500px; /* Set a max height for each box */
-  }
-  
-  .vertical-box-number {
-    font-size: 6rem;
-    color: black;
-    margin: 10px; /* Small space below the number */
-    text-align: left;
-    font-weight: 600;
-    height:120px;
-  }
-  
-  .vertical-box-heading {
-    font-size: 1.1rem; 
-    color: black;
-    text-align: left;
-   
-  }
-  
-  .vertical-para {
-    padding-top:200px;
-    font-size: 1.3rem;
-    color: black;
-    font-weight: 500;
-    text-align: left;
-  }
-  
-  /* Separator between the columns */
+.CampusLast-box {
+  background-color: #fceff8;
+  height: 40vh;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  flex: 1 1 calc(50% - 40px); /* Each box takes 50% of the row width */
+  min-width: 300px;
+  max-width: 100%;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+}
+
+.CampusLast-box:hover {
+  background-color: #ba84fe;
+}
+
+/* Style for the large number in the background */
+.CampusLast-box-number {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 100%;
+  height: 100%;
+  font-size: calc(100px + 10vw); /* Dynamically adjust the font size */
+  color: #cda8f9; /* Lighter and more transparent */
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.CampusLast-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.CampusLast-h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  top: 50%;
+  text-align: left;
+}
+
+.CampusLast-box > p {
+  font-size: 1rem;
+  color: #333;
+  position: relative;
+  z-index: 2;
+  top: 50%;
+  text-align: left;
+}
+
+/*numbers columns */
+.vertical-box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 40px; /* Space between the columns and the footer */
+  /* background-color: #FCEFF8; */
+  padding: 20px;
+  margin-left: 300px;
+}
+
+.vertical-box {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the start */
+  height: 500px; /* Set a max height for each box */
+}
+
+.vertical-box-number {
+  font-size: 6rem;
+  color: black;
+  margin: 10px; /* Small space below the number */
+  text-align: left;
+  font-weight: 600;
+  height: 120px;
+}
+
+.vertical-box-heading {
+  font-size: 1.1rem;
+  color: black;
+  text-align: left;
+}
+
+.vertical-para {
+  padding-top: 200px;
+  font-size: 1.3rem;
+  color: black;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Separator between the columns */
 .vertical-box-separator {
   width: 2px;
   background-color: #000;
-  height:70vh;
+  height: 70vh;
 }
 
 /* Styles for mobile and tablets (hover effects disabled, smaller image size) */
 @media (max-width: 768px) {
   .CampusLast-container {
-      padding-left: 20px; 
-      padding-right: 20px; 
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  
+
   .CampusLast-box {
-      flex: 1 1 100%; /* Each box takes full width in a row */
-      min-width: auto;
+    flex: 1 1 100%; /* Each box takes full width in a row */
+    min-width: auto;
   }
 
   .CampusLast-box-number {
-      font-size: calc(200px + 5vw); /* Adjust font size for smaller screens */
-      font-weight: 350;
+    font-size: calc(200px + 5vw); /* Adjust font size for smaller screens */
+    font-weight: 350;
   }
 
   .CampusLast-box > p {
@@ -159,55 +156,60 @@
     color: #000;
   }
 
-  .CampusLast-Heading{
+  .CampusLast-Heading {
     color: #000;
     font-size: 30px;
     padding: 30px;
   }
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vertical-box-container {
+    flex-direction: column;
+    margin-left: 5px;
+  }
 
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .vertical-box-container {
-        flex-direction: column; 
-        margin-left: 5px; 
-    }
+  .vertical-box {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+    background-color: #fceff8;
+  }
 
-    .vertical-box {
-        width: 100%;
-        height: 300px; 
-        padding: 20px;
-        margin-bottom: 20px; 
-        border-bottom: 2px solid black;
-      background-color: #FCEFF8; }
+  .vertical-box:last-child {
+    border-bottom: none;
+  }
 
-    .vertical-box:last-child {
-        border-bottom: none; 
-    }
+  .vertical-box-number {
+    font-size: 4rem;
+    margin: 0%;
+    padding: 0%;
+  }
 
-    .vertical-box-number {
-        font-size: 4rem; 
-        margin: 0%;
-        padding: 0%;
-    }
+  .vertical-box-heading {
+    font-size: 1.5rem;
+    margin: 0%;
+    padding: 0%;
+  }
 
-    .vertical-box-heading {
-        font-size: 1.5rem;
-        margin: 0%;
-        padding: 0%;
+  .vertical-para {
+    padding-top: 70px;
+    font-size: 1rem;
+  }
 
-    }
-
-    .vertical-para {
-        padding-top: 70px; 
-        font-size: 1rem; 
-    }
-
-    .vertical-box-separator {
-        display: none; 
-    }
+  .vertical-box-separator {
+    display: none;
+  }
 }
-
-  
+@media (max-width: 500px) {
+  .CampusLast-h2 {
+    margin-left: 1rem;
+  }
+  .CampusLast-box > p {
+    font-size: 1rem;
+    padding-top: 0;
+  }
+}
