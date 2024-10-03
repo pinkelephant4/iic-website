@@ -17,14 +17,13 @@ h1 {
 .guest-wrapper {
   display: flex;
   transition: transform 0.5s ease; /* Smooth transition for the slide */
-  width: calc(
-    100% * (number_of_guests + 2)
-  ); /* Adjust width to account for two extra slides (beginning and end) */
+  width: calc(100% * (number_of_guests + 2)); /* Adjust width to account for two extra slides (beginning and end) */
 }
 
 .guest-section {
   min-width: 100%; /* Each guest section takes full width */
   display: flex;
+  flex-direction: row; /* Default direction for desktop view */
   opacity: 0; /* Start hidden */
   animation: fadeIn 0.5s forwards; /* Animation for fade-in */
   padding: 20px;
@@ -91,15 +90,16 @@ h1 {
   color: #333;
   cursor: pointer;
   z-index: 10;
-  bottom: 50%;
 }
 
 .left-arrow {
   left: 10px;
+  margin-top: 80px;
 }
 
 .right-arrow {
   right: 10px;
+  margin-top: 80px;
 }
 
 .arrow:hover {
@@ -119,8 +119,12 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .guest-section {
+    flex-direction: column; /* Change direction for mobile view */
+  }
+
   .image-section {
-    flex: 2.5; /* Ensure it takes less space compared to text */
+    flex: 2.5; /* Ensure it takes more space compared to text */
     background-color: #afaddf;
     display: flex;
     justify-content: center; /* Ensure the image stays centered horizontally */
