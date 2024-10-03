@@ -5,7 +5,7 @@ const Hero = () => {
 
   const days = () => {
     const today = new Date();
-    const hackDate = new Date(today.getFullYear(), 10, 18);
+    const hackDate = new Date(today.getFullYear(), 10, 15);
     const difference = hackDate - today;
     const daysLeft = Math.ceil(difference / (1000 * 60 * 60 * 24));
 
