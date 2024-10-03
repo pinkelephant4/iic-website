@@ -87,8 +87,6 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  height: 500px; /* Set a consistent height for each box */
-
 }
 
 .vertical-box {
@@ -103,7 +101,6 @@
   height: 500px; /* Set a consistent height for each box */
   max-width: 300px;
   margin: 0 10px; /* Space between boxes */
- 
 }
 
 .vertical-box-number {
