@@ -54,6 +54,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .bold-text-with-images p {
@@ -61,17 +62,17 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10px; /* Adds some spacing between lines */
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .image-container {
   display: inline-block;
-  margin: 0 5px; /* Adds spacing between text and images */
+  margin: 2px 15px; /* Adds spacing between text and images */
 }
 
 /* Specific image styles */
 .image1 img {
-  width: 180px; /* You can adjust the width individually for each image */
+  width: 200px; /* You can adjust the width individually for each image */
   height: 80px;
   padding: 0px 10px; /* Add padding if needed */
 }
@@ -82,13 +83,14 @@
 }
 
 .image3 img {
-  width: 130px; /* Adjust the size for image3 */
+  width: 120px; /* Adjust the size for image3 */
   padding: 0px 10px;
 }
 
 .image4 img {
   width: 120px;
-  padding: 0px 10px;
+  padding: 5px 10px 0px 10px;
+  margin-top: 20%;
 }
 
 .image5 img {
