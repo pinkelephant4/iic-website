@@ -4,27 +4,25 @@ import "../styles/Faq.css";
 const faqData = [
   {
     eventKey: "0",
-    question: "Question #1",
+    question: "1. Who can participate in IIC ?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "The IIC is open to students and innovators from India’s premier universities and international institutions.",
   },
   {
     eventKey: "1",
-    question: "Question #2",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+    question: "2. Can I participate as an individual or do I need a team ?",
+    answer: "Participants need a team of minimum 2 and maximum 3 members.",
   },
   {
     eventKey: "2",
-    question: "Question #3",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+    question: "3. What is the participation fee ?",
+    answer: "The participation fee is Rs. 500 per team.",
   },
   {
     eventKey: "3",
-    question: "Question #4",
+    question: "4. What opportunities does the IIC offer for participants ?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "IIC provides participants with the chance to collaborate with industry experts, gain mentorship, and showcase their innovations on a global platform. Winning teams will receive exciting prizes and the opportunity for further mentorship.",
   },
 ];
 
