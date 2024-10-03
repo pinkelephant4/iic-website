@@ -20,14 +20,14 @@ const WelcomePage = () => {
       
       {/* Bold Text with Images - Split into three lines with individual image containers */}
       <div className="bold-text-with-images">
-        <p>
+        <span>
           We 
           <div className="image-container image1">
             <img src="/assets/Manipal.png" alt="logo1" />
           </div>
           are a University
-        </p>
-        <p>
+        </span>
+        <span>
           <div className="image-container image2">
             <img src="/assets/Manipal2.png" alt="logo2" />
           </div>
@@ -36,8 +36,8 @@ const WelcomePage = () => {
             <img src="/assets/Manipal3.png" alt="logo3" />
           </div>
           about
-        </p>
-        <p>
+        </span>
+        <span>
           <div className="image-container image4">
             <img src="/assets/Manipal4.png" alt="logo4" />
           </div>
@@ -46,7 +46,7 @@ const WelcomePage = () => {
             <img src="/assets/Manipal5.png" alt="logo5" />
           </div>
           growth
-        </p>
+        </span>
       </div>
     </div>
   );
