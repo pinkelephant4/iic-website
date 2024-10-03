@@ -7,7 +7,7 @@ const CampusLast = () => {
       <div className="CampusLast-container">
         <div className="CampusLast-box">
           <img
-            src="../assets/aic.png"
+            src="../assets/aic-icon.svg"
             alt="icon"
             className="CampusLast-icon"
           />
@@ -30,7 +30,7 @@ const CampusLast = () => {
         </div>
         <div className="CampusLast-box">
           <img
-            src="../assets/gifts.svg"
+            src="../assets/lor.svg"
             alt="icon"
             className="CampusLast-icon"
           />
