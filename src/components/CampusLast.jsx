@@ -7,7 +7,7 @@ const CampusLast = () => {
       <div className="CampusLast-container">
         <div className="CampusLast-box">
           <img
-            src="path_to_your_icon/icon1.png"
+            src="../assets/aic.png"
             alt="icon"
             className="CampusLast-icon"
           />
@@ -20,7 +20,7 @@ const CampusLast = () => {
         </div>
         <div className="CampusLast-box">
           <img
-            src="path_to_your_icon/icon2.png"
+            src="../assets/gift.png"
             alt="icon"
             className="CampusLast-icon"
           />
@@ -30,7 +30,7 @@ const CampusLast = () => {
         </div>
         <div className="CampusLast-box">
           <img
-            src="path_to_your_icon/icon3.png"
+            src="../assets/gift.png"
             alt="icon"
             className="CampusLast-icon"
           />
@@ -43,7 +43,7 @@ const CampusLast = () => {
         </div>
         <div className="CampusLast-box">
           <img
-            src="path_to_your_icon/icon4.png"
+            src="../assets/lor.png"
             alt="icon"
             className="CampusLast-icon"
           />
