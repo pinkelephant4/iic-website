@@ -2,6 +2,17 @@ import '../styles/Hero.css'
 import MagneticEffect from './Magnetic'
 
 const Hero = () => {
+
+  const days = () => {
+    const today = new Date();
+    const hackDate = new Date(today.getFullYear(), 10, 18);
+    const difference = hackDate - today;
+    const daysLeft = Math.ceil(difference / (1000 * 60 * 60 * 24));
+
+    return daysLeft;
+  }
+
+
   return (
     <>
       <div className='hero-wrapper'>
@@ -37,7 +48,7 @@ const Hero = () => {
             </span>
             <br />
             <span className='hero-bottom-left-number'>
-              10
+              {days()}
             </span>
             <span className='hero-bottom-left-text'>
               Left
