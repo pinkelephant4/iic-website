@@ -228,3 +228,26 @@
     padding-top: 0;
   }
 }
+
+
+.CampusLast-button-container {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  align-items: center; /* Centers the button vertically if needed */
+  height: 20vh; /* Full viewport height */
+}
+
+.CampusLast-black-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* .CampusLast-black-button:hover {
+  background-color: #333; 
+} */

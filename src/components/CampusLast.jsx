@@ -87,6 +87,9 @@ const CampusLast = () => {
           </p>
         </div>
       </div>
+      <div className="CampusLast-button-container">
+  <button className="CampusLast-black-button">Register Now</button>
+</div>
     </div>
   );
 };
