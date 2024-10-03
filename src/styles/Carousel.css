@@ -105,11 +105,23 @@ h1 {
 /* Styles for mobile and tablets (hover effects disabled, smaller image size) */
 @media (max-width: 768px) {
   .theme-card {
-    width: 300px; /* Slightly smaller for mobile */
-    height: 260px;
+    width: 100%; /* Make the card width responsive */
+    height: auto; /* Let the height adjust based on content */
+    padding: 15px; /* Adjust padding for better spacing */
   }
+
+  .theme-logo {
+    width: 80px; /* Smaller logo size for mobile and tablet */
+    margin-top: 0.5rem; /* Reduce the gap between logo and heading */
+  }
+
   h1 {
-    font-weight: 400 !important;
+    font-size: 2rem; /* Reduce h1 size for mobile */
+    margin-bottom: 20px; /* Reduce margin below the heading */
+  }
+
+  .theme-name {
+    margin-top: 0px; /* Reduce the gap between the logo and the theme name */
   }
 
   /* Disable hover effect for mobile and tablet */
@@ -124,12 +136,7 @@ h1 {
   .theme-description {
     opacity: 1; /* Always visible */
     position: relative;
-    bottom: 10px;
-  }
-
-  /* Make the logo smaller for mobile and tablet */
-  .theme-logo {
-    width: 80px; /* Smaller logo size for mobile and tablet */
-    margin-top: 1rem;
+    margin-top: -50px; /* Reduce the gap between name and description */
+    bottom: 0px;
   }
 }
