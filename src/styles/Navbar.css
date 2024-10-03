@@ -36,40 +36,33 @@
 
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 2rem; /* Increased gap between links for more spacing */
 }
 
 .nav-link {
   font-weight: 300;
-  border: 1px solid #b0b0b0;
-  border-radius: 2rem;
-  background-color: white;
-  font-size: 1.8vh;
-  padding: 0.5vh 2.5vh;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  border: none; /* Removed border for mobile */
+  background-color: transparent; /* Ensure no background */
+  font-size: 1.4vh; /* Smaller font size for better mobile appearance */
+  padding: 0.5vh 1.5vw; /* Adjust padding to give some vertical spacing */
+  color: black; /* Default text color */
+  cursor: default; /* Indicate that it's not clickable */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  min-width: 6vw; /* Minimum width to prevent squishing */
+  height: 5vh; /* Fixed height for consistent alignment */
 }
 
 .nav-links a {
   text-decoration: none;
-  font-size: 2vh;
+  font-size: 1.4vh; /* Match font size of links */
   font-weight: 500;
   color: black;
 }
 
-.nav-link:hover {
-  background-color: #f6f6f6;
-  transform: scale(1.05);
-}
-
 .nav-link.active {
-  background-color: black;
-  color: white;
-  border: none;
-}
-
-.nav-link.active a {
-  color: white;
+  color: black; /* Active link color */
 }
 
 .nav-right {
@@ -152,15 +145,15 @@
 /* Side Menu for Mobile */
 .menu {
   position: fixed;
-  top: 0;
+  top: 7vh; /* Set to the height of the navbar to position below it */
   right: -100%;
   width: 50%;
-  height: 100vh;
+  height: 50vh; /* Set a fixed height for the menu */
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  z-index: 1500;
+  z-index: 2000;
   transition: right 0.3s ease;
-  overflow-y: auto;
+  overflow-y: auto; /* Allow scrolling if content exceeds height */
   overflow-x: hidden;
 }
 
@@ -177,19 +170,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem; /* Adjust gap for better spacing */
   width: 100%;
 }
 
 .menu-links .nav-link {
-  font-size: 3vh;
-  padding: 2vh 3vh;
+  font-size: 2.5vh; /* Slightly larger font size for mobile menu links */
+  padding: 1.5vh 3vh; /* Adjusted padding */
   color: black;
   background: none;
   border: none;
   text-align: center;
   width: 100%;
-  transition: none;
 }
 
 /* Add black border between each menu item */
@@ -200,27 +192,36 @@
 /* Media Queries */
 /* mobile */
 @media (max-width: 768px) {
+  /* Mobile-specific changes for links to look like text */
   .nav-link {
-    border: none;
-    /* Remove border */
-    border-radius: 0;
-    /* Remove border-radius */
-    background-color: none;
-    /* Remove background */
-    padding: 0;
-    /* Adjust padding */
+    border: none; /* No border for mobile */
+    background-color: transparent; /* No background color */
+    padding: 0; /* No padding */
+    color: black; /* Set default text color */
+    cursor: default; /* Not clickable */
+    font-size: 1.4vh; /* Adjusted font size */
+    font-weight: 400; /* Default font weight */
+    min-width: 6vw; /* Ensure minimum width */
+    height: 5vh; /* Ensure height consistency */
   }
+
+  /* Remove any link-specific hover effects for mobile */
   a {
-    text-decoration: none;
-    font-size: 1.5rem;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+    font-size: 1.4vh; /* Consistent font size */
   }
 
   .nav-left {
     margin-left: 4%;
+    padding: 0px;
   }
 
   .nav-left > a > img {
     height: 9vw;
+    width: auto;
+    padding: 0px;
+    margin-left: -30%;
   }
 
   .navbar {
@@ -241,20 +242,6 @@
   .menu {
     display: none;
   }
-
-  /* .nav-left {
-    margin-left: 4%;
-  }
-
-  .nav-left img {
-    height: 5vw;
-  }
-
-  .navbar{
-    height: 18vw;
-    display: flex;
-    align-content: center;
-  } */
 }
 
 @media (min-width: 1024px) {
@@ -302,6 +289,7 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    gap: 2rem; /* Added gap to create space between links */
   }
 
   .nav-link {
@@ -312,6 +300,11 @@
     font-size: 2vh;
     padding: 1vh 1.4vw;
     cursor: pointer;
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    min-width: 6vw; /* Minimum width to prevent squishing */
+    height: 5vh; /* Fixed height for consistent alignment */
   }
 
   .nav-link.active {
