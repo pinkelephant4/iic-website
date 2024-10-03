@@ -89,6 +89,7 @@ const Guest = () => {
             <div className="image-section">
               <img src={guest.image} alt={guest.name} className="guest-image" />
             </div>
+            <div className="coming-soon-overlay">Coming Soon</div> {/* Overlay for hover */}
           </div>
         ))}
 
