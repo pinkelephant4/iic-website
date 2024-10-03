@@ -145,7 +145,7 @@ h1 {
   }
 
   .info-section {
-    flex: 2; /* Take more space for text */
+    flex: 2.5; /* Take more space for text */
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -163,14 +163,16 @@ h1 {
 
   .guest-name {
     font-size: 20px; /* Adjust name size for visibility */
-    margin-bottom: 10px;
+    margin-bottom: 2px;
+    padding: 0;
   }
 
   .guest-description {
     font-size: 11px; /* Adjust description size */
     line-height: 1.5; /* Line height for better readability */
-    max-height: 10.5em; /* Limit to 7 lines (approx.) */
-    overflow: hidden; /* Hide overflow */
+    max-height: 10em; /* Limit to 7 lines (approx.) */
+    padding: 0%;
+    overflow: visible;
   }
 
   .arrow {
