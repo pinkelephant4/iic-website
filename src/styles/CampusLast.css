@@ -81,50 +81,52 @@
 /*numbers columns */
 .vertical-box-container {
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: center; /* Center the boxes horizontally */
+  align-items: flex-start; /* Align all items at the top */
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  margin-bottom: 40px; /* Space between the columns and the footer */
-  /* background-color: #FCEFF8; */
- 
-  margin-left: 320px;
+  padding: 20px;
 }
 
 .vertical-box {
   flex: 1;
-  padding: 20px;
-  /* background-color: brown; */
+  padding: 80px;
+  padding-top: 0px;
   text-align: center;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content:center; /* Align content to the start */
-  height: 500px; /* Set a max height for each box */
+  justify-content: flex-start; /* Align items to the top */
+  height: 500px; /* Set a consistent height for each box */
+  max-width: 300px;
+  margin: 0 10px; /* Space between boxes */
 }
 
 .vertical-box-number {
   font-size: 6rem;
   color: black;
-  margin-bottom: 10px; /* Small space below the number */
-  text-align: left;
+  margin-bottom: 100px;
   font-weight: 600;
   height: 120px;
+  text-align: left;
+  line-height: 120px; /* Ensure the number is vertically centered */
 }
 
 .vertical-box-heading {
   font-size: 1.1rem;
   color: black;
   text-align: left;
+  margin-top: 20px; /* Add space below the number */
 }
 
 .vertical-para {
-  padding-top: 200px;
+  margin-top: 10px;
   font-size: 1.3rem;
   color: black;
   font-weight: 500;
   text-align: left;
+  flex-grow: 1; /* Fill remaining space to push content evenly */
 }
 
 /* Separator between the columns */
@@ -133,6 +135,27 @@
   background-color: #000;
   height: 70vh;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Styles for mobile and tablets (hover effects disabled, smaller image size) */
 @media (max-width: 768px) {
@@ -187,8 +210,7 @@
     width: 100%;
     height: 300px;
     padding: 20px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     border-bottom: 2px solid black;
     background-color: #fceff8;
   }
@@ -235,8 +257,7 @@
   display: flex;
   justify-content: center; 
   align-items: center; 
-  height: 3vh; 
-  margin: 20px;
+  height: 20vh; 
 }
 
 .CampusLast-black-button {
