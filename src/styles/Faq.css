@@ -129,15 +129,15 @@
   }
 
   .faq .accordion-button {
-    font-size: 1rem;
+    font-size: 0.7rem;
     width: 100%;
   }
   .faq .accordion-button:not(.collapsed) {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .answer {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 
   .faq {
