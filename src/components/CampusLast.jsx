@@ -72,7 +72,7 @@ const CampusLast = () => {
         <div className="vertical-box">
           <div className="vertical-box-number">02</div>
           <h3 className="vertical-box-heading">
-            Get and email of confirmation
+            Get email of confirmation
           </h3>
           <p className="vertical-para">
             You will get an confirmation email from us
