@@ -1,5 +1,5 @@
 import Card from "../components/Card";
-import '../styles/Patron.css';
+import "../styles/Patron.css";
 import { useEffect, useState } from "react";
 
 const Patron = (props) => {
@@ -11,7 +11,7 @@ const Patron = (props) => {
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    
+
     // Cleanup event listener on unmount
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -20,7 +20,7 @@ const Patron = (props) => {
 
   return (
     <div
-      className='patron'
+      className="patron"
       style={{
         backgroundColor: props.color,
         height: isMobile ? props.height : "65vh", // Adjust height based on screen size
