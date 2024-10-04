@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { throttle } from 'lodash';
-import '../styles/Navbar.css';
+import React, { useState, useEffect } from "react";
+import { throttle } from "lodash";
+import "../styles/Navbar.css";
 
 const Navbar = ({ active }) => {
   const [scrolling, setScrolling] = useState(false);
@@ -46,20 +46,23 @@ const Navbar = ({ active }) => {
         setScrolling(false);
       }
     }, 100);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const handleLinkClick = () => {
-    setMenuOpen(false);  // Close the menu when a link is clicked
+    setMenuOpen(false); // Close the menu when a link is clicked
   };
 
   return (
     // <div className={`navbar ${scrolling ? 'scrolled' : ''} ${scrollDirection === 'down' ? 'hide' : 'show'}`}>
-    <div className={`navbar ${scrolling ? 'scrolled' : ''}`}>
+    <div className={`navbar ${scrolling ? "scrolled" : ""}`}>
       <div className="nav-left">
+        <a href="/">
+          <img src="/assets/MUJ.png" alt="logo" className="mujlogo" />
+        </a>
         <a href="/">
           <img src="/assets/iic logo bg removed 2.png" alt="logo" />
         </a>
@@ -77,7 +80,9 @@ const Navbar = ({ active }) => {
             </div>
           </a>
           <a href="/ambassador">
-            <div className={`nav-link ${active == "ambassador" ? "active" : ""}`}>
+            <div
+              className={`nav-link ${active == "ambassador" ? "active" : ""}`}
+            >
               Ambassador
             </div>
           </a>
@@ -89,7 +94,12 @@ const Navbar = ({ active }) => {
         </div>
       </div>
       <div className="nav-right">
-        <div className="nav-right-btn" onClick={() => { window.location.href = '/problems' }}>
+        <div
+          className="nav-right-btn"
+          onClick={() => {
+            window.location.href = "/problems";
+          }}
+        >
           <span className="nav-btn-content">
             Problem Statements
             <img src="/assets/right-arrow.svg" alt="arrow" />
@@ -98,23 +108,39 @@ const Navbar = ({ active }) => {
       </div>
 
       {/* Hamburger Menu */}
-      <div className={`hamburger ${menuOpen ? 'hide' : ''}`} onClick={toggleMenu}>
+      <div
+        className={`hamburger ${menuOpen ? "hide" : ""}`}
+        onClick={toggleMenu}
+      >
         &#9776;
       </div>
 
       {/* Mobile Menu */}
-      <div className={`menu ${menuOpen ? 'active' : ''}`}>
+      <div className={`menu ${menuOpen ? "active" : ""}`}>
         <ul className="menu-links">
-          <li className="nav-link" onClick={handleLinkClick}><a href="/">Home</a></li>
-          <li className="nav-link" onClick={handleLinkClick}><a href="/about">About</a></li>
-          <li className="nav-link" onClick={handleLinkClick}><a href="/team">Team</a></li>
-          <li className="nav-link" onClick={handleLinkClick}><a href="/ambassador">Ambassador</a></li>
-          <li className="nav-link" onClick={handleLinkClick}><a href="/problems">Problem Statements</a></li>
+          <li className="nav-link" onClick={handleLinkClick}>
+            <a href="/">Home</a>
+          </li>
+          <li className="nav-link" onClick={handleLinkClick}>
+            <a href="/about">About</a>
+          </li>
+          <li className="nav-link" onClick={handleLinkClick}>
+            <a href="/team">Team</a>
+          </li>
+          <li className="nav-link" onClick={handleLinkClick}>
+            <a href="/ambassador">Ambassador</a>
+          </li>
+          <li className="nav-link" onClick={handleLinkClick}>
+            <a href="/problems">Problem Statements</a>
+          </li>
         </ul>
       </div>
 
       {/* Close Menu Icon */}
-      <div className={`hamburger-close ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+      <div
+        className={`hamburger-close ${menuOpen ? "active" : ""}`}
+        onClick={toggleMenu}
+      >
         &times;
       </div>
     </div>
