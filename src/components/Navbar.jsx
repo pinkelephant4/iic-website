@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { throttle } from 'lodash';
 import '../styles/Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ active }) => {
   const [scrolling, setScrolling] = useState(false);
   // const [scrollDirection, setScrollDirection] = useState('up');
   // const [lastScrollY, setLastScrollY] = useState(0);
@@ -67,22 +67,22 @@ const Navbar = () => {
       <div className="nav-mid">
         <div className="nav-links">
           <a href="/">
-            <div className="nav-link active">
+            <div className={`nav-link ${active == "" ? "active" : ""}`}>
               Home
             </div>
           </a>
           <a href="/about">
-            <div className="nav-link">
+            <div className={`nav-link ${active == "about" ? "active" : ""}`}>
               About
             </div>
           </a>
           <a href="/ambassador">
-            <div className="nav-link">
+            <div className={`nav-link ${active == "ambassador" ? "active" : ""}`}>
               Ambassador
             </div>
           </a>
           <a href="/team">
-            <div className="nav-link">
+            <div className={`nav-link ${active == "team" ? "active" : ""}`}>
               Team
             </div>
           </a>
@@ -109,7 +109,7 @@ const Navbar = () => {
           <li className="nav-link" onClick={handleLinkClick}><a href="/about">About</a></li>
           <li className="nav-link" onClick={handleLinkClick}><a href="/team">Team</a></li>
           <li className="nav-link" onClick={handleLinkClick}><a href="/ambassador">Ambassador</a></li>
-          <li className="nav-link" onClick={handleLinkClick}><a href="/problem-statements">Problem Statements</a></li>
+          <li className="nav-link" onClick={handleLinkClick}><a href="/problems">Problem Statements</a></li>
         </ul>
       </div>
 
