@@ -4,11 +4,8 @@ import "../styles/Navbar.css";
 
 const Navbar = ({ active }) => {
   const [scrolling, setScrolling] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  // const [menuOpen, setMenuOpen] = useState(false);
+  const [menuToggle, setMenuToggle] = useState("");
 
   useEffect(() => {
     const handleScroll = throttle(() => {
@@ -25,7 +22,8 @@ const Navbar = ({ active }) => {
   }, []);
 
   const handleLinkClick = () => {
-    setMenuOpen(false); // Close the menu when a link is clicked
+    // setMenuOpen(false); // Close the menu when a link is clicked
+    setMenuToggle(!menuToggle)
   };
 
   return (
@@ -78,42 +76,63 @@ const Navbar = ({ active }) => {
         </div>
       </div>
 
+      <button class={`nav-toggler ${menuToggle ? "toggler-open" : ""}`} onClick={handleLinkClick}>
+        <span></span>
+      </button>
+      <ul className={`mobileMenu-links ${menuToggle ? "open" : ""}`}>
+        <li className="mobileMenu-link">
+          <a href="/">Home</a>
+        </li>
+        <li className="mobileMenu-link">
+          <a href="/about">About</a>
+        </li>
+        <li className="mobileMenu-link">
+          <a href="/team">Team</a>
+        </li>
+        <li className="mobileMenu-link">
+          <a href="/ambassador">Ambassador</a>
+        </li>
+        <li className="mobileMenu-link">
+          <a href="/problems">Problem Statements</a>
+        </li>
+      </ul>
+
       {/* Hamburger Menu */}
-      <div
-        className={`hamburger ${menuOpen ? "hide" : ""}`}
-        onClick={toggleMenu}
-      >
-        &#9776;
-      </div>
+      {/* <div
+          className={`hamburger ${menuOpen ? "hide" : ""}`}
+          onClick={toggleMenu}
+        >
+          &#9776;
+        </div> */}
 
       {/* Mobile Menu */}
-      <div className={`menu ${menuOpen ? "active" : ""}`}>
-        <ul className="menu-links">
-          <li className="nav-link" onClick={handleLinkClick}>
-            <a href="/">Home</a>
-          </li>
-          <li className="nav-link" onClick={handleLinkClick}>
-            <a href="/about">About</a>
-          </li>
-          <li className="nav-link" onClick={handleLinkClick}>
-            <a href="/team">Team</a>
-          </li>
-          <li className="nav-link" onClick={handleLinkClick}>
-            <a href="/ambassador">Ambassador</a>
-          </li>
-          <li className="nav-link" onClick={handleLinkClick}>
-            <a href="/problems">Problem Statements</a>
-          </li>
-        </ul>
-      </div>
+      {/* <div className={`menu ${menuOpen ? "active" : ""}`}>
+          <ul className="menu-links">
+            <li className="nav-link" onClick={handleLinkClick}>
+              <a href="/">Home</a>
+            </li>
+            <li className="nav-link" onClick={handleLinkClick}>
+              <a href="/about">About</a>
+            </li>
+            <li className="nav-link" onClick={handleLinkClick}>
+              <a href="/team">Team</a>
+            </li>
+            <li className="nav-link" onClick={handleLinkClick}>
+              <a href="/ambassador">Ambassador</a>
+            </li>
+            <li className="nav-link" onClick={handleLinkClick}>
+              <a href="/problems">Problem Statements</a>
+            </li>
+          </ul>
+        </div> */}
 
       {/* Close Menu Icon */}
-      <div
-        className={`hamburger-close ${menuOpen ? "active" : ""}`}
-        onClick={toggleMenu}
-      >
-        &times;
-      </div>
+      {/* <div
+          className={`hamburger-close ${menuOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+        >
+          &times;
+        </div> */}
     </div>
   );
 };
