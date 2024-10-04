@@ -349,6 +349,7 @@
   }
 
   .nav-left>a>img .mujlogo {
+  .nav-left > a > img .mujlogo {
     padding: 2%;
     margin: 0%;
     justify-content: left;
@@ -416,7 +417,8 @@
   }
 
   .mujlogo {
-    height: 8vh !important;
+    height: 9vh !important;
+    transform: translateY(-5px);
   }
 
   .nav-mid {
