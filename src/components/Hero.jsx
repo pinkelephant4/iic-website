@@ -34,11 +34,15 @@ const Hero = () => {
           <div className="hero-bottom-icons">
 
             <MagneticEffect>
+              <a href="https://www.instagram.com/iicmuj?igsh=MnZsaWhsa2dqZXFl">
               <img src="/assets/insta-b.svg" alt="Instagram" className='hero-bottom-icon' />
+              </a>
             </MagneticEffect>
 
             <MagneticEffect>
+              <a href="">
               <img src="/assets/linkedin-b.svg" alt="LinkedIn" className='hero-bottom-icon' />
+              </a>
             </MagneticEffect>
           </div>
 
