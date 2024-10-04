@@ -4,39 +4,11 @@ import "../styles/Navbar.css";
 
 const Navbar = ({ active }) => {
   const [scrolling, setScrolling] = useState(false);
-  // const [scrollDirection, setScrollDirection] = useState('up');
-  // const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScrollY = window.scrollY;
-
-  //     if (currentScrollY > lastScrollY) {
-  //       setScrollDirection('down');
-  //     } else {
-  //       setScrollDirection('up');
-  //     }
-
-  //     setLastScrollY(currentScrollY);
-
-  //     if (currentScrollY > 40) {
-  //       setScrolling(true);
-  //     } else {
-  //       setScrolling(false);
-  //     }
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, [lastScrollY]);
 
   useEffect(() => {
     const handleScroll = throttle(() => {
@@ -57,7 +29,6 @@ const Navbar = ({ active }) => {
   };
 
   return (
-    // <div className={`navbar ${scrolling ? 'scrolled' : ''} ${scrollDirection === 'down' ? 'hide' : 'show'}`}>
     <div className={`navbar ${scrolling ? "scrolled" : ""}`}>
       <div className="nav-left">
         <a href="/">
