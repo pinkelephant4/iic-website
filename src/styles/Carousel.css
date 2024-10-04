@@ -89,7 +89,7 @@ h1 {
   }
 
   .theme-card:hover .theme-name {
-    transform: translateY(-40px); /* Move theme name upwards slightly */
+    transform: translateY(-80px); /* Move theme name upwards slightly */
     transition: transform 1s ease-in-out;
   }
 
@@ -99,6 +99,7 @@ h1 {
     transform: translateY(-40px); /* Move theme name upwards slightly */
     transition: opacity 0.5s ease-in-out 0.5s, bottom 0.5s ease-in-out;
     position: absolute;
+    font-weight: 200;
   }
 }
 
