@@ -131,6 +131,7 @@
   .faq .accordion-button {
     font-size: 0.7rem;
     width: 100%;
+    margin-left: 0;
   }
   .faq .accordion-button:not(.collapsed) {
     font-size: 0.7rem;

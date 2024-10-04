@@ -30,4 +30,7 @@
     height: 120vh;
     margin: 5vh 0; /* Adjust margin for mobile */
   }
+  .header h1 {
+    font-weight: 300 !important;
+  }
 }

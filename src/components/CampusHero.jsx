@@ -178,7 +178,7 @@ const CampusHero = () => {
 
         ctx.fillStyle = "black"; // Change text color to black
         ctx.textAlign = "center";
-        ctx.font = "bold 20px Arial"; // Slightly smaller text size
+        ctx.font = "20px Arial"; // Slightly smaller text size
         ctx.fillText(this.word, 0, 0);
       } else {
         this.roundRect(
@@ -198,7 +198,7 @@ const CampusHero = () => {
 
         ctx.fillStyle = "black"; // Change text color to black
         ctx.textAlign = "center";
-        ctx.font = "bold 16px Arial"; // Slightly smaller text size
+        ctx.font = "16px Arial"; // Slightly smaller text size
         ctx.fillText(this.word, 0, 0);
       }
 
