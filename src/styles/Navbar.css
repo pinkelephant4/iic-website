@@ -216,7 +216,7 @@
   }
 
   .nav-left {
-    margin-left: 4%;
+    margin-left: 0%;
     padding: 0px;
   }
 
@@ -224,6 +224,11 @@
     height: 9vw;
     width: auto;
     padding: 0px;
+    margin: 0%;
+  }
+  .nav-left > a > img .mujlogo{
+    padding: 2%;
+    margin: 0%;justify-content: left;
   }
 
   .navbar {
