@@ -77,7 +77,7 @@ const Hero = () => {
 
                 <span>About</span>
                 <p>
-                  The Wild Stone Plant is a marvel of nature. This hardy plant, known for its ability to thrive in diverse conditions, Design by Fluttertop is a testament to the resilience of life.
+                  The International Innovation Challenge (IIC) is a premier global hackathon that brings together bright minds from top universities to solve real-world industry challenges. Organized by Manipal University in collaboration with other key partners, IIC focuses on critical areas like cybersecurity, sustainability, and digital transformation. This event fosters an environment of creativity, collaboration, and problem-solving, empowering young innovators to develop groundbreaking solutions. IIC is a platform where technology meets entrepreneurship, inspiring the next generation of leaders to drive change and shape the future of industries worldwide.
                 </p>
               </div>
 
