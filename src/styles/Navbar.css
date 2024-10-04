@@ -113,7 +113,7 @@
 }
 
 .nav-right-btn:hover .nav-btn-content::after {
-  width: 99.5%;
+  width: 95% !important;
 }
 
 /* Hamburger Menu for Mobile */
