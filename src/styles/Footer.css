@@ -81,14 +81,14 @@
 }
 
 /* Social Media or External Links */
-a {
+.footer-icons a {
   color: #770fb3;
   font-size: 2.5rem;
   margin: 1rem;
   transition: all 0.2s ease-in-out;
 }
 
-a:hover {
+.footer-icons a:hover {
   transform: translateY(-5px);
   color: #827dff;
 }
@@ -150,10 +150,6 @@ a:hover {
 
   .copyright p {
     font-size: 0.9rem;
-  }
-
-  a {
-    font-size: 2rem;
   }
   .footer-icons a {
     font-size: 1.5rem;
