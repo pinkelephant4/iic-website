@@ -226,9 +226,10 @@
     padding: 0px;
     margin: 0%;
   }
-  .nav-left > a > img .mujlogo{
+  .nav-left > a > img .mujlogo {
     padding: 2%;
-    margin: 0%;justify-content: left;
+    margin: 0%;
+    justify-content: left;
   }
 
   .navbar {
@@ -289,7 +290,8 @@
     margin-left: 0.5rem;
   }
   .mujlogo {
-    height: 8vh !important;
+    height: 9vh !important;
+    transform: translateY(-5px);
   }
 
   .nav-mid {
