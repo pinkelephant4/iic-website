@@ -1,7 +1,9 @@
 import React from 'react'
 import ComingSoon from '../components/ComingSoon'
 
-const Problems = () => {
+const Problems = ({ setActive }) => {
+    setActive("problems")
+
     return (
         <>
             <ComingSoon />

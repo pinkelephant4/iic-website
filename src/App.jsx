@@ -22,6 +22,7 @@ import Problems from "./pages/Problems";
 function App() {
   const [loading, setLoading] = useState(true); // Manage loading state
   const location = useLocation(); // Get the current route location
+  const [active, setActive] = useState("");
 
   useEffect(() => {
     // Trigger loading on route change or initial load
@@ -39,14 +40,14 @@ function App() {
         <Loading /> // Show loading animation while loading is true
       ) : (
         <>
-          <Navbar />
+          <Navbar active={active} />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/ambassador" element={<Campus />} />
-            <Route path="/team" element={<Team />} />
+            <Route path="/ambassador" element={<Campus setActive={setActive} />} />
+            <Route path="/team" element={<Team setActive={setActive} />} />
             {/* to-do */}
-            <Route path="/about" element={<About />} />
-            <Route path="/problems" element={<Problems />} />
+            <Route path="/about" element={<About setActive={setActive} />} />
+            <Route path="/problems" element={<Problems setActive={setActive} />} />
           </Routes>
           <Footer />
         </>

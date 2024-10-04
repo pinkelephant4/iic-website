@@ -1,7 +1,9 @@
 import Patron from "../components/Patron";
 import "../styles/Team.css";
 
-const Team = () => {
+const Team = ({ setActive }) => {
+  setActive("team")
+
   return (
     <div className="team">
       <div className="heading1">

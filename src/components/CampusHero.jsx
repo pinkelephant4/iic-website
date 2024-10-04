@@ -251,11 +251,9 @@ const CampusHero = () => {
       <h1>Become Campus Ambassador</h1>
       <h1>Unite to Innovate</h1>
       <div className="para">
-      <p>
-        idk what to add in the text and I am too lazy to insert some lorem ipsum
-        text, so please make this work and <br /> add the content as per the
-        content team suggests
-      </p>
+        <p>
+          Join us as a Campus Ambassador and be the driving force behind IIC, bringing innovation and collaboration to your campus!
+        </p>
       </div>
       <div className="reg-btn">
         <a href="#register">Register Now</a>
