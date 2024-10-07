@@ -58,6 +58,16 @@ h1 {
   opacity: 1; /* Always visible */
   position: relative;
   z-index: 1;
+  margin-bottom: 0%;
+}
+
+.theme-name-2 {
+  font-size: 1.3rem;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  opacity: 1; /* Always visible */
+  position: relative;
+  z-index: 1;
 }
 
 .theme-description {
@@ -89,6 +99,11 @@ h1 {
   }
 
   .theme-card:hover .theme-name {
+    transform: translateY(-80px); /* Move theme name upwards slightly */
+    transition: transform 1s ease-in-out;
+  }
+
+  .theme-card:hover .theme-name-2 {
     transform: translateY(-80px); /* Move theme name upwards slightly */
     transition: transform 1s ease-in-out;
   }

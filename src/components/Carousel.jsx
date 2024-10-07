@@ -50,6 +50,58 @@ const Carousel = () => {
           <p className="theme-name">Environmental</p>
           <p className="theme-description">Tackle pressing environmental issues with innovations focused on sustainability, energy efficiency, and preserving the ecosystem.</p>
         </div>
+        <div className="theme-card">
+          <img src={logo6} alt="Theme 7 Logo" className="theme-logo" />
+          <p className="theme-name">Energy</p>
+          <span className="theme-name-2">(Renewable - Non Renewable)</span>
+          <p className="theme-description">Tackle pressing environmental issues with innovations focused on sustainability, energy efficiency, and preserving the ecosystem.</p>
+        </div>
+        <div className="theme-card">
+          <img src={logo6} alt="Theme 8 Logo" className="theme-logo" />
+          <p className="theme-name">Agriculture</p>
+          <p className="theme-description">Tackle pressing environmental issues with innovations focused on sustainability, energy efficiency, and preserving the ecosystem.</p>
+        </div>
+        <div className="theme-card">
+          <img src={logo6} alt="Theme 9 Logo" className="theme-logo" />
+          <p className="theme-name">Water</p>
+          <p className="theme-description">Tackle pressing environmental issues with innovations focused on sustainability, energy efficiency, and preserving the ecosystem.</p>
+        </div>
+        <div className="theme-card">
+          <img src={logo6} alt="Theme 10 Logo" className="theme-logo" />
+          <p className="theme-name">Education</p>
+          <p className="theme-description">Tackle pressing environmental issues with innovations focused on sustainability, energy efficiency, and preserving the ecosystem.</p>
+        </div>
+        <div className="theme-card">
+          <img src={logo5} alt="Theme 11 Logo" className="theme-logo" />
+          <p className="theme-name">Sustainable</p>
+          <span className="theme-name-2">Development</span>
+          <p className="theme-description">A flexible theme encouraging participants to bring diverse, creative solutions to any real-world challenge.</p>
+        </div>
+        <div className="theme-card">
+          <img src={logo6} alt="Theme 12 Logo" className="theme-logo" />
+          <p className="theme-name">Smart City</p>
+          <p className="theme-description">Tackle pressing environmental issues with innovations focused on sustainability, energy efficiency, and preserving the ecosystem.</p>
+        </div>
+        <div className="theme-card">
+          <img src={logo6} alt="Theme 13 Logo" className="theme-logo" />
+          <p className="theme-name">Cultural Heritage</p>
+          <p className="theme-description">Tackle pressing environmental issues with innovations focused on sustainability, energy efficiency, and preserving the ecosystem.</p>
+        </div>
+        <div className="theme-card">
+          <img src={logo6} alt="Theme 14 Logo" className="theme-logo" />
+          <p className="theme-name">Tourism</p>
+          <p className="theme-description">Tackle pressing environmental issues with innovations focused on sustainability, energy efficiency, and preserving the ecosystem.</p>
+        </div>
+        <div className="theme-card">
+          <img src={logo6} alt="Theme 15 Logo" className="theme-logo" />
+          <p className="theme-name">Smart Transport</p>
+          <p className="theme-description">Tackle pressing environmental issues with innovations focused on sustainability, energy efficiency, and preserving the ecosystem.</p>
+        </div>
+        <div className="theme-card">
+          <img src={logo6} alt="Theme 16 Logo" className="theme-logo" />
+          <p className="theme-name">Aqua Tech</p>
+          <p className="theme-description">Tackle pressing environmental issues with innovations focused on sustainability, energy efficiency, and preserving the ecosystem.</p>
+        </div>
       </div>
     </div>
   );
