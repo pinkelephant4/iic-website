@@ -33,7 +33,7 @@ h1 {
 .carousel-track {
   display: flex;
   width: calc(300%); /* Enough width to fit all cards */
-  animation: slide 10s linear infinite; /* Smooth infinite animation */
+  animation: slide 20s linear infinite; /* Smooth infinite animation */
 }
 
 /* Carousel Card Styling */
@@ -51,8 +51,8 @@ h1 {
   align-items: center;
 }
 .carousel-card img {
-  width: 80%;
-  height: 60%;
+  width: 60%;
+  height: 40%;
   border-radius: 10px;
 }
 
