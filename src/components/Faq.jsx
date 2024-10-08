@@ -16,7 +16,14 @@ const faqData = [
   {
     eventKey: "2",
     question: "3. What is the participation fee ?",
-    answer: "The participation fee is Rs. 500 per team.",
+    answer: (
+      <>
+        The participation fees is as follows: <br />
+        Indian students: ₹500 per team. <br />
+        International students: $50 USD per team.
+      </>
+    ),
+   
   },
   {
     eventKey: "3",
