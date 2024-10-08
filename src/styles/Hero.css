@@ -60,6 +60,44 @@
   height: 2.3vw;
 }
 
+.Hackathon  {
+  font-size: 3vw;
+  font-style: bold;
+  color: #39188c;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  padding-left: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.Hackathon-36  {
+  font-size: 1vw;
+  font-style: bold;
+  color: black;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  padding-left: 0.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.Hourglass-image {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  --tw-bg-opacity: 1;
+  /* background-color: rgb(255 255 255); */
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.3rem;
+}
+
+.Hourglass-image>img {
+  height: 1vw;
+}
+
 /* .unstop {
   padding-top: 1rem;
   padding-bottom: 1rem;

@@ -21,6 +21,17 @@ const Hero = () => {
           <span className='hero-heading-l1'>International Innovation </span>
           <br />
           <span className='hero-heading-l2'>Challenge</span>
+          <br />
+
+          <div className="Hackathon">
+            <span>Hackathon</span>
+            <div className="Hackathon-36">
+              <span>36 Hours Offline</span>
+            </div>
+            <div className="Hourglass-image">
+              <img src="/assets/hourglass.png" alt="hourglass" />
+            </div>  
+          </div>
 
           <div className='unstop-div'>
             <span>co-powered by</span>
