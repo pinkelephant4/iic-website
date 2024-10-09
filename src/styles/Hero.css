@@ -255,6 +255,28 @@
     margin: 20% 0 5% 5%;
   }
 
+  .Hackathon {
+    font-size: 5.5vw;
+    padding-left: 0.4rem;
+  }
+
+  .Hackathon-36 {
+    font-size: 3vw;
+    padding-left: 0.25rem;
+    --tw-bg-opacity: 1;
+    border-radius: 0.5rem;
+  }
+
+  .Hourglass-image {
+    padding-right: 0.25rem;
+    --tw-bg-opacity: 1;
+    border-radius: 0.5rem;
+  }
+
+  .Hourglass-image>img {
+    height: 2.5vw;
+  }
+
   .unstop-div {
     font-size: 4vw;
     padding-left: 0.4rem;
@@ -351,7 +373,6 @@
     font-size: 3vw;
     line-height: 1.3;
     padding-top: 0.5rem;
-
   }
   
 }
