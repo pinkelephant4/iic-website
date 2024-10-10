@@ -75,7 +75,7 @@ h1 {
   color: #333;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  max-width: 80%;
+  max-width: 100%;
   text-align: center;
   position: absolute;
   bottom: 15px; /* Move the description closer to the theme name */
