@@ -85,7 +85,7 @@ const Hero = () => {
             <div className="hero-bottom-right-container">
               <MagneticEffect>
                 <div className="hero-bottom-right-register-btn">
-                  Register Now
+                  <a href='https://unstop.com/hackathons/international-innovation-challengehackathon-manipal-university-jaipur-1174688?lb=CtnnOKei' className='hero-right-btn-link'> Register Now </a>
                 </div>
               </MagneticEffect>
               <div className='hero-bottom-right-about' >

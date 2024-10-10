@@ -211,6 +211,11 @@
   cursor: pointer;
 }
 
+.hero-right-btn-link {
+  color: white; /* Makes the text white */
+  text-decoration: none; /* Removes the underline */ 
+}
+
 .hero-bottom-right-register-btn:hover {
   transform: scale(1.05);
   border: 2px solid rgb(135, 135, 135);
