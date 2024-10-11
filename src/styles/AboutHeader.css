@@ -1,0 +1,57 @@
+.about-heading{
+    font-size: 8rem;
+    text-align: left;
+    margin-left: 13rem;
+}
+.first-div{
+    width: 50vw;
+    height: 60vh;
+    background-color: #bfbcfc;
+    border-radius: 25px;
+    position: absolute;
+    right: 10rem;
+    top: 11rem;
+
+}
+.first-div img{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 2.5rem;
+    right: 5rem;
+    border-radius: 25px;
+}
+.second-div{
+    width: 80vw;
+    height: 70vh;
+    background-color: #bc9ad9;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    position: absolute;
+    top: 35rem;
+    z-index: -1;
+}
+.second-div p{
+    color: white;
+    margin-top: 2rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+}
+.third-div{
+    width: 60vw;
+    height: 60vh;
+    background-color: #ba84fe;
+    position: absolute;
+    right: 0;
+    top: 62rem;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.third-div p{
+    color: white;
+    margin-top: 2rem;
+    line-height: 2.3rem;
+    font-size: 1.3rem;
+    margin-left: 1.5rem;
+}

@@ -1,0 +1,59 @@
+.about-cards {
+  margin-top: 160vh;
+}
+.about-cards h1 {
+  text-align: left;
+  margin-left: 5rem;
+  font-size: 4.5rem;
+}
+.about-cards {
+  width: 100%;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.carousel-card {
+  flex: 1 0 0;
+  position: relative;
+  transition: transform 0.4s ease-in-out, z-index 0.4s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  background-color: #bfbcfc;
+  margin: 0;
+  transform-origin: center;
+  z-index: 1;
+  border-radius: 25px;
+}
+
+.carousel-card.left {
+  transform: scale(0.9);
+}
+
+.carousel-card.right {
+  transform: scale(0.9);
+}
+.carousel-card.end {
+  transform: scale(0.8);
+}
+
+.carousel-card.active {
+  transform: scale(1.1); /* The middle card is bigger */
+  z-index: 2;
+}
+.carousel-card :not(.active) {
+  transform: scale(0.9);
+}
+
+.carousel-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
