@@ -4,13 +4,13 @@
     margin-left: 13rem;
 }
 .first-div{
-    width: 50vw;
+    width: 60vw;
     height: 60vh;
     background-color: #bfbcfc;
     border-radius: 25px;
     position: absolute;
     right: 10rem;
-    top: 11rem;
+    top: 13rem;
 
 }
 .first-div img{
