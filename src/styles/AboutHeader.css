@@ -108,14 +108,14 @@
     line-height: normal;
   }
 }
-@media(max-width:450px){
+@media(max-width:768px){
   .second-div h1{
-    font-size: 1.2rem;
+    font-size: 1.7rem;
   }
   .second-div p{
-    font-size: .8rem;
+    font-size: 1.1rem;
   }
   .third-div p{
-    font-size: .9rem;
+    font-size: 1.3rem;
   }
 }
