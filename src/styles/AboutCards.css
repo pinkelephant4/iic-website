@@ -199,6 +199,48 @@
     font-size: 3rem;
     margin-bottom: 1.5rem;
   }
+
+  /* Adjust arrow sizes */
+  .cascade-slider_arrow img {
+    height: 30px;
+    width: 30px;
+  }
+
+  /* Adjust dot sizes */
+  .cascade-slider_dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .cascade-slider_item.now {
+    transform: translateX(0) translateZ(0) scale(1);
+    opacity: 1;
+    z-index: 5;
+  }
+  
+  .cascade-slider_item.prev {
+    transform: translateX(-50px) translateZ(-100px) scale(0.85);
+    opacity: 0.7;
+    z-index: 3;
+  }
+  
+  .cascade-slider_item.next {
+    transform: translateX(50px) translateZ(-100px) scale(0.85);
+    opacity: 0.7;
+    z-index: 3;
+  }
+  
+  .cascade-slider_item.prev-prev {
+    transform: translateX(-100px) translateZ(-200px) scale(0.75);
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  .cascade-slider_item.next-next {
+    transform: translateX(100px) translateZ(-200px) scale(0.75);
+    opacity: 0.5;
+    z-index: 1;
+  }
 }
 
 @media (max-width: 480px) {
@@ -209,5 +251,16 @@
 
   .about-cards h1 {
     font-size: 2.5rem;
+  }
+
+  /* Further adjustments for very small screens */
+  .cascade-slider_arrow img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .cascade-slider_dot {
+    width: 10px;
+    height: 10px;
   }
 }
