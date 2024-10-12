@@ -247,6 +247,12 @@
 }
 
 @media (max-width: 480px) {
+  .cascade-slider_container{
+    margin-top: 1rem;
+  }
+  .about-cards{
+    margin-top: 0;
+  }
   .cascade-slider_item {
     width: 180px;
     height: 260px;
