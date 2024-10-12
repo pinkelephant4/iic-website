@@ -190,6 +190,9 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .about-cards{
+    margin-top: 1rem;
+  }
   .cascade-slider_item {
     width: 220px;
     height: 300px;
