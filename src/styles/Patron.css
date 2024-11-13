@@ -2,7 +2,7 @@
   height: 65vh;
   width: 100vw;
   border-top-right-radius: 50px;
-  margin: 10vh 0;
+  margin: 5vh 0;
 }
 .header h1 {
   font-size: 3rem;
@@ -16,6 +16,10 @@
   justify-content: space-evenly;
   align-items: center;
   gap: 5vw;
+  margin: 2rem;
+}
+.card{
+  width: 15vw !important;
 }
 @media (max-width: 768px) {
   .content {

@@ -1,9 +1,9 @@
 import "../styles/Card.css";
 
-const Card = () => {
+const Card = ({ image }) => {
   return (
-    <div>
-      <div className="box"></div>
+    <div className="card">
+      <img src={image} alt="Card image" className="card-image" />
     </div>
   );
 };

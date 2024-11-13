@@ -2,7 +2,7 @@ import Card from "../components/Card";
 import "../styles/Patron.css";
 import { useEffect, useState } from "react";
 
-const Patron = (props) => {
+const Patron = ({ head, cards, color, height, images }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const handleResize = () => {
@@ -22,17 +22,17 @@ const Patron = (props) => {
     <div
       className="patron"
       style={{
-        backgroundColor: props.color,
-        height: isMobile ? props.height : "65vh", // Adjust height based on screen size
+        backgroundColor: color,
+        height: isMobile ? height : "65vh", // Adjust height based on screen size
       }}
     >
       <div className="header">
-        <h1>{props.head}</h1>
+        <h1>{head}</h1>
       </div>
       <div className="content">
-        {Array.from({ length: props.cards }).map((_, index) => (
-          <Card key={index} />
-        ))}
+        {Array.from({ length: cards }).map((_, index) => (
+          <Card className='card' key={index} image={images[index]} />
+          ))}
       </div>
     </div>
   );
