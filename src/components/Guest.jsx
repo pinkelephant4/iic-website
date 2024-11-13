@@ -3,12 +3,8 @@ import "../styles/Guest.css";
 
 const Guest = () => {
   const guests = [
-    { name: "John Doe", description: "A leader in renewable energy solutions who promotes clean energy technologies. He shares his knowledge through public speaking engagements. His goal is to inspire others to embrace renewable energy. He advocates for policy changes to support sustainability. In his leisure time, he enjoys cycling and woodworking.", image: "/assets/Guest.jpg" },
-    { name: "Jane Smith", description: "A leader in renewable energy solutions who promotes clean energy technologies. He shares his knowledge through public speaking engagements. His goal is to inspire others to embrace renewable energy. He advocates for policy changes to support sustainability. In his leisure time, he enjoys cycling and woodworking.", image: "/assets/Guest.jpg" },
-    { name: "Alice Johnson", description: "A leader in renewable energy solutions who promotes clean energy technologies. He shares his knowledge through public speaking engagements. His goal is to inspire others to embrace renewable energy. He advocates for policy changes to support sustainability. In his leisure time, he enjoys cycling and woodworking.", image: "/assets/Guest.jpg" },
-    { name: "Michael Brown", description: "A leader in renewable energy solutions who promotes clean energy technologies. He shares his knowledge through public speaking engagements. His goal is to inspire others to embrace renewable energy. He advocates for policy changes to support sustainability. In his leisure time, he enjoys cycling and woodworking.", image: "/assets/Guest.jpg" },
-    { name: "Emily Davis", description: "A leader in renewable energy solutions who promotes clean energy technologies. He shares his knowledge through public speaking engagements. His goal is to inspire others to embrace renewable energy. He advocates for policy changes to support sustainability. In his leisure time, he enjoys cycling and woodworking.", image: "/assets/Guest.jpg" },
-    { name: "Chris Lee", description: "A leader in renewable energy solutions who promotes clean energy technologies. He shares his knowledge through public speaking engagements. His goal is to inspire others to embrace renewable energy. He advocates for policy changes to support sustainability. In his leisure time, he enjoys cycling and woodworking.", image: "/assets/Guest.jpg" },
+    { name: "Sh. Nilesh Desai", description: "Shri Nilesh M. Desai, a distinguished scientist and Director of ISRO’s Space Applications Centre (SAC), has over 37 years of experience in engineering and research, specializing in microwave radar systems for ISRO missions like RISAT, NISAR, and Oceansat. His work has strengthened earth observation, satellite navigation (NavIC), and advanced satellite communications for societal, governance, and strategic applications. A gold-medalist in Electronics & Communication from Gujarat University, he has guided and mentored digital design teams across SAC and promoted indigenous navigation technologies. Desai is widely recognized with awards including the IESA Dr. APJ Abdul Kalam Award and DVCon-India Lifetime Achievement Award.", image: "/assets/Guest1.png" },
+    { name: "Sh. Darshan K Patel", description: "Darshankumar K. Patel, Senior Scientist/Engineer and Group Director of Cyber Services & Information Security at SAC-ISRO, has over 35 years of experience at ISRO. A gold-medalist in Electronics Engineering from Birla Vishwakarma Vidhyalaya, he initially contributed to the development of ground systems for INSAT meteorological payloads like VHRR and IMAGER. As Deputy Project Director, he operationalized the Meteorological Data Reception System for IMD. Currently, he leads IT, Data Center, network infrastructure, and cyber security at SAC. His work spans data acquisition, processing, and the MOSDAC web portal, alongside advanced visualization technologies like AR and VR.", image: "/assets/Guest2.png" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -89,7 +85,6 @@ const Guest = () => {
             <div className="image-section">
               <img src={guest.image} alt={guest.name} className="guest-image" />
             </div>
-            <div className="coming-soon-overlay">Coming Soon</div> {/* Overlay for hover */}
           </div>
         ))}
 

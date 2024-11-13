@@ -31,7 +31,6 @@ h1 {
   background: rgba(255, 255, 255, 0.2); /* Light background for the glass effect */
   backdrop-filter: blur(10px); /* Apply blur for the glassmorphism */
   border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: transform 0.3s ease; /* Smooth scale transition */
 }
 
