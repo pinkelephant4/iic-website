@@ -18,6 +18,9 @@ const Sponser = () => {
             <img src="/assets/ct.jpg" alt="" />
           </div>
           <div className="carousel-card education-card2">
+            <img src="/assets/ts.jpg" alt="" />
+          </div>
+          <div className="carousel-card education-card2">
             <img src="/assets/unstop2.png" alt="" />
           </div>
           <div className="carousel-card knowledge-card2">
