@@ -50,6 +50,26 @@ const Team = ({ setActive }) => {
         height={"150vh"}
         images={["assets/sc4.png","assets/sc5.png","assets/sc6.png"]}
       />
+      <Patron
+        head={"Celebal Technologies"}
+        cards={3}
+        color={"#eae9ff"}
+        height={"150vh"}
+        images={["assets/cg1.png","assets/cg2.png","assets/cg3.png"]}
+      />
+      <Patron
+        cards={3}
+        color={"#eae9ff"}
+        height={"150vh"}
+        images={["assets/cg4.png","assets/cg5.png","assets/cg6.png"]}
+      />
+      <Patron
+        head={"TalSmart"}
+        cards={1}
+        color={"#bc9ad9"}
+        height={"150vh"}
+        images={["assets/tg1.png"]}
+      />
     </div>
   );
 };
