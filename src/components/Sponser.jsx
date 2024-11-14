@@ -15,6 +15,9 @@ const Sponser = () => {
             <img src="/assets/DTS.jpg" alt="" />
           </div>
           <div className="carousel-card education-card2">
+            <img src="/assets/ct.jpg" alt="" />
+          </div>
+          <div className="carousel-card education-card2">
             <img src="/assets/unstop2.png" alt="" />
           </div>
           <div className="carousel-card knowledge-card2">
@@ -38,6 +41,9 @@ const Sponser = () => {
           </div>
           <div className="carousel-card education-card2">
             <img src="/assets/partner2.png" alt="" />
+          </div>
+          <div className="carousel-card education-card2">
+            <img src="/assets/ct.jpg" alt="" />
           </div>
         </div>
       </div>
