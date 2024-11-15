@@ -47,7 +47,6 @@ function App() {
             <Route path="/team" element={<Team setActive={setActive} />} />
             {/* to-do */}
             <Route path="/about" element={<About setActive={setActive} />} />
-            <Route path="/problems" element={<Problems setActive={setActive} />} />
           </Routes>
           <Footer />
         </>

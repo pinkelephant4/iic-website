@@ -63,14 +63,13 @@ const Navbar = ({ active }) => {
       <div className="nav-right">
         <div
           className="nav-right-btn"
-          onClick={() => {
-            window.location.href = "/problems";
-          }}
         >
+          <a href="https://drive.google.com/drive/folders/1n6LzLaRzMPofrlD9bsrdWllSLpHi8LJH" style={{ color: "white",textDecoration: "none"}}>
           <span className="nav-btn-content">
             Problem Statements
             <img src="/assets/right-arrow.svg" alt="arrow" />
           </span>
+          </a>
         </div>
       </div>
 
@@ -91,7 +90,7 @@ const Navbar = ({ active }) => {
           <a href="/ambassador">Ambassador</a>
         </li>
         <li className="mobileMenu-link">
-          <a href="/problems">Problem Statements</a>
+          <a href="https://drive.google.com/drive/folders/1n6LzLaRzMPofrlD9bsrdWllSLpHi8LJH">Problem Statements</a>
         </li>
       </ul>
     </div>
