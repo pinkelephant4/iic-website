@@ -58,6 +58,11 @@ const Navbar = ({ active }) => {
               Team
             </div>
           </a>
+          <a href="/top10">
+            <div className={`nav-link ${active == "top10" ? "active" : ""}`}>
+              Top 10
+            </div>
+          </a>
         </div>
       </div>
       <div className="nav-right">
@@ -88,6 +93,9 @@ const Navbar = ({ active }) => {
         </li>
         <li className="mobileMenu-link">
           <a href="/ambassador">Ambassador</a>
+        </li>
+        <li className="mobileMenu-link">
+          <a href="/top10">Top 10</a>
         </li>
         <li className="mobileMenu-link">
           <a href="https://drive.google.com/drive/folders/1n6LzLaRzMPofrlD9bsrdWllSLpHi8LJH">Problem Statements</a>

@@ -17,7 +17,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Loading from "./components/Loading"; // Import the Loading component
 import About from "./pages/About";
-import Problems from "./pages/Problems";
+import Top10 from "./pages/Top10";
 
 function App() {
   const [loading, setLoading] = useState(true); // Manage loading state
@@ -47,6 +47,7 @@ function App() {
             <Route path="/team" element={<Team setActive={setActive} />} />
             {/* to-do */}
             <Route path="/about" element={<About setActive={setActive} />} />
+            <Route path="/top10" element={<Top10 setActive={setActive} />} />
           </Routes>
           <Footer />
         </>

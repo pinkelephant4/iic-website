@@ -1,0 +1,22 @@
+.teamname {
+  background-color: #bc9ad9;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  height: 30vh;
+}
+
+.teamname:nth-child(odd) {
+  background-color: #8eb9f5;
+}
+
+.teamname h1,
+.teamname h2 {
+  margin: 0;
+  padding: 15px 0;
+  display: block;
+}
+.top10wrapper .heading {
+  margin-bottom: 40px;
+}
